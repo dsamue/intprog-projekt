@@ -14,8 +14,9 @@ var myModel = function() {
 	}
 
 	//Get number of guests
-	this.getScore = function() {    //funkar
-		return numberOfGuests;
+	this.getScore = function() {   
+		return gameScore;
+	}
 
 
 	// 'database' for all words and corresponding sound (Kanske bättre med hela meningar och dess tillhörande ord?)
