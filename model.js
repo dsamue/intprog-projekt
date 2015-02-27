@@ -2,38 +2,116 @@ Object constructor
 var myModel = function() {
  
 	// Creating object that will hold application data
-	var correctSentence = [];     //Skulle kunna vara en lista med varje ljuds id i rätt ordning
-	var mySentence = [];  		  //Kan matchas mot "correct sentence"
+	var mySentence = [];  		  //Lagra dom valda orden i appens pratbubble
+	var boxWords = [];			  //All words to choose from
 	var gameScore = 0;
+	var gameLevel = 0;
 
 
 	// Creating functions
+	// Set gameScore
 	this.setScore = function(num) {   
-		gameScore=gameScore+num;
+		gameScore = gameScore+num;
 		notifyObservers();
 	}
 
-	//Get number of guests
+	// Get gameScore
 	this.getScore = function() {   
 		return gameScore;
 	}
 
+	// Set gameLevel
+	this.setLevel = function(num) {   
+		gameScore = num;
+		notifyObservers();
+	}
 
-	// 'database' for all words and corresponding sound (Kanske bättre med hela meningar och dess tillhörande ord?)
-	var words = [{
-		'id':1,
-		'word':'Katt',
-		'audiofile':'ljud.wav',
-		'image':'toast.jpg',
-		'description':"In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.",
+	// Get gameLevel
+	this.getLevel = function() {   
+		return gameLevel;
+	}
 
+	// Add choosen words from app to mySentence
+	this.setMySentence = function(wordId) {   
+
+	}
+
+	// Compare mySentence with correctSentence
+	this.checkMySentence = function() {   
+		// check if words position is in order
+		return true
+	}
+
+
+
+
+
+
+	// 'Database' for all sentences, corresponding words and audiofiles 
+	var sentences = [{
+
+		'id':'1',
+		'sweSentence':'Min katt är gul',
+		'engSentence':'My cat is yellow'
+		'audiofile':'ljud.wav'
+		'words':[{
+			'id':'1',
+			'engWord':'my',
+			'sweWord': 'min',
+			'position':'1' 
+		 	'audiofile':'min.wav',
+			},{
+			'id':'2',
+			'engWord':'cat',
+			'sweWord': 'katt',
+			'position':'2' 
+		 	'audiofile':'katt.wav',
+			},{
+			'id':'3',
+			'engWord':'is',
+			'sweWord': 'är',
+			'position':'3' 
+		 	'audiofile':'är.wav',
+			},{
+			'id':'4',
+			'engWord':'yellow',
+			'sweWord': 'gul',
+			'position':'4' 
+		 	'audiofile':'gul.wav',
+			}]
 		},{
-		'id':2,
-		'word':'Hund',
-		'audiofile':'ljud2.wav',
-		},
-	];
 
+		'id':'2',
+		'sweSentence':'Min hund är svart',
+		'engSentence':'My dog is black'
+		'audiofile':'ljud2.wav'
+		'words':[{
+			'id':'5',
+			'engWord':'my',
+			'sweWord': 'min',
+			'position':'1' 
+		 	'audiofile':'min.wav',
+			},{
+			'id':'6',
+			'engWord':'dog',
+			'sweWord': 'hund',
+			'position':'2' 
+		 	'audiofile':'hund.wav',
+			},{
+			'id':'7',
+			'engWord':'is',
+			'sweWord': 'är',
+			'position':'3' 
+		 	'audiofile':'är.wav',
+			},{
+			'id':'8',
+			'engWord':'black',
+			'sweWord': 'svart',
+			'position':'4' 
+		 	'audiofile':'svart.wav',
+			}]
+		}
+	];
 
 
 	// Creating observer
