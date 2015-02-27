@@ -1,0 +1,30 @@
+body {
+}
+
+.bubble-list,.word-list {
+	list-style: none;
+}
+
+.bubble-list li,.word-list li {
+	float: left;
+	background-color: #ff8205;
+	border-radius: 5px;
+	color: #ffffff;
+	height: 40px;
+	padding: 10px;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.bubble {
+	background-color: #fafafa;
+	height: 50px;
+	border-radius: 30px;
+	align: center;
+}	
+
+.word-box {
+	background-color: #0582ff;
+	border-radius: 5px;
+	height: 50%;
+}
