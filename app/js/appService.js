@@ -61,62 +61,62 @@ projectApp.factory('Model', function ($resource) {
 
 		'id':'1',
 		'sweSentence':'Min katt är gul',
-		'engSentence':'My cat is yellow'
-		'audiofile':'ljud.wav'
+		'engSentence':'My cat is yellow',
+		'audiofile':'ljud.wav',
 		'words':[{
 			'id':'1',
 			'engWord':'my',
 			'sweWord': 'min',
-			'position':'1' 
+			'position':'1', 
 		 	'audiofile':'min.wav',
 			},{
 			'id':'2',
 			'engWord':'cat',
 			'sweWord': 'katt',
-			'position':'2' 
+			'position':'2', 
 		 	'audiofile':'katt.wav',
 			},{
 			'id':'3',
 			'engWord':'is',
 			'sweWord': 'är',
-			'position':'3' 
+			'position':'3', 
 		 	'audiofile':'är.wav',
 			},{
 			'id':'4',
 			'engWord':'yellow',
 			'sweWord': 'gul',
-			'position':'4' 
+			'position':'4', 
 		 	'audiofile':'gul.wav',
 			}]
 		},{
 
 		'id':'2',
 		'sweSentence':'Min hund är svart',
-		'engSentence':'My dog is black'
-		'audiofile':'ljud2.wav'
+		'engSentence':'My dog is black',
+		'audiofile':'ljud2.wav',
 		'words':[{
 			'id':'5',
 			'engWord':'my',
 			'sweWord': 'min',
-			'position':'1' 
+			'position':'1',
 		 	'audiofile':'min.wav',
 			},{
 			'id':'6',
 			'engWord':'dog',
 			'sweWord': 'hund',
-			'position':'2' 
+			'position':'2', 
 		 	'audiofile':'hund.wav',
 			},{
 			'id':'7',
 			'engWord':'is',
 			'sweWord': 'är',
-			'position':'3' 
+			'position':'3', 
 		 	'audiofile':'är.wav',
 			},{
 			'id':'8',
 			'engWord':'black',
 			'sweWord': 'svart',
-			'position':'4' 
+			'position':'4', 
 		 	'audiofile':'svart.wav',
 			}]
 		}
