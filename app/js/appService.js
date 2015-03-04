@@ -5,7 +5,7 @@ projectApp.factory('Model', function ($resource) {
 	var mySentence = [];  		  //Lagra dom valda orden i appens pratbubble
 	var boxWords = [];			  //All words to choose from
 	var gameScore = 0;
-	var gameLevel = 0;
+	var gameLevel = 1;			//testning borde iof börja på 1
 	var myVar = 1; 				 //För test
 
 
@@ -58,6 +58,15 @@ projectApp.factory('Model', function ($resource) {
 		return sentences;
 	}
 
+	//Return sentence for the level you're on
+	this.getSentence = function() {
+	  	for(key in sentences){
+			if(sentences[key].id == gameLevel) {
+				return sentences[key];
+			}
+		}
+	}
+
 
 
 	// 'Database' for all sentences, corresponding words and audiofiles 
@@ -71,26 +80,26 @@ projectApp.factory('Model', function ($resource) {
 			'id':'1',
 			'engWord':'my',
 			'sweWord': 'min',
-			'position':'1', 
-		 	'audiofile':'min.wav',
+			'position':'1' ,
+		 	'audiofile':'min.wav'
 			},{
 			'id':'2',
 			'engWord':'cat',
 			'sweWord': 'katt',
-			'position':'2', 
-		 	'audiofile':'katt.wav',
+			'position':'2' ,
+		 	'audiofile':'katt.wav'
 			},{
 			'id':'3',
 			'engWord':'is',
 			'sweWord': 'är',
-			'position':'3', 
-		 	'audiofile':'är.wav',
+			'position':'3' ,
+		 	'audiofile':'är.wav'
 			},{
 			'id':'4',
 			'engWord':'yellow',
 			'sweWord': 'gul',
-			'position':'4', 
-		 	'audiofile':'gul.wav',
+			'position':'4' ,
+		 	'audiofile':'gul.wav'
 			}]
 		},{
 
@@ -103,25 +112,25 @@ projectApp.factory('Model', function ($resource) {
 			'engWord':'my',
 			'sweWord': 'min',
 			'position':'1',
-		 	'audiofile':'min.wav',
+		 	'audiofile':'min.wav'
 			},{
 			'id':'6',
 			'engWord':'dog',
 			'sweWord': 'hund',
-			'position':'2', 
-		 	'audiofile':'hund.wav',
+			'position':'2' ,
+		 	'audiofile':'hund.wav'
 			},{
 			'id':'7',
 			'engWord':'is',
 			'sweWord': 'är',
 			'position':'3', 
-		 	'audiofile':'är.wav',
+		 	'audiofile':'är.wav'
 			},{
 			'id':'8',
 			'engWord':'black',
 			'sweWord': 'svart',
-			'position':'4', 
-		 	'audiofile':'svart.wav',
+			'position':'4' ,
+		 	'audiofile':'svart.wav'
 			}]
 		}
 	];
