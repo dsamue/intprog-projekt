@@ -4,22 +4,26 @@
         <div class="bubble">
           <ul class="bubble-list">
 
-            <li><a href="#/test">Klicka här för att komma till en annan sida</a></li>   <!--När URLen ändras byter Anglar till rätt html-view-->
+            <li ng-model="myList[i-1]" id="1"></li>
+            <li ng-model="myList[i-1]" id="2"></li>
+            <li ng-model="myList[i-1]" id="3"></li>
+            <li ng-model="myList[i-1]" id="4"></li>
+            
           </ul>
         </div>
         <div class="word-box">
           <!--<div ng-repeat="sentence in sentences where sentence">   -->                      <!--ng-repeat är typ en forloop som går igenom "sentences" som är hämtas från modellen i someCtrl.js-->
-            <div ng-repeat="word in sentence.words|orderBy:random">
               <ul class="word-list">
-                <li>{{word.sweWord}}</li>                                  <!--{{ }} är angularkod och ett listelement skapas for varje svenskt ord i sentences-->
+                <li ng-repeat="word in sentence.words|orderBy:random" id="{{word.position}}">{{word.sweWord}}</li>                                  <!--{{ }} är angularkod och ett listelement skapas for varje svenskt ord i sentences-->
               </ul>
-            </div>
           <!--</div>-->
         </div>
       </div>
 
       <div class="col-sm-3">
+        <a href="#/test">Klicka här för att komma till en annan sida</a>   <!--När URLen ändras byter Anglar till rätt html-view-->
         <!-- score -->
+        <h2 class="score">{{myScore}}</h2>
 
         <!--Angular testcode -->
         Set MyVar <input type="number" ng-model="myVar" ng-change="setMyVar(myVar)"/>
