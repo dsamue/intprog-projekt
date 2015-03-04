@@ -6,14 +6,15 @@
   					<li>hej</li>
   					<li>jag</li>
   					<li>heter</li>
+            <li><a href="#/test">Klicka här för att komma till en annan sida</a></li>   //När URLen ändras byter Anglar till rätt html-view
   				</ul>
   			</div>
   			<div class="word-box">
-  				<ul class="word-list">
-  					<li>hej</li>
-  					<li>jag</li>
-  					<li>heter</li>
-  				</ul>
+          <div ng-repeat="sentence in sentences">                         //ng-repeat är typ en forloop som går igenom "sentences" som är hämtas från modellen i someCtrl.js
+    				<ul class="word-list" ng-repeat="word in sentence.words">
+    					<li>{{word.sweWord}}</li>                                  //{{ }} är angularkod och ett listelement skapas for varje svenskt ord i sentences
+    				</ul>
+          </div>
   			</div>
   		</div>
 

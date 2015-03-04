@@ -2,7 +2,7 @@
 projectApp.factory('Model', function ($resource) {
  
 	// Creating object that will hold application data
-	var mySentence = [];  		  //Lagra dom valda orden i appens pratbubble
+	var mySentence = [];  		  //Lagra dom valda orden i appens pratbubbla
 	var boxWords = [];			  //All words to choose from
 	var gameScore = 0;
 	var gameLevel = 0;
@@ -51,7 +51,11 @@ projectApp.factory('Model', function ($resource) {
 	// Compare mySentence with correctSentence
 	this.checkMySentence = function() {   
 		// check if words position is in order
-		return true
+		return true;
+	}
+
+	this.getSentences = function() {
+		return sentences;
 	}
 
 
