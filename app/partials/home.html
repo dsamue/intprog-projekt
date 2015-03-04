@@ -3,20 +3,18 @@
       <div class="col-sm-9">
         <div class="bubble">
           <ul class="bubble-list">
-            <li>hej</li>
-            <li>jag</li>
-            <li>heter</li>
+
             <li><a href="#/test">Klicka här för att komma till en annan sida</a></li>   <!--När URLen ändras byter Anglar till rätt html-view-->
           </ul>
         </div>
         <div class="word-box">
-          <div ng-repeat="sentence in sentences">                         <!--ng-repeat är typ en forloop som går igenom "sentences" som är hämtas från modellen i someCtrl.js-->
-            <div ng-repeat="word in sentence.words">
+          <!--<div ng-repeat="sentence in sentences where sentence">   -->                      <!--ng-repeat är typ en forloop som går igenom "sentences" som är hämtas från modellen i someCtrl.js-->
+            <div ng-repeat="word in sentence.words|orderBy:random">
               <ul class="word-list">
                 <li>{{word.sweWord}}</li>                                  <!--{{ }} är angularkod och ett listelement skapas for varje svenskt ord i sentences-->
               </ul>
             </div>
-          </div>
+          <!--</div>-->
         </div>
       </div>
 

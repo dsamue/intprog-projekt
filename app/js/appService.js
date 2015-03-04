@@ -5,7 +5,7 @@ projectApp.factory('Model', function ($resource) {
 	var mySentence = [];  		  //Lagra dom valda orden i appens pratbubble
 	var boxWords = [];			  //All words to choose from
 	var gameScore = 0;
-	var gameLevel = 1;			//testning borde iof börja på 1
+	var gameLevel = 2;			//testning borde iof börja på 1
 	var myVar = 1; 				 //För test
 
 
@@ -54,14 +54,14 @@ projectApp.factory('Model', function ($resource) {
 		return true;
 	}
 
-	this.getSentences = function() {
+	this.getAllSentences = function() {
 		return sentences;
 	}
 
 	//Return sentence for the level you're on
-	this.getSentence = function() {
+	this.getSentence = function(id) {
 	  	for(key in sentences){
-			if(sentences[key].id == gameLevel) {
+			if(sentences[key].id == id) {
 				return sentences[key];
 			}
 		}
