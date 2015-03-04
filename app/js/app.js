@@ -41,9 +41,6 @@ projectApp.config(['$routeProvider',
         templateUrl: 'partials/home.html',
         controller: 'SomeCtrl'
       }).
-      when('/test', {                                       //När man trycker på knappen på startsidan ändras url:en och därmed också html-viewn
-        templateUrl: 'partials/test.html'
-      }).
       when('/search', {
         templateUrl: 'partials/search.html',
         controller: 'SearchCtrl'
