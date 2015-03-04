@@ -41,6 +41,9 @@ projectApp.config(['$routeProvider',
         templateUrl: 'partials/home.html',
         controller: 'SomeCtrl'
       }).
+      when('/test', {
+        templateUrl: 'partials/test.html'           //test.html laddas in i sidan när url:en ändras till /test
+      }).
       when('/search', {
         templateUrl: 'partials/search.html',
         controller: 'SearchCtrl'

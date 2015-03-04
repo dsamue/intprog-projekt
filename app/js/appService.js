@@ -51,7 +51,11 @@ projectApp.factory('Model', function ($resource) {
 	// Compare mySentence with correctSentence
 	this.checkMySentence = function() {   
 		// check if words position is in order
-		return true
+		return true;
+	}
+
+	this.getSentences = function() {
+		return sentences;
 	}
 
 
