@@ -7,11 +7,25 @@ projectApp.controller('SomeCtrl', function ($scope, Model) {
 
 	var level = Model.getLevel();
 
-	$scope.sentence = Model.getSentence(level);
+	$scope.sentence = Model.getSentence(level).words;
 
-	$scope.myList = [];
+	$scope.myList = {
+		words: [$scope.sentence[1]]
+		};
+
+	//  det jag försöker göra http://vitalets.github.io/checklist-model/
 
 	console.log($scope.myList);
+
+	/*$scope.ondrop = function (li) {
+		var wordId = li.attr('id');
+		Model.setMySentence(wordId);
+	} */
+
+	/*$scope.click = function(word) {
+		$scope.myList.push(word);
+		console.log($scope.myList);
+	}*/
 
 	$scope.setMyVar = function(number){
 		Model.setMyVar(number);

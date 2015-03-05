@@ -45,12 +45,20 @@ projectApp.factory('Model', function ($resource) {
 
 	// Add choosen words from app to mySentence
 	this.setMySentence = function(wordId) {   
-
+		mySentence.push(wordId);
+		this.checkMySentence();
 	}
 
 	// Compare mySentence with correctSentence
 	this.checkMySentence = function() {   
 		// check if words position is in order
+		var sentence = this.getSentence(gameLevel).words;
+
+		for (key in mySentence) {
+			if (mySentence[key] != sentence[key].position) {
+				return false;
+			}
+		}
 		return true;
 	}
 
