@@ -1,4 +1,4 @@
-var LanguageController = function()
+var GameViewController = function(view, model)
 {
-   
+   model.getScore()
 }

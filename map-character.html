@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="angulartest.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+
+<body>
+	<div ng-app="" ng-controller="mapController">
+	<input ng-model="level" placeholder="{{level}}"></input>
+<button type="button" ng-click="moveCharacter()">Move</button>
+<div class="map" style="position: relative; left: 0; top: 0;">
+	<img id="mapBackground" style="position: relative; top: 0; left: 0; height: 300px; width: auto;" src="cartoon-game-map.svg">
+		<img id="character" style="position: absolute; top: 20px; left: 40px;" src="character.png"></img></img>
+	<p>Your level is {{level}} </p>
+	</div>
+
+<script>
+function mapController($scope)
+{
+	$scope.level = 1;
+	$scope.$watch('level', function(newValue, oldValue)
+		{ if (newValue != oldValue)
+			{
+			moveCharacter();
+			}
+		});
+//metod som uppdaterar figurens position 
+	$scope.moveCharacter = function()
+	{
+		if ($scope.level == 2)
+		{
+
+			$("#character").animate({'marginLeft' : "120px"});
+			$("#character").animate({'marginTop' : "150px"});
+		}
+		else if ($scope.level == 3)
+		{
+			$("#character").animate({'marginLeft' : "220px"});
+			$("#character").animate({'marginTop' : "100px"});
+
+		}
+		else if ($scope.level == 4)
+		{
+			$("#character").animate({'marginLeft' : "220px"});
+			$("#character").animate({'marginTop' : "35px"});
+
+		}
+		else if ($scope.level == 5)
+		{
+			$("#character").animate({'marginLeft' : "390px"});
+			$("#character").animate({'marginTop' : "35px"});
+
+		}
+		else if ($scope.level == 6)
+		{
+			$("#character").animate({'marginLeft' : "390px"});
+			$("#character").animate({'marginTop' : "170px"});
+
+		}		
+		else
+		{
+			$("#character").animate({'marginLeft' : "40px"});
+			$("#character").animate({'marginTop' : "40px"});
+
+		}	
+	}
+
+
+}
+</script>
+
+</body>
+</html>
