@@ -5,7 +5,7 @@ body {
 	list-style: none;
 }
 
-.bubble-list li,.word-list li {
+.bubble-list li,.word-list li, button {
 	float: left;
 	background-color: #ff8205;
 	border-radius: 5px;
@@ -21,10 +21,11 @@ body {
 	height: 50px;
 	border-radius: 30px;
 	align: center;
+
 }	
 
 .word-box {
-	background-color: #0582ff;
+	background-color: #5BC0DE;
 	border-radius: 5px;
 	height: 50%;
 }

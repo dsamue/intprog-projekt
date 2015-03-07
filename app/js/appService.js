@@ -43,9 +43,19 @@ projectApp.factory('Model', function ($resource) {
 		return gameLevel;
 	}
 
-	// Add choosen words from app to mySentence
-	this.setMySentence = function(wordId) {   
+	// Add choosen word from app to mySentence
+	this.setMySentence = function(word) {   
+		mySentence.push(word);
+	}
 
+	// Get mySentence
+	this.getMySentence = function() {   
+		return mySentence;
+	}
+
+	// Clear mySentence
+	this.clearMySentence = function() {   
+		mySentence = [];
 	}
 
 	// Compare mySentence with correctSentence

@@ -37,6 +37,10 @@ var projectApp = angular.module('projectApp', ['ngRoute','ngResource']);
 projectApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
+      when('/start', {
+        templateUrl: 'partials/start.html',
+        controller: 'SomeCtrl'
+      }).
       when('/home', {
         templateUrl: 'partials/home.html',
         controller: 'SomeCtrl'
@@ -54,6 +58,6 @@ projectApp.config(['$routeProvider',
       }).
       // TODO in Lab 5: add more conditions for the last two screens (overview and preparation)
       otherwise({
-        redirectTo: '/home'
+        redirectTo: '/start'
       });
   }]);
