@@ -15,7 +15,15 @@ projectApp.controller('SomeCtrl', function ($scope, Model) {
   }
 
   $scope.checkMySentence = function(){
-    Model.checkMySentence();
+    isCorrect=Model.checkMySentence();
+
+    if (isCorrect===true){
+    	alert("Rätt!");
+    }
+
+    else {
+    	alert("Fel..")
+    }
   }
 
   $scope.setMyVar = function(number){

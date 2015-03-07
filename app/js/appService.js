@@ -3,6 +3,7 @@ projectApp.factory('Model', function ($resource) {
  
 	// Creating object that will hold application data
 	var mySentence = [];  		  //Lagra dom valda orden i appens pratbubble
+	var correctSentence = [];	  //Behlvs eftersom det inte räcker med att bara kolla att ordningsföljden är korrekt i mySentence
 	var boxWords = [];			  //All words to choose from
 	var gameScore = 0;
 	var gameLevel = 0;
@@ -60,8 +61,21 @@ projectApp.factory('Model', function ($resource) {
 
 	// Compare mySentence with correctSentence
 	this.checkMySentence = function() {   
-		// check if words position is in order
-		return true;
+		//numOfWords = correctSentence.words.length;       //Än så länge har vi inte lagt till någon mening i correctSentence
+		numOfWords = 4;
+
+		if (mySentence.length != numOfWords){
+			return false
+		}
+
+		else {
+			for (i=0; i<mySentence.length; i++){
+				if(mySentence[i].position != i+1){
+					return false
+				}
+			}
+			return true
+		}
 	}
 
 	this.getSentences = function() {
