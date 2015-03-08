@@ -44,6 +44,11 @@ projectApp.factory('Model', function ($resource) {
 		return gameLevel;
 	}
 
+	// Set correctSentence
+	this.setCorretSentence = function(sentence) {   
+		correctSentence = [sentence];
+	}
+
 	// Add choosen word from app to mySentence
 	this.setMySentence = function(word) {   
 		mySentence.push(word);
@@ -78,8 +83,16 @@ projectApp.factory('Model', function ($resource) {
 		}
 	}
 
-	this.getSentences = function() {
+	this.getAllSentences = function() {
 		return sentences;
+	}
+
+	this.getSentence = function(id) {
+		for (sentence in sentences){
+			if(sentence.id==id){
+				return sentence;
+			}
+		}
 	}
 
 

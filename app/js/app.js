@@ -41,7 +41,7 @@ projectApp.config(['$routeProvider',
         templateUrl: 'partials/start.html',
         controller: 'SomeCtrl'
       }).
-      when('/home', {
+      when('/home/:sentenceId', {
         templateUrl: 'partials/home.html',
         controller: 'SomeCtrl'
       }).
