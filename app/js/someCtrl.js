@@ -1,8 +1,10 @@
 // Controller 
-projectApp.controller('SomeCtrl', function ($scope, Model) {
+projectApp.controller('SomeCtrl', function ($scope, Model, $routeParams) {
 
+  $scope.testVar = $routeParams.sentenceId;		
   $scope.myVar = Model.getMyVar();
-  $scope.sentences = Model.getSentences();
+  $scope.sentence = Model.getSentence($routeParams.sentenceId); 
+  $scope.allSentences = Model.getAllSentences();
   $scope.mySentences = Model.getMySentence();
 
   $scope.setMySentence = function(word){
@@ -28,6 +30,11 @@ projectApp.controller('SomeCtrl', function ($scope, Model) {
 
   $scope.playSound = function(audiofile){
     var audio = new Audio('audio/'+audiofile);
+	audio.play();
+  };
+
+  $scope.playSentence = function(){
+    var audio = new Audio('audio/'+sentence.audiofile);
 	audio.play();
   };
 

@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet"  href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -27,9 +28,14 @@
   </head>
   
   <body>
+    <div class="container-fluid">
+      <div class="col-sm-12 header">
+        <h1>Fabulous English <small>The extra superiour way to learn English!</small></h1>
+      </div>
 
-    <div ng-view></div>       <!--Beroende på vilken sida/url vi är på laddas olika html-filer in här. home.html är default.-->
-
+      <div ng-view></div>       <!--Beroende på vilken sida/url vi är på laddas olika html-filer in här. home.html är default.-->
+   
+    </div>
   </body>
 </html>
 

@@ -39,9 +39,9 @@ projectApp.config(['$routeProvider',
     $routeProvider.
       when('/start', {
         templateUrl: 'partials/start.html',
-        controller: 'SomeCtrl'
+        controller: 'SomeCtrl'                      //Varför får jag inte denna att funka med pickSentenceController??
       }).
-      when('/home', {
+      when('/home/:sentenceId', {
         templateUrl: 'partials/home.html',
         controller: 'SomeCtrl'
       }).
