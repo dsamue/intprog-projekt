@@ -1,4 +1,7 @@
 <div class="col-sm-9">
+  <div class="row sentence-box">
+    <h2></span>{{sentence.engSentence}}<span class="glyphicon glyphicon-play" ng-click="playSentence()"></h2>
+  </div>
   <div class="bubble">
     <ul class="bubble-list">
       <li ng-repeat="word in mySentences">{{word.engWord}}</li>
@@ -25,9 +28,9 @@
   <!-- score -->
 
   <!--Angular testcode -->
-  Set MyVar <input type="number" ng-model="myVar" ng-change="setMyVar(myVar)"/>
+  <!-- Set MyVar <input type="number" ng-model="myVar" ng-change="setMyVar(myVar)"/>
   Your var is: {{getMyVar()}}
-  Testvar: {{testVar}}
+  Testvar: {{testVar}} -->
 </div>
 
 <div>

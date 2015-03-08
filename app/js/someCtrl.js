@@ -33,6 +33,11 @@ projectApp.controller('SomeCtrl', function ($scope, Model, $routeParams) {
 	audio.play();
   };
 
+  $scope.playSentence = function(){
+    var audio = new Audio('audio/'+sentence.audiofile);
+	audio.play();
+  };
+
   $scope.setMyVar = function(number){
     Model.setMyVar(number);
   };

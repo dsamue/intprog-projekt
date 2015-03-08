@@ -1,7 +1,7 @@
 // Controller 
 projectApp.controller('PickSentenceCtrl', function ($scope, Model) {
 
-  $scope.sentences = Model.getAllSentences();
+  $scope.allSentences = Model.getAllSentences();
 
 
   $scope.setCorrectSentence = function(sentence){

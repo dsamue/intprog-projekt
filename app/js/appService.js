@@ -88,9 +88,10 @@ projectApp.factory('Model', function ($resource) {
 	}
 
 	this.getSentence = function(id) {
-		for (sentence in sentences){
-			if(sentence.id==id){
-				return sentence;
+		for (i=0; i<sentences.length; i++){
+			if(sentences[i].id == id){
+				sentence = sentences[i];
+				return sentence
 			}
 		}
 	}
