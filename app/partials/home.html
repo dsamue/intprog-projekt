@@ -1,0 +1,36 @@
+<div class="col-sm-9">
+  <div class="row sentence-box">
+    <h2></span>{{sentence.engSentence}}<span class="glyphicon glyphicon-play" ng-click="playSentence()"></h2>
+  </div>
+  <div class="bubble">
+    <ul class="bubble-list">
+      <li ng-repeat="word in mySentences">{{word.engWord}}</li>
+    </ul>
+  </div>
+  <div class="bubble">
+    <ul class="bubble-list">
+      <a href="#/test"><li>Klicka här för att komma till en annan sida</li></a>   <!--När URLen ändras byter Anglar till rätt html-view-->
+      <li ng-click="clearMySentence()">Radera alla ord</li>
+      <li ng-click="checkMySentence()">Kontrollera mening</li>
+    </ul>
+  </div>
+  <div class="word-box">                        
+      <div ng-repeat="word in sentence.words"> <!--ng-repeat är typ en forloop som går igenom "sentences" som är hämtas från modellen i someCtrl.js-->
+        <ul class="word-list">
+          <li ng-click="playSound(word.audiofile)" ng-dblclick="setMySentence(word)">{{word.engWord}}</li>                                  
+          <!--{{ }} är angularkod och ett listelement skapas for varje svenskt ord i sentences-->
+        </ul>
+      </div>
+  </div>
+</div>
+
+<div class="col-sm-3">
+  <!-- score -->
+
+  <!--Angular testcode -->
+  <!-- Set MyVar <input type="number" ng-model="myVar" ng-change="setMyVar(myVar)"/>
+  Your var is: {{getMyVar()}}
+  Testvar: {{testVar}} -->
+</div>
+
+<div>

@@ -1,0 +1,56 @@
+body {
+	font: Calibri;
+	font-size: 11pt;
+}
+
+h1,h1 small {
+	font-family: Lobster;
+	color: white;
+}
+
+h2,h3 {
+	font-family: Lobster;
+}
+
+.bubble-list,.word-list {
+	list-style: none;
+}
+
+.bubble-list li,.word-list li, button {
+	float: left;
+	background-color: #ff8205;
+	border-radius: 5px;
+	color: #ffffff;
+	height: 40px;
+	padding: 10px;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.bubble {
+	background-color: #f1f1f1;
+	height: 50px;
+	border-radius: 30px;
+	align: center;
+
+}	
+
+.word-box {
+	background-color: #5BC0DE;
+	border-radius: 5px;
+	height: 50%;
+}
+
+.sentence-box {
+	background-color: #f1f1f1;
+	border-radius: 10px;
+	text-align: center;
+	padding: 5px;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.header {
+	background-color: #F57B26;
+	margin: 0;
+	height: 90px;
