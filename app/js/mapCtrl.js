@@ -15,33 +15,24 @@ projectApp.controller('MapCtrl', function ($scope, Model){
 //metod som uppdaterar figurens position 
 	$scope.moveCharacter = function(){
 		if ($scope.level == 2){
-			$("#character").animate({'marginLeft' : "120px"});
-			$("#character").animate({'marginTop' : "150px"});
+			$("#character").animate({'marginLeft' : "-20px"});
+			$("#character").animate({top : "+=20px"});
 		}
 
-		else if ($scope.level == 3){
-			$("#character").animate({'marginLeft' : "220px"});
-			$("#character").animate({'marginTop' : "100px"});
+		/*else if ($scope.level == 3){
+			$("#character").animate({'marginLeft' : "40px"});
+			$("#character").animate({'marginTop' : "70px"});
 		}
 
 		else if ($scope.level == 4){
-			$("#character").animate({'marginLeft' : "220px"});
-			$("#character").animate({'marginTop' : "35px"});
-		}
-
-		else if ($scope.level == 5){
-			$("#character").animate({'marginLeft' : "390px"});
-			$("#character").animate({'marginTop' : "35px"});
-		}
-
-		else if ($scope.level == 6){
-			$("#character").animate({'marginLeft' : "390px"});
-			$("#character").animate({'marginTop' : "170px"});
-		}		
+			$("#character").animate({'marginLeft' : "80px"});
+			$("#character").animate({'marginTop' : "100px"});
+		}*/
+	
 
 		else{
 			$("#character").animate({'marginLeft' : "40px"});
 			$("#character").animate({'marginTop' : "40px"});
-		}	
+		}
 	};
 });

@@ -55,12 +55,15 @@ h2,h3 {
 	margin: 0;
 	height: 90px;
 
-.level-man {
-	background-color: #fafafa;
-	width: 70%;
-	height: 300px; /*ta bort när level-man är klar*/
-	margin: auto;
-	text-align: center;
+}
+
+#character {
+	width: 40px;
+	height: auto;
+	background: none;
+	position: absolute; 
+	top: 100px; 
+	left: 170px;
 }
 
 .score {

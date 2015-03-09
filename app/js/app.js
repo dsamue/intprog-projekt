@@ -37,6 +37,7 @@ var projectApp = angular.module('projectApp', ['ngRoute','ngResource']);
 projectApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
+
       when('/start', {
         templateUrl: 'partials/pickSentence.html',
         controller: 'PickSentenceCtrl'                      //Varför får jag inte denna att funka med pickSentenceController??
@@ -51,5 +52,6 @@ projectApp.config(['$routeProvider',
       }).
       otherwise({
         redirectTo: '/start'
+
       });
   }]);
