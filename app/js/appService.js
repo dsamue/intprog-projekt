@@ -6,7 +6,7 @@ projectApp.factory('Model', function ($resource) {
 	var correctSentence = [];	  //Behlvs eftersom det inte räcker med att bara kolla att ordningsföljden är korrekt i mySentence
 	var boxWords = [];			  //All words to choose from
 	var gameScore = 0;
-	var gameLevel = 0;
+	var gameLevel = 1;
 	var myVar = 1; 				 //För test
 
 

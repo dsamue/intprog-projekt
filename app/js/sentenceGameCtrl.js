@@ -1,5 +1,5 @@
 // Controller 
-projectApp.controller('SomeCtrl', function ($scope, Model, $routeParams) {
+projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams) {
 
   $scope.testVar = $routeParams.sentenceId;		
   $scope.myVar = Model.getMyVar();

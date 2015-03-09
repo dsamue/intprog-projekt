@@ -54,3 +54,32 @@ h2,h3 {
 	background-color: #F57B26;
 	margin: 0;
 	height: 90px;
+
+.level-man {
+	background-color: #fafafa;
+	width: 70%;
+	height: 300px; /*ta bort när level-man är klar*/
+	margin: auto;
+	text-align: center;
+}
+
+.score {
+	background-color: #0582ff;
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	font-size: 20pt;
+}
+
+#soundButton {
+	background-color: #0582ff;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	border: none;
+	margin: auto;
+}
+
+#soundButton span {
+	font-size: 17pt;
+}

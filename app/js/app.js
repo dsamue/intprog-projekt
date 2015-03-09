@@ -38,25 +38,17 @@ projectApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/start', {
-        templateUrl: 'partials/start.html',
-        controller: 'SomeCtrl'                      //Varför får jag inte denna att funka med pickSentenceController??
+        templateUrl: 'partials/pickSentence.html',
+        controller: 'PickSentenceCtrl'                      //Varför får jag inte denna att funka med pickSentenceController??
       }).
       when('/home/:sentenceId', {
-        templateUrl: 'partials/home.html',
-        controller: 'SomeCtrl'
+        templateUrl: 'partials/sentenceGame.html',
+        controller: 'SentenceGameCtrl'
       }).
       when('/test', {
-        templateUrl: 'partials/test.html'           //test.html laddas in i sidan när url:en ändras till /test
+        templateUrl: 'partials/map.html',           //test.html laddas in i sidan när url:en ändras till /test
+        controller: 'MapCtrl'
       }).
-      when('/search', {
-        templateUrl: 'partials/search.html',
-        controller: 'SearchCtrl'
-      }).
-      when('/dish/:dishId', {
-        templateUrl: 'partials/dish.html',
-        controller: 'DishCtrl'
-      }).
-      // TODO in Lab 5: add more conditions for the last two screens (overview and preparation)
       otherwise({
         redirectTo: '/start'
       });
