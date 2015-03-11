@@ -1,6 +1,6 @@
 // Controller 
 
-projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams) {
+projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams, $location) {
 
   $(".alert").hide();
 
@@ -16,7 +16,6 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams)
 
   $scope.clearMySentence = function(){
     Model.clearMySentence();
-    $scope.mySentences = Model.getMySentence();       //Det här känns som en fullösning. Utan den så uppdateras inte pratbubblan när man rensar mySentence. Oklart varför..
   };
 
   $scope.checkMySentence = function(){
@@ -25,6 +24,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams)
     if (isCorrect===true){
       $(".alert-success").show();
       $(".alert-success").animate({marginTop : "25%"});
+      $location.url('/sentence/2');
     }
 
     else {
