@@ -2,7 +2,7 @@
 
 projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams) {
 
-  $(".alert").hide();
+  $scope.alerts= true; //sätter hide=true på alerts
 
   $scope.testVar = $routeParams.sentenceId;		
   $scope.myVar = Model.getMyVar();
@@ -22,23 +22,20 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams)
   $scope.checkMySentence = function(){
     isCorrect=Model.checkMySentence();
 
-    if (isCorrect===true){
-      $(".alert-success").show();
-      $(".alert-success").animate({marginTop : "0"});
+    if (isCorrect) {
+      $scope.fail = true; //göm fail-alert
+      $scope.success = false; //visa success-alert
+      
+    } else {
+      $scope.success = true;
+      $scope.fail = false;
+
     }
 
-    else {
-      $(".alert-danger").show();
-      $(".alert-danger").animate({marginTop : "0"}); //måste nollställa 
-    }
+    $scope.alerts = false; //visa alerts
+     
   };
 
-  $scope.done = function() {
-    $(".alert").animate({marginTop : "60%"});
-    $(".alert").hide(); 
-
-    //lägga till gå vidare till next level? 
-  };
 
   $scope.playSound = function(audiofile){
     var audio = new Audio('audio/'+audiofile);
