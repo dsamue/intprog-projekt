@@ -15,8 +15,8 @@ projectApp.controller('MapCtrl', function ($scope, Model){
 //metod som uppdaterar figurens position 
 	$scope.moveCharacter = function(){
 		if ($scope.level == 2){
-			$("#character").animate({'marginLeft' : "-20px"});
-			$("#character").animate({top : "+=20px"});
+			$("#character").animate({marginLeft : "-=50px"});
+			$("#character").animate({marginTop : "+=120px"});
 		}
 
 		/*else if ($scope.level == 3){

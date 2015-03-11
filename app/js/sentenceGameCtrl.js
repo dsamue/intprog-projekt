@@ -1,5 +1,8 @@
 // Controller 
+
 projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams) {
+
+  $(".alert").hide();
 
   $scope.testVar = $routeParams.sentenceId;		
   $scope.myVar = Model.getMyVar();
@@ -20,12 +23,19 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams)
     isCorrect=Model.checkMySentence();
 
     if (isCorrect===true){
-    	alert("Rätt!");
+      $(".alert-success").show();
+      $(".alert-success").animate({marginTop : "25%"});
     }
 
     else {
-    	alert("Fel..")
+      $(".alert-danger").show();
+      $(".alert-danger").animate({marginTop : "25%"});
     }
+  };
+
+  $scope.done = function() {
+    $(".alert").hide(); 
+    //lägga till gå vidare till next level? 
   };
 
   $scope.playSound = function(audiofile){

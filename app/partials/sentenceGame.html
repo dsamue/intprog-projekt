@@ -1,6 +1,6 @@
 <div class="col-sm-9">
   <div class="row sentence-box">
-    <h2></span>{{sentence.engSentence}}<span class="glyphicon glyphicon-play" ng-click="playSentence()"></h2>
+    <h2><!--{{sentence.engSentence}}--> Click here to play<span class="glyphicon glyphicon-play" ng-click="playSentence()"></span></h2>
   </div>
   <div class="bubble">
     <ul class="bubble-list">
@@ -9,7 +9,7 @@
   </div>
   <div class="bubble">
     <ul class="bubble-list">
-      <a href="#/test"><li>Klicka här för att komma till en annan sida (map.html)</li></a>   <!--När URLen ändras byter Anglar till rätt html-view-->
+      <!--<a href="#/test"><li>Klicka här för att komma till en annan sida (map.html)</li></a> -->  <!--När URLen ändras byter Anglar till rätt html-view-->
       <li ng-click="clearMySentence()">Radera alla ord</li>
       <li ng-click="checkMySentence()">Kontrollera mening</li>
     </ul>
@@ -35,4 +35,7 @@
   Testvar: {{testVar}} -->
 </div>
 
-<div>
+<div class="col-sm-12 alert alert-success" role="alert" ng-click="done()">Well done!<span class="glyphicon glyphicon-remove" ></span></div>
+
+<div class="col-sm-12 alert alert-danger" role="alert" ng-click="done()">Wrong answer<span class="glyphicon glyphicon-remove" ></span></div>
+
