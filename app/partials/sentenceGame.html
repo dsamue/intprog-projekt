@@ -15,7 +15,7 @@
     </ul>
   </div>
   <div class="word-box">                        
-      <div ng-repeat="word in sentence.words"> <!--ng-repeat är typ en forloop som går igenom "sentences" som är hämtas från modellen i someCtrl.js-->
+      <div ng-repeat="word in sentence"> <!--ng-repeat är typ en forloop som går igenom "sentences" som är hämtas från modellen i someCtrl.js-->
         <ul class="word-list">
           <li ng-click="playSound(word.audiofile)" ng-dblclick="setMySentence(word)">{{word.engWord}}</li>                                  
           <!--{{ }} är angularkod och ett listelement skapas for varje svenskt ord i sentences-->

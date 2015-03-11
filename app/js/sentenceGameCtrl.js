@@ -6,7 +6,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams)
 
   $scope.testVar = $routeParams.sentenceId;		
   $scope.myVar = Model.getMyVar();
-  $scope.sentence = Model.getSentence($routeParams.sentenceId); 
+  $scope.sentence= Model.getSentence($routeParams.sentenceId).words.sort(function() { return .5 - Math.random(); }); //någon härlig random-funktion, ordningen blir dock samma varje gång
   $scope.allSentences = Model.getAllSentences();
   $scope.mySentences = Model.getMySentence();
 
