@@ -30,6 +30,9 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
       $(".alert-danger").show();
       $(".alert-danger").animate({marginTop : "0"}); //måste nollställa 
     }
+
+
+    //Använd t.e.x denna för att gå vidare till nästa sida: $location.url('/sentence/2');  (tvåan får väl kanske vara en räknare så man hela tiden kommer vidare)
   };
 
   $scope.done = function() {

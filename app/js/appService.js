@@ -61,7 +61,7 @@ projectApp.factory('Model', function ($resource) {
 
 	// Clear mySentence
 	this.clearMySentence = function() {   
-		mySentence.splice(0,mySentence.length);    //needs to delete, not replace.  (sli)
+		mySentence.splice(0,mySentence.length);
 	}
 
 	// Compare mySentence with correctSentence
