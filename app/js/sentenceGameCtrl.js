@@ -24,17 +24,19 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams)
 
     if (isCorrect===true){
       $(".alert-success").show();
-      $(".alert-success").animate({marginTop : "25%"});
+      $(".alert-success").animate({marginTop : "0"});
     }
 
     else {
       $(".alert-danger").show();
-      $(".alert-danger").animate({marginTop : "25%"});
+      $(".alert-danger").animate({marginTop : "0"}); //måste nollställa 
     }
   };
 
   $scope.done = function() {
+    $(".alert").animate({marginTop : "60%"});
     $(".alert").hide(); 
+
     //lägga till gå vidare till next level? 
   };
 
