@@ -32,3 +32,4 @@ Hämta de slumpmässigt valda orden och visa dem
 Controller
 Lägg ordelement i pratbubble-array vid drag&drop
 
+Test
