@@ -1,6 +1,6 @@
 <div class="col-sm-9">
   <div class="row sentence-box">
-    <h2></span>{{sentence.engSentence}}<span class="glyphicon glyphicon-play" ng-click="playSentence()"></h2>
+    <h2><!--{{sentence.engSentence}}--> Click here to play the sentence in english<span class="glyphicon glyphicon-play" ng-click="playSentence()"></span></h2>
   </div>
   <div class="bubble">
     <ul class="bubble-list">
@@ -9,13 +9,13 @@
   </div>
   <div class="bubble">
     <ul class="bubble-list">
-      <a href="#/test"><li>Klicka här för att komma till en annan sida (map.html)</li></a>   <!--När URLen ändras byter Anglar till rätt html-view-->
+      <!--<a href="#/test"><li>Klicka här för att komma till en annan sida (map.html)</li></a> -->  <!--När URLen ändras byter Anglar till rätt html-view-->
       <li ng-click="clearMySentence()">Radera alla ord</li>
       <li ng-click="checkMySentence()">Kontrollera mening</li>
     </ul>
   </div>
   <div class="word-box">                        
-      <div ng-repeat="word in sentence.words"> <!--ng-repeat är typ en forloop som går igenom "sentences" som är hämtas från modellen i someCtrl.js-->
+      <div ng-repeat="word in sentence"> <!--ng-repeat är typ en forloop som går igenom "sentences" som är hämtas från modellen i someCtrl.js-->
         <ul class="word-list">
           <li ng-click="playSound(word.audiofile)" ng-dblclick="setMySentence(word)">{{word.engWord}}</li>                                  
           <!--{{ }} är angularkod och ett listelement skapas for varje svenskt ord i sentences-->
@@ -25,6 +25,8 @@
 </div>
 
 <div class="col-sm-3">
+
+  <div ng-controller="MapCtrl" ng-include="'partials/map.html'"></div>
   <!-- score -->
 
   <!--Angular testcode -->
@@ -33,4 +35,8 @@
   Testvar: {{testVar}} -->
 </div>
 
-<div>
+<!-- hidden alerts-->
+<div class="col-sm-12 alert alert-success" role="alert" ng-click="done()">Well done!<span class="glyphicon glyphicon-remove" ></span></div>
+
+<div class="col-sm-12 alert alert-danger" role="alert" ng-click="done()">Wrong answer<span class="glyphicon glyphicon-remove" ></span></div>
+

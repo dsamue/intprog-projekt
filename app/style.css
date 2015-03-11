@@ -1,6 +1,13 @@
 body {
 	font: Calibri;
 	font-size: 11pt;
+	margin: 0;
+	padding: 0;
+}
+
+.container-fluid {
+	margin: 0;
+	padding: 0;
 }
 
 h1,h1 small {
@@ -55,12 +62,15 @@ h2,h3 {
 	margin: 0;
 	height: 90px;
 
-.level-man {
-	background-color: #fafafa;
-	width: 70%;
-	height: 300px; /*ta bort när level-man är klar*/
-	margin: auto;
-	text-align: center;
+}
+
+#character {
+	width: 40px;
+	height: auto;
+	background: none;
+	position: absolute; 
+	margin-top: 100px; 
+	margin-left: -50px;
 }
 
 .score {
@@ -82,4 +92,15 @@ h2,h3 {
 
 #soundButton span {
 	font-size: 17pt;
+}
+
+.alert {
+	position: absolute;
+	width: 100%;
+	margin-top: 60%;
+	z-index: 100;
+}
+
+.glyphicon-remove {
+	float: right;
 }

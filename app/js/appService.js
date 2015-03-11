@@ -61,11 +61,12 @@ projectApp.factory('Model', function ($resource) {
 
 	// Clear mySentence
 	this.clearMySentence = function() {   
-		mySentence = [];
+		mySentence.splice(0,mySentence.length);    //needs to delete, not replace.  (sli)
 	}
 
 	// Compare mySentence with correctSentence
 	this.checkMySentence = function() {   
+
 		//numOfWords = correctSentence.words.length;       //Än så länge har vi inte lagt till någon mening i correctSentence
 		numOfWords = 4;
 
@@ -103,7 +104,6 @@ projectApp.factory('Model', function ($resource) {
 
 		'id':'1',
 		'sweSentence':'Min katt är gul',
-		'engSentence':'My cat is yellow',
 		'audiofile':'mening1.mp3',
 		'words':[{
 			'id':'1',
@@ -117,10 +117,12 @@ projectApp.factory('Model', function ($resource) {
 			'sweWord': 'katt',
 			'position':'2', 
 		 	'audiofile':'cat.mp3',
+
 			},{
 			'id':'3',
 			'engWord':'is',
 			'sweWord': 'är',
+
 			'position':'3', 
 		 	'audiofile':'is.mp3',
 			},{
@@ -136,12 +138,14 @@ projectApp.factory('Model', function ($resource) {
 		'sweSentence':'Min hund är svart',
 		'engSentence':'My dog is black',
 		'audiofile':'mening2.mp3',
+
 		'words':[{
 			'id':'5',
 			'engWord':'my',
 			'sweWord': 'min',
 			'position':'1',
 		 	'audiofile':'my.mp3',
+
 			},{
 			'id':'6',
 			'engWord':'dog',
