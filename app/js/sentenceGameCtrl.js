@@ -24,7 +24,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     if (isCorrect) {
       $scope.fail = true; //göm fail-alert
       $scope.success = false; //visa success-alert
-      $location.url('/sentence/2'); //gå till nästa level??
+      //$location.url('/sentence/2');  Använd för att gå till nästa level?? 2an kan ju ersättas med en counter t.ex.
       
     } else {
       $scope.success = true;
