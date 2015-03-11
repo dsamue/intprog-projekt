@@ -9,7 +9,7 @@
   </div>
 
   <div class="row">
-    <h2>Dubbelklicka på orden så de hamnar i rätt ordning</h2>
+    <h2>Doubleclick on the words to put them in the right order</h2>
   </div>
 
   <div class="row">
@@ -20,13 +20,13 @@
 
     <div class="col-sm-8 col-xs-12 bubble">
       <ul class="bubble-list">
-        <li ng-repeat="word in mySentences">{{word.engWord}}</li>
+        <li ng-repeat="word in mySentences">{{word.sweWord}}</li>
       </ul>
     </div>
 
     <div class="col-sm-3 col-xs-12">
-      <button class="sentence-button" ng-click="clearMySentence()">Rensa ord</button>
-      <button class="sentence-button" ng-click="checkMySentence()">Kontrollera mening</button>
+      <button class="sentence-button" ng-click="clearMySentence()">Clear words</button>
+      <button class="sentence-button" ng-click="checkMySentence()">Check sentence</button>
     </div>
 
   </div>
@@ -36,7 +36,7 @@
   <div class="row word-box">                        
       <div ng-repeat="word in sentence"> <!--ng-repeat är typ en forloop som går igenom "sentences" som är hämtas från modellen i someCtrl.js-->
         <ul class="word-list">
-          <li ng-click="playSound(word.audiofile)" ng-dblclick="setMySentence(word)">{{word.engWord}}</li>                                  
+          <li ng-click="playSound(word.audiofile)" ng-dblclick="setMySentence(word)">{{word.sweWord}}</li>                                  
           <!--{{ }} är angularkod och ett listelement skapas for varje svenskt ord i sentences-->
         </ul>
       </div>
