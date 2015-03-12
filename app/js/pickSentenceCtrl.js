@@ -22,6 +22,7 @@ projectApp.controller('Tabcontroller', function(){
 		return this.tab === checkTab;
 	};
 });
-	
+
+
 
 
