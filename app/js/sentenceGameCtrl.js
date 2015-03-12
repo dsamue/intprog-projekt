@@ -1,6 +1,6 @@
 // Controller 
 
-projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams, $location) {
+projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams, $location, $route) {
 
   $scope.alerts= true; //sätter hide=true på alerts
 
@@ -16,6 +16,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
 
   $scope.clearMySentence = function(){
     Model.clearMySentence();
+    $route.reload();                      //Kanske inte supersnyggt men enkel lösning. Behöver vi ens knappen när man kan flytta orden?
   };
 
   $scope.checkMySentence = function(){

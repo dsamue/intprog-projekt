@@ -136,7 +136,16 @@ projectApp.directive('droppable', function() {
           
           var binId = this.id;
           var item = document.getElementById(e.dataTransfer.getData('Text'));
-          this.appendChild(item);
+          
+          //Ok, här är lite modifikation av koden för att kunna byta plats på orden. Ordet hamnar då allid framför det man är på.
+          if (binId === 'dropContainer') {
+            this.appendChild(item);  
+          }
+
+          else {
+          this.parentNode.insertBefore(item, this);
+          }
+
           // call the passed drop function
           scope.$apply(function(scope) {
             var fn = scope.drop();
