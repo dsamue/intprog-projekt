@@ -3,7 +3,7 @@ projectApp.factory('Model', function ($resource) {
  
 	// Creating object that will hold application data
 	var mySentence = [];  		  //Lagra dom valda orden i appens pratbubble
-	var correctSentence = [];	  //Behlvs eftersom det inte räcker med att bara kolla att ordningsföljden är korrekt i mySentence
+	var correctSentence = [];	  //Behövs eftersom det inte räcker med att bara kolla att ordningsföljden är korrekt i mySentence
 	var boxWords = [];			  //All words to choose from
 	var gameScore = 0;
 	var gameLevel = 1;
