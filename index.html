@@ -1,56 +1,13 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dinner planner</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-
-    <link rel="stylesheet"  href="style.css">
-
-  </head>
-  <body>
-
-  	<div class="container-fluid">
-
-  		<div class="col-sm-9 gameView">
-  			<div class="col-sm-9 bubble">
-  				<ul class="bubble-list">
-
-  				</ul>
-  			</div>
-        <div class="col-sm-3">
-          <button id="soundButton"><span class="glyphicon glyphicon-volume-up"></span></button>
+    <div class="container-fluid">
+      <a href="#/start">
+        <div class="col-sm-12 header">
+          <h1>Fabulous English <small>The extra superiour way to learn English!</small></h1>
+          <h1>Fabulous Swedish <small>The extra superiour way to learn Swedish!</small></h1>
         </div>
-  			<div class="col-sm-12 word-box">
-  				<ul class="word-list">
-  					<!-- js-->
-  				</ul>
-  			</div>
-  		</div>
+      </a>
 
-  		<div class="col-sm-3">
-  			<div class="level-man">
-  				blabla
-  			</div>
-  			<div class="score">
-  				1000
-  			</div>
-  		</div>
-  	</div>
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-
-	<!-- The application JavaScript code -->
-	<script src="app.js"></script>
-  <script src="view.js"></script>
-  <script src="model.js"></script>
-  <script src="controller.js"></script>
-
-  </body>
-</html>
+      
+      <div ng-view></div>       <!--Beroende på vilken sida/url vi är på laddas olika html-filer in här. home.html är default.-->
+   
+    </div>
