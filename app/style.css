@@ -125,13 +125,13 @@ h2 {
   border: 1px solid red;
   padding: 20px;
 }
-.item {
+.dragItem {
   @extend %content;
   transition: all 0.2s ease;
 }
 .drag {
   opacity: 0.5;
 }
-.over {
-  /*background: red;
+.dragItem.over {
+  opacity: 0.5;
 }
