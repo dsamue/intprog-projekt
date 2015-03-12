@@ -54,7 +54,9 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
   };
 
   $scope.handleDrop = function(item, bin) {
-    alert('Item ' + item + ' has been dropped into ' + bin);
+    //alert('Item ' + item + ' has been dropped into ' + bin);
+    Model.setMySentence(item);
+    console.log(Model.getMySentence.length);
   }
 
 });

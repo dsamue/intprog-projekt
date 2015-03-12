@@ -33,7 +33,7 @@ h2 {
 	list-style: none;
 }
 
-.bubble-list li,.word-list li, button, #dragItem {
+.bubble-list li,.word-list li, button, #dragItem, .dragItem {
 	float: left;
 	background-color: #ff8205;
 	border-radius: 5px;

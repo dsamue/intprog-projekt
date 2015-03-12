@@ -19,10 +19,7 @@
       <button type="button" class="play-button"><span class="glyphicon glyphicon-play" ng-click="playSentence()"></span></button>
     </div>
 
-    <div class="col-sm-8 col-xs-12 bubble">
-      <ul class="bubble-list">
-        <li ng-repeat="word in mySentences">{{word.sweWord}}</li>
-      </ul>
+    <div class="col-sm-8 col-xs-12 bubble" droppable drop="handleDrop">
     </div>
 
     <div class="col-sm-3 col-xs-12">
@@ -32,22 +29,16 @@
 
   </div>
     
-
-
   <div class="row word-box">                        
-      <div ng-repeat="word in sentence"> <!--ng-repeat är typ en forloop som går igenom "sentences" som är hämtas från modellen i someCtrl.js-->
-        <ul class="word-list">
-          <li ng-click="playSound(word.audiofile)" ng-dblclick="setMySentence(word)">{{word.sweWord}}</li>                                  
-          <!--{{ }} är angularkod och ett listelement skapas for varje svenskt ord i sentences-->
-        </ul>
-      </div>
+    <div ng-repeat="word in sentence" class="dragItem" id="{{word.id}}" ng-click="playSound(word.audiofile)" ng-dblclick="setMySentence(word)" draggable>{{word.sweWord}}</div>
   </div>
 
   <!--test för drag&drop-->
+  <!--
   <div class="row">
     <div class="bubble col-md-6" droppable drop="handleDrop">
-      <div id="dragItem" draggable>Drag denna</div>  
-      <div id="dragItem" draggable>och denna</div>  
+      <div class="dragItem" id="1" draggable>Drag denna</div>  
+      <div class="dragItem" id="2" draggable>och denna</div>  
     </div>
 
     <div class="bubble col-md-6" droppable drop="handleDrop">
@@ -56,7 +47,8 @@
 
   <div class="bin" droppable drop="handleDrop" ng-repeat="bin in [1, 2, 3]" bin="bin" id="bin{{ bin }}">{{ bin }}</div>
   <div class="item" id="item{{ item }}" ng-repeat="item in [1, 2, 3]" draggable item="item">{{ item }}</div>
-
+  -->
+  
   <!-- hidden alerts-->
   <div class="row" ng-hide="alerts">
     <div class="alert alert-success" role="alert" ng-hide="success" >Well done!<button type="button">Continue</button></div>
