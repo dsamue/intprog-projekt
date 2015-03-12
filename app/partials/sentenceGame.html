@@ -37,11 +37,25 @@
   <div class="row word-box">                        
       <div ng-repeat="word in sentence"> <!--ng-repeat är typ en forloop som går igenom "sentences" som är hämtas från modellen i someCtrl.js-->
         <ul class="word-list">
-          <li ng-click="playSound(word.audiofile)" ng-dblclick="setMySentence(word)">{{word.sweWord}}</li>                                  
+          <li ng-click="playSound(word.audiofile)" ng-dblclick="setMySentence(word)">{{word.sweWord}}</li> 
+          <li>Drag denna</li>                                 
           <!--{{ }} är angularkod och ett listelement skapas for varje svenskt ord i sentences-->
         </ul>
       </div>
   </div>
+
+  <!--test för drag&drop-->
+  <div class="row">
+    <div class="bubble col-md-6">
+      <div id="dragItem">Drag denna</div>  
+    </div>
+
+    <div class="bubble col-md-6">
+    </div>
+  </div>
+
+  <div class="bin" droppable drop="handleDrop" ng-repeat="bin in [1, 2, 3]" bin="bin" id="bin{{ bin }}">{{ bin }}</div>
+  <div class="item" id="item{{ item }}" ng-repeat="item in [1, 2, 3]" draggable item="item">{{ item }}</div>
 
   <!-- hidden alerts-->
   <div class="row" ng-hide="alerts">
