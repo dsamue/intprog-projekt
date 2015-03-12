@@ -111,7 +111,11 @@ projectApp.directive('droppable', function() {
       el.addEventListener(
         'dragenter',
         function(e) {
+          var item = document.getElementById(e.dataTransfer.getData('Text'));
           this.classList.add('over');
+          /*if (this.id!='dropContainer'){
+            this.parentNode.insertBefore(this, item);
+          }*/   //Bara lite test. skulle kanske kunna användas för att placera objekt till vänster/höger om vi kollar muspositionen.
           return false;
         },
         false
@@ -137,13 +141,13 @@ projectApp.directive('droppable', function() {
           var binId = this.id;
           var item = document.getElementById(e.dataTransfer.getData('Text'));
           
-          //Ok, här är lite modifikation av koden för att kunna byta plats på orden. Ordet hamnar då allid framför det man är på.
+          //Ok, här är lite modifikation av koden för att man ska kunna byta plats på orden. Ordet hamnar då allid framför det man är över.
           if (binId === 'dropContainer') {
             this.appendChild(item);  
           }
 
           else {
-          this.parentNode.insertBefore(item, this);
+            this.parentNode.insertBefore(item, this);
           }
 
           // call the passed drop function
