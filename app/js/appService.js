@@ -102,6 +102,7 @@ projectApp.factory('Model', function ($resource) {
 
 		'id':'1',
 		'sweSentence':'Min katt är gul',
+		'engSentence':'My cat is yellow',
 		'audiofile':'mening1.mp3',
 		'words':[{
 			'id':'1',
