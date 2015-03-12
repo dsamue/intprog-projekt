@@ -125,10 +125,6 @@ h2 {
 }
 .item {
   @extend %content;
-  min-height: 150px;
-  min-width: 150px;
-  background: blue;
-  float: right;
   transition: all 0.2s ease;
 }
 .drag {

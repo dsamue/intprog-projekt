@@ -8,7 +8,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
   $scope.myVar = Model.getMyVar();
   $scope.sentence= Model.getSentence($routeParams.sentenceId).words.sort(function() { return .5 - Math.random(); }); //någon härlig random-funktion, ordningen blir dock samma varje gång
   $scope.allSentences = Model.getAllSentences();
-  $scope.mySentences = Model.getMySentence();
+  $scope.mySentence = Model.getMySentence();
 
   $scope.setMySentence = function(word){
     Model.setMySentence(word);
@@ -54,9 +54,8 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
   };
 
   $scope.handleDrop = function(item, bin) {
-    //alert('Item ' + item + ' has been dropped into ' + bin);
-    Model.setMySentence(item);
-    console.log(Model.getMySentence.length);
+    //alert('Word with id ' + item + ' has been set to mySetence ' + bin);
+    Model.setMySentence(item);  //Item är i det här fallet bara ordets ID
   }
 
 });

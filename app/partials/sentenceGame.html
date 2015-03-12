@@ -28,27 +28,31 @@
     </div>
 
   </div>
-    
+
   <div class="row word-box">                        
-    <div ng-repeat="word in sentence" class="dragItem" id="{{word.id}}" ng-click="playSound(word.audiofile)" ng-dblclick="setMySentence(word)" draggable>{{word.sweWord}}</div>
+    <div ng-repeat="word in sentence" class="dragItem item" id="word{{word.id}}" ng-click="playSound(word.audiofile)" ng-dblclick="setMySentence(word)" draggable>{{word.sweWord}}</div>
   </div>
 
   <!--test för drag&drop-->
-  <!--
+
+<!--
   <div class="row">
     <div class="bubble col-md-6" droppable drop="handleDrop">
-      <div class="dragItem" id="1" draggable>Drag denna</div>  
-      <div class="dragItem" id="2" draggable>och denna</div>  
+      <div id="dragItem" draggable>Drag denna</div>  
+      <div id="dragItem" draggable>och denna</div>  
     </div>
 
     <div class="bubble col-md-6" droppable drop="handleDrop">
     </div>
   </div>
+-->
 
+<!--
   <div class="bin" droppable drop="handleDrop" ng-repeat="bin in [1, 2, 3]" bin="bin" id="bin{{ bin }}">{{ bin }}</div>
   <div class="item" id="item{{ item }}" ng-repeat="item in [1, 2, 3]" draggable item="item">{{ item }}</div>
-  -->
-  
+-->
+
+
   <!-- hidden alerts-->
   <div class="row" ng-hide="alerts">
     <div class="alert alert-success" role="alert" ng-hide="success" >Well done!<button type="button">Continue</button></div>
