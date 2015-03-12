@@ -17,6 +17,8 @@ body {
 	background-color: #ffffff;
 	height: auto;
 	box-shadow: 0px 2px 10px #cccccc;
+	overflow: hidden;
+	padding-bottom: 30px;
 }
 
 h1,h1 small {
@@ -33,7 +35,7 @@ h2 {
 	list-style: none;
 }
 
-.bubble-list li,.word-list li, button {
+.bubble-list li,.word-list li {
 	float: left;
 	background-color: #ff8205;
 	border-radius: 5px;
@@ -41,6 +43,7 @@ h2 {
 	height: 40px;
 	padding: 10px;
 	margin: 5px;
+	border: none;
 }
 
 .bubble {
@@ -84,27 +87,48 @@ h2 {
 	font-size: 20pt;
 }
 
+button {
+	border-radius: 5px;
+	color: #ffffff;
+	height: 40px;
+	padding: 10px;
+	border: none;
+}
+
+.sentence-button {
+	float: left;
+	margin: 5px;
+	background-color: #ff8205;
+}
+
+.continue-button {
+	float: right;
+	margin-top: -10px;
+	background-color: #57aa58;
+}
+
 .play-button {
 	background-color: #0582ff;
 	width: 50px;
 	height: 50px;
 	border-radius: 25px;
 	border: none;
-	margin: auto;
+	margin-left: 15px;
+	color: #ffffff;
 }
 
 .play-button span {
 	font-size: 17pt;
 }
 
-.sentence-button {
-	border: none;
-}
-
 .alert {
-	margin: 0;
+	margin: -40px;
+	margin-top: 20px;
+	padding-top: 25px;
+	height: 90px;
 }
 
 .glyphicon-remove {
 	float: right;
+	margin: 0;
 }
