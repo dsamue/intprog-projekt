@@ -140,6 +140,12 @@ projectApp.directive('droppable', function() {
           
           var binId = this.id;
           var item = document.getElementById(e.dataTransfer.getData('Text'));
+
+          //Funderade på om detta kunde vara något för att returnerna positionen.. men vete sjutton
+          /*var position = 0;
+          while( (item = item.previousSibling) != null ){
+            position++;
+          }*/
           
           //Ok, här är lite modifikation av koden för att man ska kunna byta plats på orden. Ordet hamnar då allid framför det man är över.
           if (binId === 'dropContainer') {

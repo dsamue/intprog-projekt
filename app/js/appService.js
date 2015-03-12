@@ -25,7 +25,6 @@ projectApp.factory('Model', function ($resource) {
 	// Set gameScore
 	this.setScore = function(num) {   
 		gameScore = gameScore+num;
-		notifyObservers();
 	}
 
 	// Get gameScore
@@ -35,8 +34,7 @@ projectApp.factory('Model', function ($resource) {
 
 	// Set gameLevel
 	this.setLevel = function(num) {   
-		gameScore = num;
-		notifyObservers();
+		gameLevel += num;
 	}
 
 	// Get gameLevel
@@ -66,7 +64,7 @@ projectApp.factory('Model', function ($resource) {
 
 	// Compare mySentence with correctSentence
 	this.checkMySentence = function() {   
-
+		return true
 		//numOfWords = correctSentence.words.length;       //Än så länge har vi inte lagt till någon mening i correctSentence
 		numOfWords = 4;
 
