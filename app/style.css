@@ -33,7 +33,7 @@ h2 {
 	list-style: none;
 }
 
-.bubble-list li,.word-list li, button {
+.bubble-list li,.word-list li, button, #dragItem, .dragItem {
 	float: left;
 	background-color: #ff8205;
 	border-radius: 5px;
@@ -45,7 +45,7 @@ h2 {
 
 .bubble {
 	background-color: #f1f1f1;
-	height: 50px;
+	min-height: 50px;
 	border-radius: 30px;
 
 }	
@@ -53,6 +53,7 @@ h2 {
 .word-box {
 	background-color: #5BC0DE;
 	border-radius: 5px;
+	min-height: 50px;
 	margin: 10px;
 }
 
@@ -107,4 +108,30 @@ h2 {
 
 .glyphicon-remove {
 	float: right;
+}
+
+
+%content {
+  font-size: 32px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.bin {
+  @extend %content;
+  min-height: 150px;
+  min-width: 150px;
+  float: left;
+  border: 1px solid red;
+  padding: 20px;
+}
+.dragItem {
+  @extend %content;
+  transition: all 0.5s ease;
+}
+.drag {
+  opacity: 0.5;
+}
+.dragItem.over {
+  opacity: 0.5;
 }

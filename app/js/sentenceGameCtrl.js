@@ -1,14 +1,13 @@
 // Controller 
 
-projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams, $location) {
+projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams, $location, $route) {
 
   $scope.alerts= true; //sätter hide=true på alerts
 
-  $scope.testVar = $routeParams.sentenceId;		
   $scope.myVar = Model.getMyVar();
   $scope.sentence= Model.getSentence($routeParams.sentenceId).words.sort(function() { return .5 - Math.random(); }); //någon härlig random-funktion, ordningen blir dock samma varje gång
   $scope.allSentences = Model.getAllSentences();
-  $scope.mySentences = Model.getMySentence();
+  $scope.mySentence = Model.getMySentence();
 
   $scope.setMySentence = function(word){
     Model.setMySentence(word);
@@ -16,17 +15,18 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
 
   $scope.clearMySentence = function(){
     Model.clearMySentence();
+    $route.reload();                      //Kanske inte supersnyggt men enkel lösning. Behöver vi ens knappen när man kan flytta orden?
   };
 
-  $scope.checkMySentence = function(){
+  $scope.checkMySentence = function(){   //Denna funkar ej nu. Modellen returnerar alltid true så länge
     isCorrect=Model.checkMySentence();
 
     if (isCorrect) {
       $scope.fail = true; //göm fail-alert
       $scope.success = false; //visa success-alert
-      //$location.url('/sentence/2');  Använd för att gå till nästa level?? 2an kan ju ersättas med en counter t.ex.
-            
-    } else {
+    } 
+
+    else {
       $scope.success = true;
       $scope.fail = false;
     }
@@ -34,10 +34,15 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     $scope.alerts = false; //visa alerts 
   };
 
+  $scope.levelUp = function (){
+    Model.setLevel(1);                            //plussar en level för varje avklarad mening
+    var level = Model.getLevel().toString();
+    $location.url('/sentence/'+level); 
+  };
 
   $scope.playSound = function(audiofile){
     var audio = new Audio('audio/'+audiofile);
-	audio.play();
+	  audio.play();
   };
 
   $scope.playSentence = function(){
@@ -52,5 +57,10 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
   $scope.getMyVar = function() {
     return Model.getMyVar();
   };
+
+  $scope.handleDrop = function(item, bin) {
+    //alert('Word with id ' + item + ' has been set to mySetence ' + bin);  //Inte klart
+    Model.setMySentence(item);  //Item är i det här fallet bara ordets ID
+  }
 
 });

@@ -55,3 +55,119 @@ projectApp.config(['$routeProvider',
 
       });
   }]);
+
+
+projectApp.directive('draggable', function() {
+  return function(scope, element) {
+    // this gives us the native JS object
+    var el = element[0];
+    
+    el.draggable = true;
+    
+    el.addEventListener(
+      'dragstart',
+      function(e) {
+        e.dataTransfer.effectAllowed = 'move';
+        e.dataTransfer.setData('Text', this.id);
+        this.classList.add('drag');
+        return false;
+      },
+      false
+    );
+    
+    el.addEventListener(
+      'dragend',
+      function(e) {
+        this.classList.remove('drag');
+        return false;
+      },
+      false
+    );
+  }
+});
+
+projectApp.directive('droppable', function() {
+  return {
+    scope: {
+      drop: '&',
+      bin: '='
+    },
+    link: function(scope, element) {
+      // again we need the native object
+      var el = element[0];
+      
+      el.addEventListener(
+        'dragover',
+        function(e) {
+          e.dataTransfer.dropEffect = 'move';
+          // allows us to drop
+          if (e.preventDefault) e.preventDefault();
+          this.classList.add('over');
+          return false;
+        },
+        false
+      );
+      
+      el.addEventListener(
+        'dragenter',
+        function(e) {
+          var item = document.getElementById(e.dataTransfer.getData('Text'));
+          this.classList.add('over');
+          /*if (this.id!='dropContainer'){
+            this.parentNode.insertBefore(this, item);
+          }*/   //Bara lite test. skulle kanske kunna användas för att placera objekt till vänster/höger om vi kollar muspositionen.
+          return false;
+        },
+        false
+      );
+      
+      el.addEventListener(
+        'dragleave',
+        function(e) {
+          this.classList.remove('over');
+          return false;
+        },
+        false
+      );
+      
+      el.addEventListener(
+        'drop',
+        function(e) {
+          // Stops some browsers from redirecting.
+          if (e.stopPropagation) e.stopPropagation();
+          
+          this.classList.remove('over');
+          
+          var binId = this.id;
+          var item = document.getElementById(e.dataTransfer.getData('Text'));
+
+          //Funderade på om detta kunde vara något för att returnerna positionen.. men vete sjutton
+          /*var position = 0;
+          while( (item = item.previousSibling) != null ){
+            position++;
+          }*/
+          
+          //Ok, här är lite modifikation av koden för att man ska kunna byta plats på orden. Ordet hamnar då allid framför det man är över.
+          if (binId === 'dropContainer') {
+            this.appendChild(item);  
+          }
+
+          else {
+            this.parentNode.insertBefore(item, this);
+          }
+
+          // call the passed drop function
+          scope.$apply(function(scope) {
+            var fn = scope.drop();
+            if ('undefined' !== typeof fn) {            
+              fn(item.id, binId);
+            }
+          });
+          
+          return false;
+        },
+        false
+      );
+    }
+  }
+});
