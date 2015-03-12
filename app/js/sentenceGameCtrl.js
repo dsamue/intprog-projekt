@@ -21,7 +21,6 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
   $scope.checkMySentence = function(){
     isCorrect=Model.checkMySentence();
 
-
     if (isCorrect) {
       $scope.fail = true; //göm fail-alert
       $scope.success = false; //visa success-alert
@@ -30,12 +29,9 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     } else {
       $scope.success = true;
       $scope.fail = false;
-
-
     }
 
-    $scope.alerts = false; //visa alerts
-     
+    $scope.alerts = false; //visa alerts 
   };
 
 
