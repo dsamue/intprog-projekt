@@ -5,7 +5,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
   $scope.alerts= true; //sätter hide=true på alerts
 
   $scope.myVar = Model.getMyVar();
-  $scope.sentence= Model.getSentence($routeParams.sentenceId).words.sort(function() { return .5 - Math.random(); }); //någon härlig random-funktion, ordningen blir dock samma varje gång
+  $scope.sentence = Model.getSentence($routeParams.sentenceId).words.sort(function() { return .5 - Math.random(); }); //någon härlig random-funktion, ordningen blir dock samma varje gång
   $scope.allSentences = Model.getAllSentences();
   $scope.mySentence = Model.getMySentence();//Model.getMySentence();
   $scope.testArray = ['1','2','3','4','5'];
@@ -15,8 +15,12 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
   };
 
   $scope.clearMySentence = function(){
+    $scope.sentence = $scope.sentence.concat($scope.mySentence);  //lägger till valda ord i wordbox igen om man rensar orden
     Model.clearMySentence();
-    $route.reload();                      //Kanske inte supersnyggt men enkel lösning. Behöver vi ens knappen när man kan flytta orden?
+
+    //$scope.sentence = Model.getSentence($routeParams.sentenceId).words.sort(function() { return .5 - Math.random(); }); //någon härlig random-funktion, ordningen blir dock samma varje gång
+
+    //$route.reload();                      //Kanske inte supersnyggt men enkel lösning. Behöver vi ens knappen när man kan flytta orden?
   };
 
   $scope.checkMySentence = function(){   //Denna funkar ej nu. Modellen returnerar alltid true så länge
@@ -25,6 +29,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     if (isCorrect) {
       $scope.fail = true; //göm fail-alert
       $scope.success = false; //visa success-alert
+      Model.clearMySentence();
     } 
 
     else {
