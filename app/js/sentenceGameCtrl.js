@@ -7,7 +7,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
   $scope.myVar = Model.getMyVar();
   $scope.sentence= Model.getSentence($routeParams.sentenceId).words.sort(function() { return .5 - Math.random(); }); //någon härlig random-funktion, ordningen blir dock samma varje gång
   $scope.allSentences = Model.getAllSentences();
-  $scope.mySentence = [];//Model.getMySentence();
+  $scope.mySentence = Model.getMySentence();//Model.getMySentence();
   $scope.testArray = ['1','2','3','4','5'];
 
   $scope.setMySentence = function(word){
@@ -32,7 +32,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
       $scope.fail = false;
     }
 
-    $scope.alerts = false; //visa alerts 
+    $scope.alerts = false; //visa alerts*/ 
   };
 
   $scope.levelUp = function (){

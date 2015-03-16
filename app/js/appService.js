@@ -64,7 +64,6 @@ projectApp.factory('Model', function ($resource) {
 
 	// Compare mySentence with correctSentence
 	this.checkMySentence = function() {   
-		return true
 		//numOfWords = correctSentence.words.length;       //Än så länge har vi inte lagt till någon mening i correctSentence
 		numOfWords = 4;
 

@@ -12,7 +12,12 @@
 }
 
 .as-sortable-placeholder {
+    display: inline-block;
+    width: 124px;
+    height: 110px;
+    float: left;
 }
+
 
 .as-sortable-drag {
     position: absolute;
