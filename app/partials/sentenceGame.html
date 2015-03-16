@@ -20,7 +20,7 @@
     </div>
 
     <!--Bubble-->
-    <div id='dropContainer' class="col-sm-8 col-xs-12 bubble">
+    <div id='dropContainer' class="col-sm-8 col-xs-12 bubble" data-as-sortable data-ng-model="mySentence">
     </div>
 
     <!--Buttons-->
@@ -31,8 +31,10 @@
   </div>
 
   <!--Wordbox-->
-  <div id="dropContainer" class="row word-box">                        
-    <div ng-repeat="word in sentence" class="dragItem item" id="word{{word.id}}" ng-click="playSound(word.audiofile)">{{word.sweWord}}</div>
+  <div id="dropContainer" class="row word-box" data-as-sortable data-ng-model="sentence">                        
+    <div ng-repeat="word in sentence" data-as-sortable-item class="dragItem" id="word{{word.id}}" ng-click="playSound(word.audiofile)">
+      <div data-as-sortable-item-handle>{{word.sweWord}}</div>
+    </div>
   </div>
 
 
