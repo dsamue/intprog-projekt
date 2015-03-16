@@ -19,24 +19,29 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
 
-  <!-- The application JavaScript code -->
-  <script src="js/app.js"></script>
-  <script src="js/appService.js"></script>
-  <script src="js/pickSentenceCtrl.js"></script>
-  <script src="js/sentenceGameCtrl.js"></script>
-  <script src="js/mapCtrl.js"></script>
+    <!-- The application JavaScript code -->
+    <script src="js/app.js"></script>
+    <script src="js/appService.js"></script>
+    <script src="js/pickSentenceCtrl.js"></script>
+    <script src="js/sentenceGameCtrl.js"></script>
+    <script src="js/mapCtrl.js"></script>
 
-  </head>
-  
+   <!--ng-Sortable-->
+    <link rel="stylesheet" type="text/css" href="ng-sortable/ng-sortable.css">
+    <script src="ng-sortable/ng-sortable.js"></script>
+
+  </head>  
+
   <body>
     <div class="container-fluid">
       <a href="#/start">
         <div class="col-sm-12 header">
-          <h1>Fabulous English <small>The extra superiour way to learn English!</small></h1>
+          <h1>Fabulous Swedish <small>The extra superiour way to learn Swedish!</small></h1>
         </div>
       </a>
-
+      
       <div ng-view></div>       <!--Beroende på vilken sida/url vi är på laddas olika html-filer in här. home.html är default.-->
    
     </div>
