@@ -8,7 +8,7 @@
 }
 
 .as-sortable-item-handle {
-    cursor: default;
+    cursor: move;
 }
 
 .as-sortable-placeholder {
