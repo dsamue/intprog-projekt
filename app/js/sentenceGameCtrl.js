@@ -7,7 +7,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
   $scope.myVar = Model.getMyVar();
   $scope.sentence = Model.getSentence($routeParams.sentenceId).words.sort(function() { return .5 - Math.random(); }); //någon härlig random-funktion, ordningen blir dock samma varje gång
   $scope.allSentences = Model.getAllSentences();
-  $scope.mySentence = Model.getMySentence();//Model.getMySentence();
+  $scope.mySentence = Model.getMySentence();
   $scope.testArray = ['1','2','3','4','5'];
 
   $scope.setMySentence = function(word){
@@ -17,14 +17,11 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
   $scope.clearMySentence = function(){
     $scope.sentence = $scope.sentence.concat($scope.mySentence);  //lägger till valda ord i wordbox igen om man rensar orden
     Model.clearMySentence();
-
-    //$scope.sentence = Model.getSentence($routeParams.sentenceId).words.sort(function() { return .5 - Math.random(); }); //någon härlig random-funktion, ordningen blir dock samma varje gång
-
-    //$route.reload();                      //Kanske inte supersnyggt men enkel lösning. Behöver vi ens knappen när man kan flytta orden?
   };
 
-  $scope.checkMySentence = function(){   //Denna funkar ej nu. Modellen returnerar alltid true så länge
-    isCorrect=Model.checkMySentence();
+  $scope.checkMySentence = function(){ 
+    Model.setCorrectSentence($routeParams.sentenceId);      
+    isCorrect = Model.checkMySentence();
 
     if (isCorrect) {
       $scope.fail = true; //göm fail-alert
