@@ -2,28 +2,30 @@
 
 projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams, $location, $route) {
 
-  $scope.alerts= true; //sätter hide=true på alerts
+  $scope.alerts = true; //sätter hide=true på alerts
 
-  $scope.myVar = Model.getMyVar();
-  $scope.sentence= Model.getSentence($routeParams.sentenceId).words.sort(function() { return .5 - Math.random(); }); //någon härlig random-funktion, ordningen blir dock samma varje gång
+  $scope.sentence = Model.getSentence($routeParams.sentenceId).words.sort(function() { return .5 - Math.random(); }); //någon härlig random-funktion, ordningen blir dock samma varje gång
   $scope.allSentences = Model.getAllSentences();
   $scope.mySentence = Model.getMySentence();
+
 
   $scope.setMySentence = function(word){
     Model.setMySentence(word);
   };
 
   $scope.clearMySentence = function(){
+    $scope.sentence = $scope.sentence.concat($scope.mySentence);  //lägger till valda ord i wordbox igen om man rensar orden
     Model.clearMySentence();
-    $route.reload();                      //Kanske inte supersnyggt men enkel lösning. Behöver vi ens knappen när man kan flytta orden?
   };
 
-  $scope.checkMySentence = function(){   //Denna funkar ej nu. Modellen returnerar alltid true så länge
-    isCorrect=Model.checkMySentence();
+  $scope.checkMySentence = function(){ 
+    Model.setCorrectSentence($routeParams.sentenceId);      
+    isCorrect = Model.checkMySentence();
 
     if (isCorrect) {
       $scope.fail = true; //göm fail-alert
       $scope.success = false; //visa success-alert
+      Model.clearMySentence();
     } 
 
     else {
@@ -31,7 +33,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
       $scope.fail = false;
     }
 
-    $scope.alerts = false; //visa alerts 
+    $scope.alerts = false; //visa alerts*/ 
   };
 
   $scope.levelUp = function (){
@@ -58,9 +60,11 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     return Model.getMyVar();
   };
 
-  $scope.handleDrop = function(item, bin) {
-    //alert('Word with id ' + item + ' has been set to mySetence ' + bin);  //Inte klart
-    Model.setMySentence(item);  //Item är i det här fallet bara ordets ID
-  }
-
+  //Ev.för drag/drop. Kolla mer vid behov. Hur ska dom skrivas? $scope.accept = func...? 
+  /*$scope.dragControlListeners = {
+    accept: function (sourceItemHandleScope, destSortableScope) {return boolean};//override to determine drag is allowed or not. default is true.
+    itemMoved: function (event) {}; //Do what you want}
+    orderChanged: function(event) {}; //Do what you want}
+    //containment: '#board'//optional param.
+  };*/
 });

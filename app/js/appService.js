@@ -3,7 +3,7 @@ projectApp.factory('Model', function ($resource) {
  
 	// Creating object that will hold application data
 	var mySentence = [];  		  //Lagra dom valda orden i appens pratbubble
-	var correctSentence = [];	  //Behövs eftersom det inte räcker med att bara kolla att ordningsföljden är korrekt i mySentence
+	var correctSentence = {};	  //Behövs eftersom det inte räcker med att bara kolla att ordningsföljden är korrekt i mySentence
 	var boxWords = [];			  //All words to choose from
 	var gameScore = 0;
 	var gameLevel = 1;
@@ -43,8 +43,8 @@ projectApp.factory('Model', function ($resource) {
 	}
 
 	// Set correctSentence
-	this.setCorretSentence = function(sentence) {   
-		correctSentence = [sentence];
+	this.setCorrectSentence = function(id) {   
+		correctSentence = this.getSentence(id);
 	}
 
 	// Add choosen word from app to mySentence
@@ -64,9 +64,7 @@ projectApp.factory('Model', function ($resource) {
 
 	// Compare mySentence with correctSentence
 	this.checkMySentence = function() {   
-		return true
-		//numOfWords = correctSentence.words.length;       //Än så länge har vi inte lagt till någon mening i correctSentence
-		numOfWords = 4;
+		numOfWords = correctSentence['length'];       
 
 		if (mySentence.length != numOfWords){
 			return false
@@ -82,10 +80,12 @@ projectApp.factory('Model', function ($resource) {
 		}
 	}
 
+	// Get all sentences	
 	this.getAllSentences = function() {
 		return sentences;
 	}
 
+	// Get specific sentence
 	this.getSentence = function(id) {
 		for (i=0; i<sentences.length; i++){
 			if(sentences[i].id == id){
@@ -104,6 +104,8 @@ projectApp.factory('Model', function ($resource) {
 		'sweSentence':'Min katt är gul',
 		'engSentence':'My cat is yellow',
 		'audiofile':'mening1.mp3',
+		'length': 4,
+
 		'words':[{
 			'id':'1',
 			'engWord':'my',
@@ -137,6 +139,7 @@ projectApp.factory('Model', function ($resource) {
 		'sweSentence':'Min hund är svart',
 		'engSentence':'My dog is black',
 		'audiofile':'mening2.mp3',
+		'length': 4,
 
 		'words':[{
 			'id':'5',
