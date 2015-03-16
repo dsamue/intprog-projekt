@@ -35,8 +35,8 @@
 
   <!--Wordbox-->
   <div id="sortable-container" class="row word-box" as-sortable data-ng-model="sentence">                        
-    <div ng-repeat="word in sentence" as-sortable-item class="dragItem" id="word{{word.id}}" ng-click="playSound(word.audiofile)">
-      <div as-sortable-item-handle>{{word.sweWord}}</div>
+    <div ng-repeat="word in sentence" as-sortable-item as-sortable-item-handle class="dragItem" id="word{{word.id}}" ng-click="playSound(word.audiofile)">
+      <div>{{word.sweWord}}</div>
     </div>
   </div>
 

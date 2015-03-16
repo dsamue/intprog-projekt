@@ -8,7 +8,7 @@
 }
 
 .as-sortable-item-handle {
-    cursor: move;
+    cursor: default;
 }
 
 .as-sortable-placeholder {
@@ -16,6 +16,10 @@
     width: 124px;
     height: 110px;
     float: left;
+    border: 1px darkgrey;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #dbdbdb;
 }
 
 
@@ -27,4 +31,33 @@
 
 .as-sortable-hidden {
     display: none !important;
+}
+
+
+/*
+.as-sortable-item, .as-sortable-placeholder {
+    min-height: 20px;
+    margin: 1px 2px 5px 1px;
+    border-radius: 10px;
+}
+
+.as-sortable-item {
+    border: solid 1px darkgrey;
+    background-color: #ffffff;
+}
+
+.as-sortable-item-handle {
+}
+
+.as-sortable-placeholder {
+    border: 1px dashed darkgrey;
+    box-sizing: border-box;
+    background-color: #dbdbdb;
+}
+
+.as-sortable-drag {
+    opacity: .8;
+}
+
+.as-sortable-hidden {
 }
