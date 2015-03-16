@@ -59,11 +59,12 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     return Model.getMyVar();
   };
 
+  //Hur ska dom här skrivas? $scope.accept = func...?    också himla oklart skriven. 
+  
   /*$scope.dragControlListeners = {
-    accept: function (sourceItemHandleScope, destSortableScope) {return boolean}//override to determine drag is allowed or not. default is true.
-    itemMoved: function (event) {//Do what you want},
-    orderChanged: function(event) {//Do what you want},
-    containment: '#board'//optional param.
-};*/
-
+    accept: function (sourceItemHandleScope, destSortableScope) {return boolean};//override to determine drag is allowed or not. default is true.
+    itemMoved: function (event) {}; //Do what you want}
+    orderChanged: function(event) {}; //Do what you want}
+    //containment: '#board'//optional param.
+  };*/
 });
