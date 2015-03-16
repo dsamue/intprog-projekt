@@ -40,18 +40,17 @@ projectApp.config(['$routeProvider',
 
       when('/start', {
         templateUrl: 'partials/pickSentence.html',
-        controller: 'PickSentenceCtrl'                      //Varför får jag inte denna att funka med pickSentenceController??
+        controller: 'PickSentenceCtrl'                
       }).
       when('/sentence/:sentenceId', {
         templateUrl: 'partials/sentenceGame.html',
         controller: 'SentenceGameCtrl'
       }).
       when('/test', {
-        templateUrl: 'partials/map.html',           //test.html laddas in i sidan när url:en ändras till /test
+        templateUrl: 'partials/map.html',          
         controller: 'MapCtrl'
       }).
       otherwise({
         redirectTo: '/start'
-
       });
   }]);

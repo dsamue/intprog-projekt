@@ -40,36 +40,6 @@
     </div>
   </div>
 
-  <!--dragdrop test-->
-  <div class="row">
-    test1
-    <ul data-as-sortable data-ng-model="testArray">
-      <li ng-repeat="item in testArray" data-as-sortable-item>
-          <div data-as-sortable-item-handle>
-               {{item}}
-          </div>
-      </li>
-    </ul>
-  </div>
-
- <div class="row">
-    test2
-    <ul ngmodel="testArray">
-      <li ng-repeat="item in testArray">
-          <div class="test">
-               {{item}}
-          </div>
-      </li>
-    </ul>
-  </div>
-
-  <ul as-sortable ng-model="testArray">
-    <li ng-repeat="number in testArray" as-sortable-item as-sortable-item-handle>
-      {{number}}
-    </li>
-  </ul>
-
-
   <!-- hidden alerts-->
   <div class="row" ng-hide="alerts">
     <div class="alert alert-success" role="alert" ng-hide="success" >Well done!<button type="button" ng-click="levelUp()">Continue</button></div>

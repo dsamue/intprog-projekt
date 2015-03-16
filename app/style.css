@@ -39,7 +39,7 @@ h3 {
 	list-style: none;
 }
 
-.bubble-list li,.word-list li, button, #dragItem, .dragItem, .test {
+.bubble-list li,.word-list li, button, .dragItem{
 	float: left;
 	background-color: #ff8205;
 	border-radius: 5px;
@@ -67,7 +67,6 @@ h3 {
 	background-color: #F57B26;
 	margin: 0;
 	height: 90px;
-
 }
 
 .progress {
@@ -115,32 +114,6 @@ h3 {
 .glyphicon-remove {
 	float: right;
 }
-
-%content {
-  font-size: 32px;
-  text-align: center;
-  margin: 0 5px;
-}
-
-.bin {
-  @extend %content;
-  min-height: 150px;
-  min-width: 150px;
-  float: left;
-  border: 1px solid red;
-  padding: 20px;
-}
-.dragItem {
-  @extend %content;
-  transition: all 0.5s ease;
-}
-.drag {
-  opacity: 0.5;
-}
-.dragItem.over {
-  opacity: 0.5;
-}
-
 
 section{
 	float: center;

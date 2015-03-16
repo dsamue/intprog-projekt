@@ -64,9 +64,7 @@ projectApp.factory('Model', function ($resource) {
 
 	// Compare mySentence with correctSentence
 	this.checkMySentence = function() {   
-		numOfWords = correctSentence.words.length;       //Än så länge har vi inte lagt till någon mening i correctSentence
-		console.log(numOfWords);
-		//numOfWords = 4;
+		numOfWords = correctSentence['length'];       
 
 		if (mySentence.length != numOfWords){
 			return false
@@ -82,10 +80,12 @@ projectApp.factory('Model', function ($resource) {
 		}
 	}
 
+	// Get all sentences	
 	this.getAllSentences = function() {
 		return sentences;
 	}
 
+	// Get specific sentence
 	this.getSentence = function(id) {
 		for (i=0; i<sentences.length; i++){
 			if(sentences[i].id == id){
@@ -104,6 +104,8 @@ projectApp.factory('Model', function ($resource) {
 		'sweSentence':'Min katt är gul',
 		'engSentence':'My cat is yellow',
 		'audiofile':'mening1.mp3',
+		'length': 4,
+
 		'words':[{
 			'id':'1',
 			'engWord':'my',
@@ -137,6 +139,7 @@ projectApp.factory('Model', function ($resource) {
 		'sweSentence':'Min hund är svart',
 		'engSentence':'My dog is black',
 		'audiofile':'mening2.mp3',
+		'length': 4,
 
 		'words':[{
 			'id':'5',
