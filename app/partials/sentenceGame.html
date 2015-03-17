@@ -42,9 +42,19 @@
 
   <!-- hidden alerts-->
   <div class="row" ng-hide="alerts">
-    <div class="alert alert-success" role="alert" ng-hide="success" >Well done!<button type="button" ng-click="levelUp()">Continue</button></div>
 
-    <div class="alert alert-danger" role="alert" ng-hide="fail" >Wrong answer</div>
+
+    <div class="alert alert-success" role="alert" ng-hide="success" >
+      <p><span class="glyphicon glyphicon-ok"></span>
+      Well done!</p>
+      <button type="button" class="continue-button" ng-click="levelUp()">Continue</button>
+    </div>
+
+    <div class="alert alert-danger" role="alert" ng-hide="fail" >
+      <p><span class="glyphicon glyphicon-remove" ></span>
+      Wrong answer</p>
+    </div>
+  
   </div>
 
 
