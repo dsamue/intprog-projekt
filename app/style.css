@@ -128,10 +128,7 @@ button {
 }
 
 .alert span {
-	font-size: 20pt;
-	background-color: red;
-	margin-bottom: -10px;
-
+	font-size: 12pt;
 }
 
 .alert {
@@ -141,27 +138,10 @@ button {
 	height: 110px;
 }
 
-.glyphicon-remove {
-	float: right;
-}
 
 .pickSentence {
-	width: 70%;
+	width: 60%;
 	margin: auto;
-	background-color: black;
-}
-
-.pickSentence p {
-	font-family: Lobster;
-	font-size: 22px;
-	font-weight: bold;
-	font-style: italic;
-	color: rgb(62, 62, 62);
-	margin: 25px;
-}
-
-.pickSentence ul {
-	float: left;
 }
 
 .pickSentence li {
