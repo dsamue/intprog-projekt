@@ -11,19 +11,17 @@
     cursor: move;
 }
 
-.as-sortable-placeholder {
+.as-sortable-placeholder { /*lägger en box där din dragItem hamnar*/
     display: inline-block;
     width: 124px;
     height: 110px;
     float: left;
-    border: 1px darkgrey;
     margin: 5px;
-    border-radius: 5px;
-    background-color: #dbdbdb;
 }
 
 
-.as-sortable-drag {
+.as-sortable-drag { /*hur den stylas när den är i "luften"*/
+    background: none; 
     position: absolute;
     pointer-events: none;
     z-index: 9999;

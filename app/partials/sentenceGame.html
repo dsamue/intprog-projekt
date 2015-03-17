@@ -22,7 +22,7 @@
     <!--Bubble-->
     <div id='sortable-container' class="col-sm-8 col-xs-12 bubble" data-as-sortable data-ng-model="mySentence">
       <div ng-repeat="word in mySentence" as-sortable-item class="dragItem" id="word{{word.id}}" ng-click="playSound(word.audiofile)">
-        <div as-sortable-item-handle>{{word.sweWord}}</div>
+        <div as-sortable-item-handle >{{word.sweWord}}</div>
       </div>
     </div>
 
