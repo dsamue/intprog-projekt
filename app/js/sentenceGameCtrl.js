@@ -1,30 +1,27 @@
 // Controller 
 
-projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams, $location) {
+projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams, $location, $route) {
 
-  $scope.alerts= true; //sätter hide=true på alerts
+  $scope.alerts = true; //sätter hide=true på alerts
 
-  $scope.testVar = $routeParams.sentenceId;		
-  $scope.myVar = Model.getMyVar();
-  $scope.sentence= Model.getSentence($routeParams.sentenceId).words.sort(function() { return .5 - Math.random(); }); //någon härlig random-funktion, ordningen blir dock samma varje gång
+  $scope.sentence = Model.getSentence($routeParams.sentenceId).words.sort(function() { return .5 - Math.random(); }); //någon härlig random-funktion, ordningen blir dock samma varje gång
   $scope.allSentences = Model.getAllSentences();
-  $scope.mySentences = Model.getMySentence();
+  $scope.mySentence = Model.getMySentence();
+
 
   $scope.setMySentence = function(word){
     Model.setMySentence(word);
   };
 
   $scope.clearMySentence = function(){
+    $scope.sentence = $scope.sentence.concat($scope.mySentence);  //lägger till valda ord i wordbox igen om man rensar orden
     Model.clearMySentence();
   };
 
-  $scope.nextLevel = function() {
-    Model.clearMySentence(); //nollställa sentence
-    $location.url('/sentence/2'); //gå till nästa level??
-  }
 
-  $scope.checkMySentence = function(){
-    isCorrect=Model.checkMySentence();
+  $scope.checkMySentence = function(){ 
+    Model.setCorrectSentence($routeParams.sentenceId);      
+    isCorrect = Model.checkMySentence();
 
     if (isCorrect) {
       $scope.fail = true; //göm fail-alert
@@ -35,13 +32,19 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
       $scope.fail = false;
     }
 
-    $scope.alerts = false; //visa alerts 
+    $scope.alerts = false; //visa alerts*/ 
   };
 
+  $scope.levelUp = function (){
+    Model.clearMySentence(); // clearMySenctence() borde köras när du väljer att gå till nästa level..
+    Model.setLevel(1);                            //plussar en level för varje avklarad mening
+    var level = Model.getLevel().toString();
+    $location.url('/sentence/'+level); 
+  };
 
   $scope.playSound = function(audiofile){
     var audio = new Audio('audio/'+audiofile);
-	audio.play();
+	  audio.play();
   };
 
   $scope.playSentence = function(){
@@ -57,4 +60,11 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     return Model.getMyVar();
   };
 
+  //Ev.för drag/drop. Kolla mer vid behov. Hur ska dom skrivas? $scope.accept = func...? 
+  /*$scope.dragControlListeners = {
+    accept: function (sourceItemHandleScope, destSortableScope) {return boolean};//override to determine drag is allowed or not. default is true.
+    itemMoved: function (event) {}; //Do what you want}
+    orderChanged: function(event) {}; //Do what you want}
+    //containment: '#board'//optional param.
+  };*/
 });
