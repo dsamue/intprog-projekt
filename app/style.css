@@ -37,11 +37,7 @@ h3 {
 
 }
 
-.bubble-list,.word-list {
-	list-style: none;
-}
-
-.bubble-list li,.word-list li, .dragItem{
+.dragItem{
 	float: left;
 	background-color: #ff8205;
 	border-radius: 5px;
@@ -74,23 +70,6 @@ h3 {
 
 .progress {
 	margin-bottom: 50px;
-}
-
-#character {
-	width: 40px;
-	height: auto;
-	background: none;
-	position: absolute; 
-	margin-top: 100px; 
-	margin-left: -50px;
-}
-
-.score {
-	background-color: #0582ff;
-	width: 80%;
-	margin: auto;
-	text-align: center;
-	font-size: 20pt;
 }
 
 button {
