@@ -37,18 +37,6 @@ h3 {
 
 }
 
-
- .dragItem {
-	float: left;
-	background-color: #ff8205;
-	border-radius: 5px;
-	color: #ffffff;
-	height: 40px;
-	padding: 10px;
-	margin: 5px;
-	border: none;
-}
-
 .bubble {
 	background-color: #f1f1f1;
 	min-height: 50px;
@@ -63,14 +51,21 @@ h3 {
 	margin: 10px;
 }
 
+.dragItem{
+	float: left;
+	background-color: #ff8205;
+	border-radius: 5px;
+	color: #ffffff;
+	height: 40px;
+	padding: 10px;
+	margin: 5px;
+	border: none;
+}
+
 .header {
 	background-color: #F57B26;
 	margin: 0;
 	height: 90px;
-}
-
-.progress {
-	margin-bottom: 50px;
 }
 
 
