@@ -18,13 +18,17 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     Model.clearMySentence();
   };
 
+  $scope.nextLevel = function() {
+    Model.clearMySentence(); //nollställa sentence
+    $location.url('/sentence/2'); //gå till nästa level??
+  }
+
   $scope.checkMySentence = function(){
     isCorrect=Model.checkMySentence();
 
     if (isCorrect) {
       $scope.fail = true; //göm fail-alert
       $scope.success = false; //visa success-alert
-      $location.url('/sentence/2'); //gå till nästa level??
       
     } else {
       $scope.success = true;

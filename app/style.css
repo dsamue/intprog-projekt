@@ -121,14 +121,19 @@ button {
 	font-size: 17pt;
 }
 
+.alert span {
+	font-size: 20pt;
+	background-color: red;
+	margin-bottom: -10px;
+
+}
+
 .alert {
 	margin: -40px;
 	margin-top: 20px;
 	padding-top: 25px;
-	height: 90px;
+	height: 110px;
 }
 
-.glyphicon-remove {
-	float: right;
-	margin: 0;
-}
+
+

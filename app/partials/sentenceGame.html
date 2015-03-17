@@ -45,9 +45,18 @@
 
   <!-- hidden alerts-->
   <div class="row" ng-hide="alerts">
-    <div class="alert alert-success" role="alert" ng-hide="success" >Well done!<button type="button" class="continue-button">Continue</button></div>
 
-    <div class="alert alert-danger" role="alert" ng-hide="fail" >Wrong answer</div>
+    <div class="alert alert-success" role="alert" ng-hide="success" >
+      <span class="glyphicon glyphicon-ok"></span>
+      Well done!
+      <button type="button" class="continue-button" ng-click="nextLevel()">Continue</button>
+    </div>
+
+    <div class="alert alert-danger" role="alert" ng-hide="fail" >
+      <span class="glyphicon glyphicon-remove" ></span>
+      <p>Wrong answer</p>
+    </div>
+  
   </div>
 
 </div>
