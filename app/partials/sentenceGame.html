@@ -20,7 +20,10 @@
     </div>
 
     <!--Bubble-->
-    <div id='dropContainer' class="col-sm-8 col-xs-12 bubble" droppable drop="handleDrop">
+    <div id='sortable-container' class="col-sm-8 col-xs-12 bubble" data-as-sortable data-ng-model="mySentence">
+      <div ng-repeat="word in mySentence" as-sortable-item class="dragItem" id="word{{word.id}}" ng-click="playSound(word.audiofile)">
+        <div as-sortable-item-handle>{{word.sweWord}}</div>
+      </div>
     </div>
 
     <!--Buttons-->
@@ -31,10 +34,11 @@
   </div>
 
   <!--Wordbox-->
-  <div id="dropContainer" class="row word-box" droppable drop="handleDrop">                        
-    <div ng-repeat="word in sentence" class="dragItem item" id="word{{word.id}}" ng-click="playSound(word.audiofile)" draggable droppable drop="handleDrop">{{word.sweWord}}</div>
+  <div id="sortable-container" class="row word-box" as-sortable data-ng-model="sentence">                        
+    <div ng-repeat="word in sentence" as-sortable-item class="dragItem"  id="word{{word.id}}" ng-click="playSound(word.audiofile)">  
+      <div as-sortable-item-handle>{{word.sweWord}}</div>
+    </div>
   </div>
-
 
   <!-- hidden alerts-->
   <div class="row" ng-hide="alerts">
@@ -42,6 +46,8 @@
 
     <div class="alert alert-danger" role="alert" ng-hide="fail" >Wrong answer</div>
   </div>
+
+
 
 </div>
 
