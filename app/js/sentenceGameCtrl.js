@@ -36,6 +36,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
   };
 
   $scope.levelUp = function (){
+
     Model.clearMySentence(); // clearMySenctence() borde köras när du väljer att gå till nästa level..
     Model.setLevel(1);                            //plussar en level för varje avklarad mening
     var level = Model.getLevel().toString();

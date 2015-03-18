@@ -11,12 +11,9 @@
     cursor: move;
 }
 
-.as-sortable-placeholder { /*lägger en box där din dragItem hamnar*/
+.as-sortable-placeholder { /*vad händer när du hovrar över drop*/
     display: inline-block;
-    width: 124px;
-    height: 110px;
     float: left;
-    margin: 5px;
 }
 
 

@@ -235,6 +235,177 @@ projectApp.factory('Model', function ($resource) {
 			'position':'4', 
 		 	'audiofile':'randig.mp3',
 			}]
+		},{
+
+		'id':'5',
+		'sweSentence':'Mina jordgubbar',
+		'engSentence':'My strawberries are red',
+		'audiofile':'mening4.mp3',
+		'length': 4,
+
+		'words':[{
+			'id':'17',
+			'engWord':'my',
+			'sweWord': 'mina',
+			'position':'1',
+		 	'audiofile':'min.mp3',
+
+			},{
+			'id':'14',
+			'engWord':'strawberries',
+			'sweWord': 'jordgubbar',
+			'position':'2', 
+		 	'audiofile':'tiger.mp3', //ljudfil ska ändras
+			},{
+			'id':'19',
+			'engWord':'is',
+			'sweWord': 'är',
+			'position':'3', 
+		 	'audiofile':'är.mp3',
+			},{
+			'id':'16',
+			'engWord':'red',
+			'sweWord': 'röda',
+			'position':'4', 
+		 	'audiofile':'mat.mp3',
+			}]
+		},{
+
+		'id':'6',
+		'sweSentence':'Min mat är god',
+		'engSentence':'My food is tasty',
+		'audiofile':'mening4.mp3',
+		'length': 4,
+
+		'words':[{
+			'id':'21',
+			'engWord':'my',
+			'sweWord': 'min',
+			'position':'1',
+		 	'audiofile':'min.mp3',
+
+			},{
+			'id':'22',
+			'engWord':'food',
+			'sweWord': 'mat',
+			'position':'2', 
+		 	'audiofile':'mat.mp3',
+			},{
+			'id':'23',
+			'engWord':'is',
+			'sweWord': 'är',
+			'position':'3', 
+		 	'audiofile':'är.mp3',
+			},{
+			'id':'24',
+			'engWord':'tasty',
+			'sweWord': 'god',
+			'position':'4', 
+		 	'audiofile':'god.mp3',
+			}]
+		},{
+
+		'id':'7',
+		'sweSentence':'Min tiger är randig',
+		'engSentence':'My food is foody',
+		'audiofile':'mening4.mp3',
+		'length': 4,
+
+		'words':[{
+			'id':'25',
+			'engWord':'my',
+			'sweWord': 'min',
+			'position':'1',
+		 	'audiofile':'min.mp3',
+
+			},{
+			'id':'26',
+			'engWord':'tiger',
+			'sweWord': 'tiger',
+			'position':'2', 
+		 	'audiofile':'tiger.mp3',
+			},{
+			'id':'27',
+			'engWord':'is',
+			'sweWord': 'är',
+			'position':'3', 
+		 	'audiofile':'är.mp3',
+			},{
+			'id':'28',
+			'engWord':'striped',
+			'sweWord': 'randig',
+			'position':'4', 
+		 	'audiofile':'randig.mp3',
+			}]
+		},{
+
+		'id':'8',
+		'sweSentence':'Min mat är matmat',
+		'engSentence':'My food is foodfood',
+		'audiofile':'mening4.mp3',
+		'length': 4,
+
+		'words':[{
+			'id':'29',
+			'engWord':'my',
+			'sweWord': 'min',
+			'position':'1',
+		 	'audiofile':'min.mp3',
+
+			},{
+			'id':'30',
+			'engWord':'food',
+			'sweWord': 'mat',
+			'position':'2', 
+		 	'audiofile':'tiger.mp3',
+			},{
+			'id':'31',
+			'engWord':'is',
+			'sweWord': 'är',
+			'position':'3', 
+		 	'audiofile':'är.mp3',
+			},{
+			'id':'32',
+			'engWord':'foodfood',
+			'sweWord': 'matmat',
+			'position':'4', 
+		 	'audiofile':'randig.mp3',
+			}]
+		},{
+
+		'id':'9',
+		'sweSentence':'Min bil är blå',
+		'engSentence':'My car is blue',
+		'audiofile':'mening4.mp3',
+		'length': 4,
+
+		'words':[{
+			'id':'33',
+			'engWord':'my',
+			'sweWord': 'min',
+			'position':'1',
+		 	'audiofile':'min.mp3',
+
+			},{
+
+			'id':'34',
+			'engWord':'car',
+			'sweWord': 'bil',
+			'position':'2', 
+		 	'audiofile':'car.mp3',
+			},{
+			'id':'35',
+			'engWord':'is',
+			'sweWord': 'är',
+			'position':'3', 
+		 	'audiofile':'är.mp3',
+			},{
+			'id':'36',
+			'engWord':'blue',
+			'sweWord': 'blå',
+			'position':'4', 
+		 	'audiofile':'blå.mp3',
+			}]
 		}
 	];
 

@@ -1,13 +1,14 @@
+
 <div class="container">
 
 	<!-- instructions -->
  	<div class="row" >  
- 		<h2>Chose a level to begin</h2>
+ 		<h2>Choose a level to begin</h2>
  	</div>
 	
 	<div class="pickSentence" ng-controller="Tabcontroller as panel">
 		<ul>
-			<li ng-class="{active:panel.isSelected(1)}"> <!--Kan gå efter levelid?-->
+			<li ng-class="{active:panel.isSelected(1)}"> 
 				<a href ng-click="panel.selectTab(1)">Level 1 - Animals</a>
 			</li>
 			<li ng-class="{active:panel.isSelected(2)}">
@@ -20,17 +21,22 @@
 				<a href ng-click="panel.selectTab(4)">Level 4</a>
 			</li>
 			
-					<a class="ng-scope" href="#/sentence/{{sentence.id}}" ng-repeat="sentence in allSentences">
-						
+					<a class="ng-scope" href="#/sentence/{{sentence.id}}" ng-repeat="sentence in allSentences.slice(0, 4)">
 						<h3 ng-show="panel.isSelected(1)" class="ng-binding">{{sentence.engSentence}}</h3>
-						<h3 ng-show="panel.isSelected(2)" >Level 2-content</h3>
-						<h3 ng-show="panel.isSelected(3)" >Level 3-content</h3>
+					</a>
+					<a class="ng-scope" href="#/sentence/{{sentence.id}}" ng-repeat="sentence in allSentences.slice(4, 8)">
+						<h3 ng-show="panel.isSelected(2)" class="ng-binding">{{sentence.engSentence}}</h3>
+					</a>
+					<a class="ng-scope" href="#/sentence/{{sentence.id}}" ng-repeat="sentence in allSentences.slice(8)">
+						<h3 ng-show="panel.isSelected(3)" class="ng-binding">{{sentence.engSentence}}</h3>
+					</a>
 						<h3 ng-show="panel.isSelected(4)" >Level 4-content</h3>
 						
 						<!--<h3>Play full level?</h3>-->
-					</a>
+					<div ng-repeat="item in items.slice(6, 10)">{{item}}</div>
 		</ul>
 	</div>
+
 
 </div>
 
