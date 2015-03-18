@@ -34,7 +34,7 @@ projectApp.factory('Model', function ($resource) {
 
 	// Set gameLevel
 	this.setLevel = function(num) {   
-		gameLevel += num;	
+		gameLevel = num;	
 	}
 
 	// Get gameLevel
