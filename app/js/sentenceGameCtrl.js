@@ -40,10 +40,11 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     Model.clearMySentence(); // clearMySenctence() borde köras när du väljer att gå till nästa level..
     Model.setLevel(1);                            //plussar en level för varje avklarad mening
     var level = Model.getLevel().toString();
-    if (level >= 5) {
-      Model.setLevel(-4);
+    if (level == 5) {
       $location.url('/pickSentence.html');
-    } else {
+    } else if(level == 8){
+      $location.url('/pickSentence.html');
+    } else
       $location.url('/sentence/'+level);
     }
   };
