@@ -238,24 +238,24 @@ projectApp.factory('Model', function ($resource) {
 		},{
 
 		'id':'5',
-		'sweSentence':'Min tiger är randig',
-		'engSentence':'My food is food',
+		'sweSentence':'Mina jordgubbar',
+		'engSentence':'My strawberries are red',
 		'audiofile':'mening4.mp3',
 		'length': 4,
 
 		'words':[{
 			'id':'13',
 			'engWord':'my',
-			'sweWord': 'min',
+			'sweWord': 'mina',
 			'position':'1',
 		 	'audiofile':'min.mp3',
 
 			},{
 			'id':'14',
-			'engWord':'tiger',
-			'sweWord': 'tiger',
+			'engWord':'strawberries',
+			'sweWord': 'jordgubbar',
 			'position':'2', 
-		 	'audiofile':'tiger.mp3',
+		 	'audiofile':'tiger.mp3', //ljudfil ska ändras
 			},{
 			'id':'15',
 			'engWord':'is',
@@ -264,8 +264,8 @@ projectApp.factory('Model', function ($resource) {
 		 	'audiofile':'är.mp3',
 			},{
 			'id':'16',
-			'engWord':'striped',
-			'sweWord': 'randig',
+			'engWord':'red',
+			'sweWord': 'röda',
 			'position':'4', 
 		 	'audiofile':'randig.mp3',
 			}]
@@ -374,7 +374,7 @@ projectApp.factory('Model', function ($resource) {
 		},{
 
 		'id':'9',
-		'sweSentence':'Min tiger är randig',
+		'sweSentence':'Min bil är blå',
 		'engSentence':'My car is blue',
 		'audiofile':'mening4.mp3',
 		'length': 4,
@@ -388,10 +388,10 @@ projectApp.factory('Model', function ($resource) {
 
 			},{
 			'id':'14',
-			'engWord':'tiger',
-			'sweWord': 'tiger',
+			'engWord':'car',
+			'sweWord': 'bil',
 			'position':'2', 
-		 	'audiofile':'tiger.mp3',
+		 	'audiofile':'car.mp3',
 			},{
 			'id':'15',
 			'engWord':'is',
@@ -400,10 +400,10 @@ projectApp.factory('Model', function ($resource) {
 		 	'audiofile':'är.mp3',
 			},{
 			'id':'16',
-			'engWord':'striped',
-			'sweWord': 'randig',
+			'engWord':'blue',
+			'sweWord': 'blå',
 			'position':'4', 
-		 	'audiofile':'randig.mp3',
+		 	'audiofile':'blå.mp3',
 			}]
 		}
 	];
