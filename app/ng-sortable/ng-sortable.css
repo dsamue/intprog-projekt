@@ -16,14 +16,12 @@
     width: 124px;
     height: 110px;
     float: left;
-    border: 1px darkgrey;
     margin: 5px;
-    border-radius: 5px;
-    background-color: #dbdbdb;
 }
 
 
 .as-sortable-drag {
+    background: none;
     position: absolute;
     pointer-events: none;
     z-index: 9999;
