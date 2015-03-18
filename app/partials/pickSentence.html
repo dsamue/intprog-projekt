@@ -1,40 +1,26 @@
-<div class="col-md-6">
+<div class="container">
 
- 	<div class="row" style="text-align:center">  <!-- är det fult att lägga in style här? Känns också lite onödigt att göra en så lite grej i css? -->
- 		<!--<h2>Välj en mening!</h2>-->
- 		<h2>Welcome!</h2>
- 		<h3>Choose a level and click on a sentence to learn it!</h3>
+	<!-- instructions -->
+ 	<div class="row" >  
+ 		<h2>Welcome to Fabulous Swedish!</h2>
  	</div>
-	
-	<section class="tab" ng-controller="Tabcontroller as panel">
-		<ul>
-			<li ng-class="{active:panel.isSelected(1)}"> <!--Kan gå efter levelid?-->
-				<a href ng-click="panel.selectTab(1)">Level 1 - Animals</a>
-			</li>
-			<li ng-class="{active:panel.isSelected(2)}">
-				<a href ng-click="panel.selectTab(2)">Level 2 - Food</a>
-			</li>
-			<li ng-class="{active:panel.isSelected(3)}">
-				<a href ng-click="panel.selectTab(3)">Level 3 - Vehicles</a>
-			</li>			
-			<li ng-class="{active:panel.isSelected(4)}">
-				<a href ng-click="panel.selectTab(4)">Level 4</a>
-			</li>
-			
-					<a class="ng-scope" href="#/sentence/{{sentence.id}}" ng-repeat="sentence in allSentences">
-						<div class="row sentence-box">
-							<h3 ng-show="panel.isSelected(1)" class="ng-binding">{{sentence.engSentence}}</h3>
-							<h3 ng-show="panel.isSelected(2)" >Level 2-content</h3>
-							<h3 ng-show="panel.isSelected(3)" >Level 3-content</h3>
-							<h3 ng-show="panel.isSelected(4)" >Level 4-content</h3>
-						</div>
-						<!--<h3>Play full level?</h3>-->
-					</a>
-		</ul>
-	</section>
+ 	
+ 	<div class="row">
+ 		<div class="col-md-3 col-sm-1"></div>
+ 		<div class="col-md-6 col-sm-10 bubble info-bubble">
+			<h1 class="info-text"><small>
+			In this almost mindblowing app you will learn to speak swedish in the most extraordinary way!<br/><br/>
+			Litsen to the very useful sentences in swedish and try to create the same sentence by draging the correct words to the bubble.<br/><br/>
+			You can check if the sentence is corect and move up one level, but if your answer is wrong, you lose 100 points...
+ 			</small></h1>
+ 		</div>
+ 		<div class="col-md-3 col-sm-1"></div>
+ 	</div>
 
+ 	<div class="row">
+ 		<a href="#/sentence/1"><h2>Play the game!</h2></a>
+ 	</div>
 </div>
-
 
 
 

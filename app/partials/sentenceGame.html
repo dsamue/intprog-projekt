@@ -22,7 +22,7 @@
     <!--Bubble-->
     <div id='sortable-container' class="col-sm-8 col-xs-12 bubble" data-as-sortable data-ng-model="mySentence">
       <div ng-repeat="word in mySentence" as-sortable-item class="dragItem" id="word{{word.id}}" ng-click="playSound(word.audiofile)">
-        <div as-sortable-item-handle>{{word.sweWord}}</div>
+        <div as-sortable-item-handle >{{word.sweWord}}</div>
       </div>
     </div>
 
@@ -42,9 +42,19 @@
 
   <!-- hidden alerts-->
   <div class="row" ng-hide="alerts">
-    <div class="alert alert-success" role="alert" ng-hide="success" >Well done!<button type="button" ng-click="levelUp()">Continue</button></div>
 
-    <div class="alert alert-danger" role="alert" ng-hide="fail" >Wrong answer</div>
+
+    <div class="alert alert-success" role="alert" ng-hide="success" >
+      <p><span class="glyphicon glyphicon-ok"></span>
+      Well done!</p>
+      <button type="button" class="continue-button" ng-click="levelUp()">Continue</button>
+    </div>
+
+    <div class="alert alert-danger" role="alert" ng-hide="fail" >
+      <p><span class="glyphicon glyphicon-remove" ></span>
+      Wrong answer</p>
+    </div>
+  
   </div>
 
 
