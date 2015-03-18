@@ -39,7 +39,12 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     Model.clearMySentence(); // clearMySenctence() borde köras när du väljer att gå till nästa level..
     Model.setLevel(1);                            //plussar en level för varje avklarad mening
     var level = Model.getLevel().toString();
-    $location.url('/sentence/'+level); 
+    if (level >= 5) {
+      Model.setLevel(-4);
+      $location.url('/pickSentence.html');
+    } else {
+      $location.url('/sentence/'+level);
+    }
   };
 
   $scope.playSound = function(audiofile){
@@ -49,7 +54,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
 
   $scope.playSentence = function(){
     var audio = new Audio('audio/'+sentence.audiofile);
-	audio.play();
+    audio.play();
   };
 
   $scope.setMyVar = function(number){
