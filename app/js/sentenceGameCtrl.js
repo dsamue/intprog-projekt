@@ -36,11 +36,11 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
   };
 
   $scope.levelUp = function (){
-
-    Model.clearMySentence(); // clearMySenctence() borde köras när du väljer att gå till nästa level..
-    Model.setLevel($routeParams.sentenceId);                           //plussar en level för varje avklarad mening
+    $scope.sentence = $scope.sentence.concat($scope.mySentence);  //lägger till valda ord i wordbox igen om man rensar orden
+    Model.clearMySentence();             // clearMySenctence() borde köras när du väljer att gå till nästa level..
+    Model.setLevel($routeParams.sentenceId);                           
     
-    var level = Number($routeParams.sentenceId) + 1 ;
+    var level = Number($routeParams.sentenceId) + 1 ; //plussar en level för varje avklarad mening
 
 
     if (level == 5) {
