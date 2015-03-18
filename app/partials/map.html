@@ -1,9 +1,9 @@
 <div>
 	<div id="scoreMap">
-		<img id="mapBackground" src="graphics/europe.png"></img>
-		<img id="character" src="graphics/ship.png"></img>
+		<img id="mapBackground" src="graphics/frame.png"></img>
+		<div id="character">
+			<p>Level: {{gameData.level}}</p>
+			<p>Score: {{gameData.score}}</p>
+		</div>
 	</div>
-	<input ng-model="level" placeholder="{{level}}"></input>
-	<button type="button" ng-click="moveCharacter()">Move</button>
-	<p>Your level is {{level}}</p>
 </div>

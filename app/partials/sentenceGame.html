@@ -1,4 +1,5 @@
-<div class="container">
+<div class="col-md-3"></div>
+<div class="container col-md-6">
 
   <!--Progress bar-->
   <div class="row">
@@ -51,15 +52,15 @@
     </div>
 
     <div class="alert alert-danger" role="alert" ng-hide="fail" >
-      <p><span class="glyphicon glyphicon-remove" ></span>
-      Wrong answer</p>
+      <p><span class="glyphicon glyphicon-remove" ng-click="hideAlerts()"></span>
+      Wrong answer..<br/>-20 points</p>
     </div>
-  
   </div>
 
-
-
 </div>
+
+<!--score board-->
+<div class="col-md-3" ng-controller="MapCtrl" ng-include="'partials/map.html'"></div>
 
 
 

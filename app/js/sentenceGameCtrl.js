@@ -7,6 +7,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
   $scope.sentence = Model.getSentence($routeParams.sentenceId).words.sort(function() { return .5 - Math.random(); }); //någon härlig random-funktion, ordningen blir dock samma varje gång
   $scope.allSentences = Model.getAllSentences();
   $scope.mySentence = Model.getMySentence();
+  $scope.score = Model.getScore();
 
 
   $scope.setMySentence = function(word){
@@ -25,12 +26,14 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     if (isCorrect) {
       $scope.fail = true; //göm fail-alert
       $scope.success = false; //visa success-alert
+      Model.setScore(100);
       Model.clearMySentence();
     } 
 
     else {
       $scope.success = true;
       $scope.fail = false;
+      Model.setScore(-20);
     }
 
     $scope.alerts = false; //visa alerts*/ 
@@ -50,6 +53,10 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
   $scope.playSentence = function(){
     var audio = new Audio('audio/'+sentence.audiofile);
 	audio.play();
+  };
+
+  $scope.hideAlerts = function(){
+    $scope.alerts = true;
   };
 
   $scope.setMyVar = function(number){

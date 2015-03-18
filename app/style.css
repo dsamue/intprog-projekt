@@ -141,6 +141,20 @@ h3 {
 	float: right;
 }
 
+.mapBackground{
+	position: relative;
+	height:400px;
+	margin-top:200px;
+}
+#character {
+	width: 40px;
+	height: auto;
+	background: none;
+	position: absolute; 
+	margin-top: -400px; 
+	margin-left: 150px;
+}
+
 section{
 	float: center;
 
