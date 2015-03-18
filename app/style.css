@@ -89,6 +89,12 @@ h3 {
 	margin: 10px;
 }
 
+.continue-button {
+	float: right;
+	margin-top: -10px;
+	background-color: #57aa58;
+}
+
 .header {
 	background-color: #F57B26;
 	margin: 0;
@@ -133,13 +139,32 @@ h3 {
 	border: none;
 }
 
-.alert {
-	margin: 0;
+.alert span {
+	font-size: 12pt;
 }
+
+.alert {
+	margin: -40px;
+	margin-top: 20px;
+	padding-top: 0px;
+	height: 110px;
+}
+
+.alert-success{
+	margin-top: 70px;
+	margin-bottom:-200px;
+	padding-top: 25px;
+}
+
 
 .glyphicon-remove {
 	float: right;
 }
+
+.glyphicon{
+	cursor: default;
+}
+
 
 .mapBackground{
 	position: relative;
