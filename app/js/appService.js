@@ -235,6 +235,176 @@ projectApp.factory('Model', function ($resource) {
 			'position':'4', 
 		 	'audiofile':'randig.mp3',
 			}]
+		},{
+
+		'id':'5',
+		'sweSentence':'Min tiger är randig',
+		'engSentence':'My food is food',
+		'audiofile':'mening4.mp3',
+		'length': 4,
+
+		'words':[{
+			'id':'13',
+			'engWord':'my',
+			'sweWord': 'min',
+			'position':'1',
+		 	'audiofile':'min.mp3',
+
+			},{
+			'id':'14',
+			'engWord':'tiger',
+			'sweWord': 'tiger',
+			'position':'2', 
+		 	'audiofile':'tiger.mp3',
+			},{
+			'id':'15',
+			'engWord':'is',
+			'sweWord': 'är',
+			'position':'3', 
+		 	'audiofile':'är.mp3',
+			},{
+			'id':'16',
+			'engWord':'striped',
+			'sweWord': 'randig',
+			'position':'4', 
+		 	'audiofile':'randig.mp3',
+			}]
+		},{
+
+		'id':'6',
+		'sweSentence':'Min tiger är randig',
+		'engSentence':'My food is tasty',
+		'audiofile':'mening4.mp3',
+		'length': 4,
+
+		'words':[{
+			'id':'13',
+			'engWord':'my',
+			'sweWord': 'min',
+			'position':'1',
+		 	'audiofile':'min.mp3',
+
+			},{
+			'id':'14',
+			'engWord':'tiger',
+			'sweWord': 'tiger',
+			'position':'2', 
+		 	'audiofile':'tiger.mp3',
+			},{
+			'id':'15',
+			'engWord':'is',
+			'sweWord': 'är',
+			'position':'3', 
+		 	'audiofile':'är.mp3',
+			},{
+			'id':'16',
+			'engWord':'striped',
+			'sweWord': 'randig',
+			'position':'4', 
+		 	'audiofile':'randig.mp3',
+			}]
+		},{
+
+		'id':'7',
+		'sweSentence':'Min tiger är randig',
+		'engSentence':'My food is foody',
+		'audiofile':'mening4.mp3',
+		'length': 4,
+
+		'words':[{
+			'id':'13',
+			'engWord':'my',
+			'sweWord': 'min',
+			'position':'1',
+		 	'audiofile':'min.mp3',
+
+			},{
+			'id':'14',
+			'engWord':'tiger',
+			'sweWord': 'tiger',
+			'position':'2', 
+		 	'audiofile':'tiger.mp3',
+			},{
+			'id':'15',
+			'engWord':'is',
+			'sweWord': 'är',
+			'position':'3', 
+		 	'audiofile':'är.mp3',
+			},{
+			'id':'16',
+			'engWord':'striped',
+			'sweWord': 'randig',
+			'position':'4', 
+		 	'audiofile':'randig.mp3',
+			}]
+		},{
+
+		'id':'8',
+		'sweSentence':'Min tiger är randig',
+		'engSentence':'My food is foodfood',
+		'audiofile':'mening4.mp3',
+		'length': 4,
+
+		'words':[{
+			'id':'13',
+			'engWord':'my',
+			'sweWord': 'min',
+			'position':'1',
+		 	'audiofile':'min.mp3',
+
+			},{
+			'id':'14',
+			'engWord':'tiger',
+			'sweWord': 'tiger',
+			'position':'2', 
+		 	'audiofile':'tiger.mp3',
+			},{
+			'id':'15',
+			'engWord':'is',
+			'sweWord': 'är',
+			'position':'3', 
+		 	'audiofile':'är.mp3',
+			},{
+			'id':'16',
+			'engWord':'striped',
+			'sweWord': 'randig',
+			'position':'4', 
+		 	'audiofile':'randig.mp3',
+			}]
+		},{
+
+		'id':'9',
+		'sweSentence':'Min tiger är randig',
+		'engSentence':'My car is blue',
+		'audiofile':'mening4.mp3',
+		'length': 4,
+
+		'words':[{
+			'id':'13',
+			'engWord':'my',
+			'sweWord': 'min',
+			'position':'1',
+		 	'audiofile':'min.mp3',
+
+			},{
+			'id':'14',
+			'engWord':'tiger',
+			'sweWord': 'tiger',
+			'position':'2', 
+		 	'audiofile':'tiger.mp3',
+			},{
+			'id':'15',
+			'engWord':'is',
+			'sweWord': 'är',
+			'position':'3', 
+		 	'audiofile':'är.mp3',
+			},{
+			'id':'16',
+			'engWord':'striped',
+			'sweWord': 'randig',
+			'position':'4', 
+		 	'audiofile':'randig.mp3',
+			}]
 		}
 	];
 
