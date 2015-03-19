@@ -1,14 +1,10 @@
-// Controller 
-
+// Controller for sentence game
 projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams, $location, $route) {
 
   $scope.alerts = true; //sätter hide=true på alerts
 
   $scope.sentence = Model.getSentence($routeParams.sentenceId).words.sort(function() { return .5 - Math.random(); }); //någon härlig random-funktion, ordningen blir dock samma varje gång
-  $scope.allSentences = Model.getAllSentences();
   $scope.mySentence = Model.getMySentence();
-  $scope.score = Model.getScore();
-
 
   $scope.setMySentence = function(word){
     Model.setMySentence(word);
@@ -32,9 +28,9 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     } 
 
     else {
-      $scope.success = true;
       $scope.fail = false;
-      $scope.finish = false;
+      $scope.success = true;
+      $scope.finish = true;
       Model.setScore(-20);
     }
 
@@ -80,19 +76,4 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     $scope.alerts = true;
   };
 
-  $scope.setMyVar = function(number){
-    Model.setMyVar(number);
-  };
-
-  $scope.getMyVar = function() {
-    return Model.getMyVar();
-  };
-
-  //Ev.för drag/drop. Kolla mer vid behov. Hur ska dom skrivas? $scope.accept = func...? 
-  /*$scope.dragControlListeners = {
-    accept: function (sourceItemHandleScope, destSortableScope) {return boolean};//override to determine drag is allowed or not. default is true.
-    itemMoved: function (event) {}; //Do what you want}
-    orderChanged: function(event) {}; //Do what you want}
-    //containment: '#board'//optional param.
-  };*/
 });

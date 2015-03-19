@@ -1,12 +1,5 @@
 // SentenceController 
-projectApp.controller('PickSentenceCtrl', function ($scope, Model) {
-
-  $scope.allSentences = Model.getAllSentences();
-
-
-  $scope.setCorrectSentence = function(sentence){
-    Model.setCorretSentence(sentence);
-  };
+projectApp.controller('StartCtrl', function ($scope, Model) {
 
     $scope.resetGame = function(sentence){
     Model.resetGameData();

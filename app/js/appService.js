@@ -2,23 +2,12 @@
 projectApp.factory('Model', function ($resource) {
  
 	// Creating object that will hold application data
-	var mySentence = [];  		  //Lagra dom valda orden i appens pratbubble
-	var correctSentence = {};	  //Behövs eftersom det inte räcker med att bara kolla att ordningsföljden är korrekt i mySentence
-	var boxWords = [];			  //All words to choose from
-	var gameData = {score:0, level:1};    //för att kunna binda data mellan modell och flera olika controllers/views
-	var myVar = 1; 				 //För test
+	var mySentence = [];  		 			 //Lagra dom valda orden i appens pratbubbla
+	var correctSentence = {};	 			 //Behövs eftersom det inte räcker med att bara kolla att ordningsföljden är korrekt i mySentence
+	var gameData = {score:0, level:1};   	 //för att kunna binda data mellan modell och flera olika controllers/views
+
 
 	// Creating functions
-	// För test
-	this.setMyVar = function(num) {   
-		myVar = num;
-	}
-
-	// För test
-	this.getMyVar = function() {   
-		return myVar;
-	}
-
 	this.resetGameData = function() {   
 		gameData.score = 0;
 		gameData.level = 1;
@@ -53,11 +42,6 @@ projectApp.factory('Model', function ($resource) {
 		correctSentence = this.getSentence(id);
 	}
 
-	// Add choosen word from app to mySentence
-	this.setMySentence = function(word) {   
-		mySentence.push(word);
-	}
-
 	// Get mySentence
 	this.getMySentence = function() {   
 		return mySentence;
@@ -70,7 +54,6 @@ projectApp.factory('Model', function ($resource) {
 
 	// Compare mySentence with correctSentence
 	this.checkMySentence = function() {  
-		return true
 		numOfWords = correctSentence['length'];       
 
 		if (mySentence.length != numOfWords){
