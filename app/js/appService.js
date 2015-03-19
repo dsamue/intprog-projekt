@@ -10,6 +10,7 @@ projectApp.factory('Model', function ($resource) {
 	var myVar = 1; 				 //För test
 
 
+
 	// Creating functions
 	// För test
 	this.setMyVar = function(num) {   
@@ -32,6 +33,11 @@ projectApp.factory('Model', function ($resource) {
 		return gameScore;
 	}
 
+    // Reset gameScore
+    this.resetScore = function() {   
+    	gameScore = 0;
+	}
+
 	// Set gameLevel
 	this.setLevel = function(num) {   
 		gameLevel += num;
@@ -41,6 +47,11 @@ projectApp.factory('Model', function ($resource) {
 	this.getLevel = function() {   
 		return gameLevel;
 	}
+
+	// Reset gameLevel
+	this.resetLevel = function() {   
+    	gameLevel = 1;
+  	}
 
 	// Set correctSentence
 	this.setCorrectSentence = function(id) {   
