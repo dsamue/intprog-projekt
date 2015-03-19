@@ -8,6 +8,19 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
   $scope.allSentences = Model.getAllSentences();
   $scope.mySentence = Model.getMySentence();
 
+  $scope.level = Model.getLevel();
+  $scope.score = Model.getScore();
+
+  $scope.addGameScore = function(){
+    Model.setScore(30);
+    if (Model.getScore() > 100) {
+      Model.resetScore();
+    }
+  };
+
+    $scope.resetGameLevel = function(){
+    Model.resetLevel();
+  };
 
   $scope.setMySentence = function(word){
     Model.setMySentence(word);
