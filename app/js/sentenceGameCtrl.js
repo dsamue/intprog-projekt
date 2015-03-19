@@ -25,6 +25,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
       $scope.finish = true; //göm finish-alert
       $scope.success = false; //visa success-alert
       Model.setScore(100);
+      Model.setLevel(1);                       //plussar en level för varje avklarad mening
     } 
 
     else {
@@ -40,17 +41,16 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
   $scope.levelUp = function (){
 
     Model.clearMySentence();                      // clearMySenctence() körs när du väljer att gå till nästa level..
-    Model.setLevel(1);                            //plussar en level för varje avklarad mening
     var level = Model.getLevel()
     
-    if (level = 7){
-      Model.setLevel(-1); 
+    if (level === 7){
       $scope.finish = false; //visa finish-alert
       $scope.fail = true; //göm fail-alert
       $scope.success = true; //göm fail-alert
     }
 
     else{
+      console.log(level)
       var level = Model.getLevel().toString();
       $location.url('/sentence/'+level);
       $scope.finish = true; //göm finish-alert

@@ -1,10 +1,5 @@
 projectApp.controller('progressbarCtrl', function ($scope, Model) {
 
-  $scope.score = Model.getScore();
+  $scope.gameData = Model.getGameData();
   
-  $scope.procent =(Model.getScore() / 120) * 100;
-
-
-
-
 });

@@ -26,6 +26,15 @@ h3 {
 	text-align: center;
 }
 
+p {
+	font-family: Lobster;
+	font-size: 22px;
+	font-weight: bold;
+	font-style: italic;
+	color: rgb(62, 62, 62);
+	margin: 25px;
+}
+
 .container-fluid {
 	margin: 0;
 	padding: 0;

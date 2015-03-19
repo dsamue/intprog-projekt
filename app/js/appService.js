@@ -29,7 +29,7 @@ projectApp.factory('Model', function ($resource) {
 
 	// Set gameLevel
 	this.setLevel = function(num) {   
-		gameLevel.level = num;	   //I arbetsmasterns variant är num level, i min adderas num till nuvarande level
+		gameData.level += num;	   //I arbetsmasterns variant är num level, i min adderas num till nuvarande level
 	}
 
 	// Get gameLevel
@@ -53,7 +53,7 @@ projectApp.factory('Model', function ($resource) {
 	}
 
 	// Compare mySentence with correctSentence
-	this.checkMySentence = function() {  
+	this.checkMySentence = function() { 
 		numOfWords = correctSentence['length'];       
 
 		if (mySentence.length != numOfWords){
@@ -162,76 +162,6 @@ projectApp.factory('Model', function ($resource) {
 		},{
 
 		'id':'3',
-		'sweSentence':'Giraffer har lång hals',
-		'engSentence':'Giraffes have long necks',
-		'audiofile':'mening3.mp3',
-		'length': 4,
-		'levelID' : '1',
-
-		'words':[{
-			'id':'9',
-			'engWord':'giraffes',
-			'sweWord': 'giraffer',
-			'position':'1',
-		 	'audiofile':'giraffer.mp3',
-
-			},{
-			'id':'10',
-			'engWord':'have',
-			'sweWord': 'har',
-			'position':'2', 
-		 	'audiofile':'har.mp3',
-			},{
-			'id':'11',
-			'engWord':'long',
-			'sweWord': 'lång',
-			'position':'3', 
-		 	'audiofile':'lång.mp3',
-			},{
-			'id':'12',
-			'engWord':'necks',
-			'sweWord': 'hals',
-			'position':'4', 
-		 	'audiofile':'black.mp3',
-			}]
-		},{
-
-		'id':'4',
-		'sweSentence':'Min tiger är randig',
-		'engSentence':'My tiger is striped',
-		'audiofile':'mening4.mp3',
-		'length': 4,
-		'levelID' : '1',
-
-		'words':[{
-			'id':'13',
-			'engWord':'my',
-			'sweWord': 'min',
-			'position':'1',
-		 	'audiofile':'min.mp3',
-
-			},{
-			'id':'14',
-			'engWord':'tiger',
-			'sweWord': 'tiger',
-			'position':'2', 
-		 	'audiofile':'tiger.mp3',
-			},{
-			'id':'15',
-			'engWord':'is',
-			'sweWord': 'är',
-			'position':'3', 
-		 	'audiofile':'är.mp3',
-			},{
-			'id':'16',
-			'engWord':'striped',
-			'sweWord': 'randig',
-			'position':'4', 
-		 	'audiofile':'randig.mp3',
-			}]
-		},{
-
-		'id':'5',
 		'sweSentence':'Mina jordgubbar är röda',
 		'engSentence':'My strawberries are red',
 		'audiofile':'mening4.mp3',
@@ -250,7 +180,7 @@ projectApp.factory('Model', function ($resource) {
 			'engWord':'strawberries',
 			'sweWord': 'jordgubbar',
 			'position':'2', 
-		 	'audiofile':'tiger.mp3', //ljudfil ska ändras
+		 	'audiofile':'tiger.mp3', //ljudfil ska ändras. Jäkla tigerätare!!
 			},{
 			'id':'19',
 			'engWord':'is',
@@ -266,7 +196,7 @@ projectApp.factory('Model', function ($resource) {
 			}]
 		},{
 
-		'id':'6',
+		'id':'4',
 		'sweSentence':'Min mat är god',
 		'engSentence':'My food is tasty',
 		'audiofile':'mening4.mp3',
@@ -301,10 +231,10 @@ projectApp.factory('Model', function ($resource) {
 			}]
 		},{
 
-		'id':'7',
-		'sweSentence':'Min mat är matig',
-		'engSentence':'My food is foody',
-		'audiofile':'mening4.mp3',
+		'id':'5',
+		'sweSentence':'Min båt är gul',
+		'engSentence':'My boat is yellow',
+		'audiofile':'mening5.mp3',
 		'length': 4,
 		'levelID' : '2',
 
@@ -317,10 +247,10 @@ projectApp.factory('Model', function ($resource) {
 
 			},{
 			'id':'26',
-			'engWord':'tiger',
-			'sweWord': 'tiger',
+			'engWord':'boat',
+			'sweWord': 'båt',
 			'position':'2', 
-		 	'audiofile':'tiger.mp3',
+		 	'audiofile':'båt.mp3',
 			},{
 			'id':'27',
 			'engWord':'is',
@@ -329,49 +259,14 @@ projectApp.factory('Model', function ($resource) {
 		 	'audiofile':'är.mp3',
 			},{
 			'id':'28',
-			'engWord':'striped',
-			'sweWord': 'randig',
+			'engWord':'yellow',
+			'sweWord': 'gul',
 			'position':'4', 
-		 	'audiofile':'randig.mp3',
+		 	'audiofile':'gul.mp3',
 			}]
 		},{
 
-		'id':'8',
-		'sweSentence':'Min mat är matmat',
-		'engSentence':'My food is foodfood',
-		'audiofile':'mening4.mp3',
-		'length': 4,
-		'levelID' : '2',
-
-		'words':[{
-			'id':'29',
-			'engWord':'my',
-			'sweWord': 'min',
-			'position':'1',
-		 	'audiofile':'min.mp3',
-
-			},{
-			'id':'30',
-			'engWord':'food',
-			'sweWord': 'mat',
-			'position':'2', 
-		 	'audiofile':'tiger.mp3',
-			},{
-			'id':'31',
-			'engWord':'is',
-			'sweWord': 'är',
-			'position':'3', 
-		 	'audiofile':'är.mp3',
-			},{
-			'id':'32',
-			'engWord':'foodfood',
-			'sweWord': 'matmat',
-			'position':'4', 
-		 	'audiofile':'randig.mp3',
-			}]
-		},{
-
-		'id':'9',
+		'id':'6',
 		'sweSentence':'Min bil är blå',
 		'engSentence':'My car is blue',
 		'audiofile':'mening4.mp3',

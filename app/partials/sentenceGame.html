@@ -1,12 +1,6 @@
 <div class="col-md-3"></div>
 <div class="container col-md-6">
 
-  <!--Progress bar-->
-  <div class="row">
-    <div ng-include=" 'partials/progressbar.html' "></div>
-  </div>
-
-
   <!--Buttons and instructions-->
   <div class="row">
     <h2>How do you say "{{engSentence}}" in Swedish?</h2>
@@ -49,6 +43,11 @@
         <span class="glyphicon glyphicon-play" ng-click="playSentence()"></span>
       </div>
     </div>
+  </div>
+
+  <!--Progress bar-->
+  <div class="row">
+    <div ng-controller="progressbarCtrl" ng-include="'partials/progressbar.html'"></div>
   </div>
 
   <!-- hidden alerts-->

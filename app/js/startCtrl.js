@@ -7,7 +7,7 @@ projectApp.controller('StartCtrl', function ($scope, Model) {
 });
 
 
-/* tidigare kod
+/* tidigare kod från pick sentence
 
 // Tabcontroller
 projectApp.controller('Tabcontroller', function(){
