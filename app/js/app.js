@@ -47,8 +47,8 @@ projectApp.config(['$routeProvider',
         controller: 'SentenceGameCtrl'
       }).
       when('/test', {
-        templateUrl: 'partials/map.html',          
-        controller: 'MapCtrl'
+        templateUrl: 'partials/progressbar.html',          
+        controller: 'progressbarCtrl'
       }).
       otherwise({
         redirectTo: '/start'
