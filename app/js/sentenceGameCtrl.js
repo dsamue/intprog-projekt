@@ -24,6 +24,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     isCorrect = Model.checkMySentence();
 
     if (isCorrect) {
+<<<<<<< HEAD
       $scope.fail = true; //göm fail-alert
       $scope.success = false; //visa success-alert
 
@@ -33,6 +34,20 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
 
       Model.setScore(10);
 
+=======
+
+      Model.setScore(10);
+
+      var score = Model.getScore();
+
+      if (score == 120) {
+        $location.url('/finish');
+      } else {
+        $scope.fail = true; //göm fail-alert
+        $scope.success = false; //visa success-alert
+      }
+      
+>>>>>>> origin/sanna2
     } else {
       $scope.success = true;
       $scope.fail = false;
@@ -47,7 +62,6 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     Model.setLevel($routeParams.sentenceId);                           
     
     var level = Number($routeParams.sentenceId) + 1 ; //plussar en level för varje avklarad mening
-
 
     if (level == 5) {
       $location.url('/pickSentence.html');
