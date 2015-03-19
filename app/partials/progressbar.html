@@ -1,5 +1,5 @@
 <!-- This div displays the user their level -->
-<div class="levelDisplay">
+<div class="levelDisplay" ng-controller="progressbarCtrl">
 <h3>Your score is <strong style="color: red; font-weight: bold;">{{score}}</strong></h3>
 </div>
 
@@ -8,7 +8,7 @@
     <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:100%;">{{score}}%</div>
 </div>-->
 
-<div class="progress">
+<div class="progress" ng-controller="progressbarCtrl">
   <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
     10%
   </div>

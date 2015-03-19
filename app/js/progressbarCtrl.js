@@ -1,4 +1,5 @@
-projectApp.controller('progressbarCtrl', function($scope, Model) {
-	$scope.score = Model.getScore();
+projectApp.controller('progressbarCtrl', function ($scope, Model) {
+
+  $scope.score = Model.getScore();
 
 });
