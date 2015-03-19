@@ -8,4 +8,8 @@ projectApp.controller('PickSentenceCtrl', function ($scope, Model) {
     Model.setCorretSentence(sentence);
   };
 
+    $scope.resetGame = function(sentence){
+    Model.resetGameData();
+  };
+
 });

@@ -19,7 +19,10 @@ projectApp.factory('Model', function ($resource) {
 		return myVar;
 	}
 
-
+	this.resetGameData = function() {   
+		gameData.score = 0;
+		gameData.level = 1;
+	}
 
 	this.getGameData = function() {   
 		return gameData;
@@ -66,7 +69,8 @@ projectApp.factory('Model', function ($resource) {
 	}
 
 	// Compare mySentence with correctSentence
-	this.checkMySentence = function() {   
+	this.checkMySentence = function() {  
+		return true
 		numOfWords = correctSentence['length'];       
 
 		if (mySentence.length != numOfWords){

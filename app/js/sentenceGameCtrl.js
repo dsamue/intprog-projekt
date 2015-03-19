@@ -25,6 +25,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
 
     if (isCorrect) {
       $scope.fail = true; //göm fail-alert
+      $scope.finish = true; //göm finish-alert
       $scope.success = false; //visa success-alert
       Model.setScore(100);
       Model.clearMySentence();
@@ -33,16 +34,36 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     else {
       $scope.success = true;
       $scope.fail = false;
+      $scope.finish = false;
       Model.setScore(-20);
     }
 
-    $scope.alerts = false; //visa alerts*/ 
+    $scope.alerts = false; //visa alerts
   };
 
   $scope.levelUp = function (){
     Model.setLevel(1);                            //plussar en level för varje avklarad mening
-    var level = Model.getLevel().toString();
-    $location.url('/sentence/'+level); 
+    var level = Model.getLevel()
+    
+    if (level > 2){
+      Model.setLevel(-1); 
+      $scope.finish = false; //visa finish-alert
+      $scope.fail = true; //göm fail-alert
+      $scope.success = true; //göm fail-alert
+    }
+
+    else{
+      var level = Model.getLevel().toString();
+      $location.url('/sentence/'+level);
+      $scope.finish = true; //göm finish-alert
+    }
+
+  };
+
+  $scope.backToStart = function (){
+      $location.url('/start');
+      $route.reload();
+      Model.resetGameData();
   };
 
   $scope.playSound = function(audiofile){

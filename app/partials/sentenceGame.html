@@ -1,3 +1,4 @@
+<div class="row">
 <div class="col-md-3"></div>
 <div class="container col-md-6">
 
@@ -49,6 +50,12 @@
       <button type="button" class="continue-button" ng-click="levelUp()">Continue</button>
     </div>
 
+    <div class="alert alert-success" role="alert" ng-hide="finish" >
+      <p><span class="glyphicon glyphicon-ok"></span>
+      Wow, You finished the game! Well played!</p>
+      <button type="button" class="continue-button" ng-click="backToStart()">Back to start</button>
+    </div>
+
     <div class="alert alert-danger" role="alert" ng-hide="fail" ng-click="hideAlerts()">
       <p><span class="glyphicon glyphicon-remove" ng-click="hideAlerts()"></span>
       Wrong answer<br/>-20 points..</p>
@@ -58,8 +65,8 @@
 </div>
 
 <!--score board-->
-<div class="col-md-3" ng-controller="MapCtrl" ng-include="'partials/map.html'"></div>
-
+<div class="col-md-3" ng-controller="ScoreBoardCtrl" ng-include="'partials/scoreBoard.html'"></div>
+</div>
 
 
 
