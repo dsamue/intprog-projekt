@@ -175,14 +175,21 @@ h3 {
 	color:black;
 	font-size: 2em;
 	position: absolute;
-	padding-top:50px;
-	margin-left:150px;
+	padding-top:60px;
+	margin-left:45%;
 	cursor:pointer;
 }
 
 #instruction-row{
 	position:relative;
 	height:100px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#play-button-row{
+	margin-top:50px;
+	float:center;
 }
 
 #score-board {

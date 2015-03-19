@@ -9,7 +9,7 @@
   <!--Bubble row-->
   <div class="row bubble-row">
 
-      <div id='sortable-container' class="col-sm-9 col-xs-12 bubble" data-as-sortable data-ng-model="mySentence">
+      <div id='sortable-container' class="col-md-9 col-sm-12 bubble" data-as-sortable data-ng-model="mySentence">
         <div ng-repeat="word in mySentence" as-sortable-item class="dragItem" id="word{{word.id}}" ng-click="playSound(word.audiofile)">
           <div as-sortable-item-handle >{{word.sweWord}}</div>
         </div>
@@ -17,7 +17,7 @@
         <button type="button" class="delete-button btn btn-danger" ng-click="clearMySentence()"><span class="glyphicon glyphicon-remove" ng-click="clearMySentence()"></span></button>
       </div>
     
-    <div class="col-sm-3 col-xs-12">
+    <div class="col-md-3 col-sm-12">
       <button type="button" class="btn btn-success check-button" ng-click="checkMySentence()">Check sentence</button>
     </div>
 
@@ -32,9 +32,13 @@
 
   <!--instructions and play-->
   <div class="row" id="instruction-row">
-    <h2>
-      <small><span class="glyphicon glyphicon-play" id="play-symbol" ng-click="playSentence()"></span>Listen to it and drag the words to the bubble!</small>
-    </h2>
+    
+    <div class="row">
+      <h2><small>Need help? Drag the words to the bubble and listen to the sentence below</small></h2>
+    </div>
+    <div class="play-button-row">
+      <span class="glyphicon glyphicon-play" id="play-symbol" ng-click="playSentence()"></span>
+    </div>
   </div>
 
   <!-- hidden alerts-->
