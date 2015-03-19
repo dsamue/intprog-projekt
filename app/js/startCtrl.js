@@ -1,14 +1,14 @@
 // SentenceController 
-projectApp.controller('PickSentenceCtrl', function ($scope, Model) {
+projectApp.controller('StartCtrl', function ($scope, Model) {
 
-  $scope.allSentences = Model.getAllSentences();
-
-
-  $scope.setCorrectSentence = function(sentence){
-    Model.setCorretSentence(sentence);
+    $scope.resetGame = function(sentence){
+    Model.resetGameData();
   };
-
 });
+
+
+/* tidigare kod från pick sentence
+
 // Tabcontroller
 projectApp.controller('Tabcontroller', function(){
 	this.tab = 1;
@@ -22,6 +22,7 @@ projectApp.controller('Tabcontroller', function(){
 		return this.tab === checkTab;
 	};
 });
-	
 
+
+*/
 

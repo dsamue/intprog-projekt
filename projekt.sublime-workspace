@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"borderr",
+				"border-radius"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"bin",
+				"binId"
+			],
+			[
+				"my",
+				"mySentence"
+			],
+			[
 				"text",
 				"text-align"
 			],
@@ -139,7 +155,7 @@
 			"file": "app/index.html",
 			"settings":
 			{
-				"buffer_size": 1317,
+				"buffer_size": 2017,
 				"line_ending": "Unix"
 			}
 		},
@@ -147,15 +163,7 @@
 			"file": "app/js/app.js",
 			"settings":
 			{
-				"buffer_size": 3550,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/js/someCtrl.js",
-			"settings":
-			{
-				"buffer_size": 297,
+				"buffer_size": 3277,
 				"line_ending": "Unix"
 			}
 		},
@@ -163,31 +171,63 @@
 			"file": "app/js/appService.js",
 			"settings":
 			{
-				"buffer_size": 2633,
+				"buffer_size": 3490,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/partials/home.html",
+			"file": "app/partials/sentenceGame.html",
 			"settings":
 			{
-				"buffer_size": 1173,
+				"buffer_size": 1946,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/partials/start.html",
+			"file": "app/js/sentenceGameCtrl.js",
 			"settings":
 			{
-				"buffer_size": 141,
+				"buffer_size": 2178,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/partials/test.html",
+			"file": "app/style.css",
 			"settings":
 			{
-				"buffer_size": 6,
+				"buffer_size": 2253,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/partials/map.html",
+			"settings":
+			{
+				"buffer_size": 307,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/js/mapCtrl.js",
+			"settings":
+			{
+				"buffer_size": 960,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/partials/pickSentence.html",
+			"settings":
+			{
+				"buffer_size": 1391,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/js/pickSentenceCtrl.js",
+			"settings":
+			{
+				"buffer_size": 478,
 				"line_ending": "Unix"
 			}
 		}
@@ -226,13 +266,46 @@
 	],
 	"file_history":
 	[
-		"/Users/David/Desktop/Github/intprog-projekt/app/index.html",
+		"/Users/David/Desktop/Github/intprog-projekt/app/dist/ng-sortable.css",
+		"/Users/David/Desktop/Github/intprog-projekt/app/dist/ng-sortable.js",
+		"/Users/David/Desktop/Github/intprog-projekt/app/js/pickSentenceCtrl.js",
+		"/Users/David/Desktop/Github/intprog-projekt/app/partials/pickSentence.html",
+		"/Users/David/Desktop/Github/intprog-projekt/app/dist/ng-sortable.style.css",
+		"/Users/David/Desktop/Github/ng-sortable/dist/ng-sortable.js",
+		"/Users/David/Desktop/Github/ng-sortable/Gruntfile.js",
+		"/Users/David/Desktop/Github/intprog-projekt/package.json",
+		"/Users/David/Desktop/Github/intprog-projekt/bower.json",
+		"/Users/David/Desktop/Github/intprog-projekt/Gruntfile.js",
+		"/Users/David/Desktop/Github/ng-sortable/source/sortable.js",
+		"/Users/David/Desktop/Github/ng-sortable/dist/ng-sortable.min.js",
+		"/Users/David/Desktop/Github/ng-sortable/source/ng-sortable.css",
+		"/Users/David/Downloads/Dragger (1)/index.html",
+		"/Users/David/Downloads/Dragger (1)/home.html",
+		"/Users/David/Desktop/Github/intprog-projekt/map.html",
+		"/Users/David/Desktop/Github/intprog-projekt/map-character.html",
+		"/Users/David/Desktop/Github/intprog-projekt/MapView.js",
+		"/Users/David/Desktop/Github/intprog-projekt/view.js",
+		"/Users/David/Desktop/Github/intprog-projekt/LanguageController.js",
+		"/Users/David/Desktop/Github/intprog-projekt/character.png",
+		"/Users/David/Desktop/Github/intprog-projekt/app.js",
 		"/Users/David/Desktop/Github/intprog-projekt/index.html",
+		"/Users/David/Desktop/Github/intprog-projekt/app/index.html",
+		"/Users/David/Desktop/Github/intprog-projekt/app/js/appService.js",
+		"/Users/David/Desktop/Github/intprog-projekt/app/js/app.js",
+		"/Users/David/Desktop/Github/intprog-projekt/app/js/someCtrl.js",
+		"/Users/David/Desktop/Github/intprog-projekt/app/partials/home.html",
+		"/Users/David/Desktop/Github/intprog-projekt/app/partials/start.html",
+		"/Users/David/Desktop/Github/intprog-projekt/app/style.css",
+		"/Users/David/Desktop/Github/intprog-projekt/style.css",
+		"/Users/David/Desktop/Github/intprog-projekt/model.js",
+		"/Users/David/Desktop/Github/lab2/index.html",
+		"/Users/David/Desktop/Github/intprog-projekt/projekt.sublime-workspace",
+		"/Users/David/Downloads/Dragger/index.html",
+		"/Users/David/Downloads/Dragger/home.html",
 		"/Users/David/Desktop/Git startinfo.txt",
 		"/Users/David/Desktop/Veckoplan.txt",
 		"/Users/David/Desktop/Github/lab2/select-dish.html",
 		"/Users/David/Desktop/Github/lab2/select-starter.html",
-		"/Users/David/Desktop/Github/lab2/index.html",
 		"/Users/David/Desktop/Github/lab2/dinner-preparation.html",
 		"/Users/David/Desktop/Github/lab2/dinner-overview.html",
 		"/Users/David/Desktop/Github/lab2/screen-after.html",
@@ -249,7 +322,7 @@
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -263,6 +336,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"dragControlListeners",
+			"drop",
+			"words",
+			"drop",
+			"dropp",
+			"appendChild",
+			"mysentence",
 			");\n"
 		],
 		"highlight": true,
@@ -281,7 +361,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -290,7 +370,242 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1317,
+						"buffer_size": 2017,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1532,
+								1532
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3277,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3260,
+								3260
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 79.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/js/appService.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3490,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								525,
+								525
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/partials/sentenceGame.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1946,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1629,
+								1629
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 113.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/js/sentenceGameCtrl.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2178,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1792,
+								1792
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 317.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2253,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1447,
+								1447
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/partials/map.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 307,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								202,
+								202
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/js/mapCtrl.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 960,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								418,
+								418
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/partials/pickSentence.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1391,
 						"regions":
 						{
 						},
@@ -304,8 +619,7 @@
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -315,42 +629,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "app/js/app.js",
+					"buffer": 9,
+					"file": "app/js/pickSentenceCtrl.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3550,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/js/someCtrl.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 297,
+						"buffer_size": 478,
 						"regions":
 						{
 						},
@@ -369,122 +653,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/js/appService.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2633,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/partials/home.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1173,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/partials/start.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 141,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/partials/test.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
 					"type": "text"
 				}
 			]
