@@ -30,7 +30,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
       Model.setScore(25);
       var score = Model.getScore();
       console.log(score);
-=======
+
       Model.setScore(10);
 
     } else {
