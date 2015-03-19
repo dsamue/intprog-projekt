@@ -105,6 +105,7 @@ projectApp.factory('Model', function ($resource) {
 		'engSentence':'My cat is yellow',
 		'audiofile':'mening1.mp3',
 		'length': 4,
+		'levelID' : '1',
 
 		'words':[{
 			'id':'1',
@@ -140,6 +141,7 @@ projectApp.factory('Model', function ($resource) {
 		'engSentence':'My dog is black',
 		'audiofile':'mening2.mp3',
 		'length': 4,
+		'levelID' : '1',
 
 		'words':[{
 			'id':'5',
@@ -174,6 +176,7 @@ projectApp.factory('Model', function ($resource) {
 		'engSentence':'Giraffes have long necks',
 		'audiofile':'mening3.mp3',
 		'length': 4,
+		'levelID' : '1',
 
 		'words':[{
 			'id':'9',
@@ -208,6 +211,7 @@ projectApp.factory('Model', function ($resource) {
 		'engSentence':'My tiger is striped',
 		'audiofile':'mening4.mp3',
 		'length': 4,
+		'levelID' : '1',
 
 		'words':[{
 			'id':'13',
@@ -238,10 +242,11 @@ projectApp.factory('Model', function ($resource) {
 		},{
 
 		'id':'5',
-		'sweSentence':'Mina jordgubbar',
+		'sweSentence':'Mina jordgubbar är röda',
 		'engSentence':'My strawberries are red',
 		'audiofile':'mening4.mp3',
 		'length': 4,
+		'levelID' : '2',
 
 		'words':[{
 			'id':'17',
@@ -276,6 +281,7 @@ projectApp.factory('Model', function ($resource) {
 		'engSentence':'My food is tasty',
 		'audiofile':'mening4.mp3',
 		'length': 4,
+		'levelID' : '2',
 
 		'words':[{
 			'id':'21',
@@ -306,10 +312,11 @@ projectApp.factory('Model', function ($resource) {
 		},{
 
 		'id':'7',
-		'sweSentence':'Min tiger är randig',
+		'sweSentence':'Min mat är matig',
 		'engSentence':'My food is foody',
 		'audiofile':'mening4.mp3',
 		'length': 4,
+		'levelID' : '2',
 
 		'words':[{
 			'id':'25',
@@ -344,6 +351,7 @@ projectApp.factory('Model', function ($resource) {
 		'engSentence':'My food is foodfood',
 		'audiofile':'mening4.mp3',
 		'length': 4,
+		'levelID' : '2',
 
 		'words':[{
 			'id':'29',
@@ -378,6 +386,7 @@ projectApp.factory('Model', function ($resource) {
 		'engSentence':'My car is blue',
 		'audiofile':'mening4.mp3',
 		'length': 4,
+		'levelID' : '3',
 
 		'words':[{
 			'id':'33',
