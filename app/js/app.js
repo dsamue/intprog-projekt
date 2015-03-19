@@ -50,6 +50,10 @@ projectApp.config(['$routeProvider',
         templateUrl: 'partials/progressbar.html',          
         controller: 'progressbarCtrl'
       }).
+      when('/finish', {
+        templateUrl: 'partials/finish.html',          
+        controller: 'progressbarCtrl'
+      }).
       otherwise({
         redirectTo: '/start'
       });
