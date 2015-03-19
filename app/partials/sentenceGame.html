@@ -30,6 +30,11 @@
     </div>
   </div>
 
+  <!--Progress bar-->
+  <div class="row">
+    <div ng-controller="progressbarCtrl" ng-include="'partials/progressbar.html'"></div>
+  </div>
+
   <!--instructions and play-->
   <div class="row" id="instruction-row">
     
@@ -45,10 +50,6 @@
     </div>
   </div>
 
-  <!--Progress bar-->
-  <div class="row">
-    <div ng-controller="progressbarCtrl" ng-include="'partials/progressbar.html'"></div>
-  </div>
 
   <!-- hidden alerts-->
   <div class="row" ng-hide="alerts">

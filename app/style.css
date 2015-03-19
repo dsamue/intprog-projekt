@@ -109,7 +109,6 @@ p {
 	border-radius: 5px;
 	color: #ffffff;
 	height: 40px;
-    /*HEAD*/
 	padding: 10px;
 	margin: 5px;
 }
@@ -121,7 +120,7 @@ p {
 }
 
 .progress { 
-  height: 3em;
+  height: 1em;
   i { line-height: 3.5em; }
 }
 
