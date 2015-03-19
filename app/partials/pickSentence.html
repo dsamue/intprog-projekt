@@ -1,21 +1,26 @@
 
 <div class="container">
 
+
+
 	<!-- instructions -->
  	<div class="row" >  
- 		<h2>Choose a level to begin</h2>
+ 		<h2>Choose a topic to begin</h2>
  	</div>
+
+
+ 	<div class="row">
 	
 	<div class="pickSentence" ng-controller="Tabcontroller as panel">
 		<ul>
 			<li ng-class="{active:panel.isSelected(1)}"> 
-				<a href="#/sentence/1" ng-click="panel.selectTab(1)">Level 1 - Animals</a>
+				<a href="#/sentence/1" ng-click="panel.selectTab(1)">Animals</a>
 			</li>
 			<li ng-class="{active:panel.isSelected(2)}">
-				<a href="#/sentence/5" ng-click="panel.selectTab(2)">Level 2 - Food</a>
+				<a href="#/sentence/5" ng-click="panel.selectTab(2)">Food</a>
 			</li>
 			<li ng-class="{active:panel.isSelected(3)}">
-				<a href="#/sentence/9" ng-click="panel.selectTab(3)">Level 3 - Vehicles</a>
+				<a href="#/sentence/9" ng-click="panel.selectTab(3)">Vehicles</a>
 			</li>			
 			
 					<!--<a class="ng-scope" href="#/sentence/{{sentence.id}}" ng-repeat="sentence in allSentences.slice(0, 4)">
@@ -34,6 +39,14 @@
 
 		</ul>
 	</div>
+	</div>
+	
+
+
+<!--Progress bar-->
+	<div class="row">
+    	<div ng-include=" 'partials/progressbar.html' "></div>
+  	</div>
 
 </div>
 
