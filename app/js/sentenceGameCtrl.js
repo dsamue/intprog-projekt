@@ -32,7 +32,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
 
       if (score == 120) {
         console.log('hej');
-        $location.url('/finish.html');
+        $location.url('/finish');
       } else {
         $scope.fail = true; //göm fail-alert
         $scope.success = false; //visa success-alert

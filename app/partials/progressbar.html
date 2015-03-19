@@ -1,13 +1,10 @@
-<!-- This div displays the user their level -->
+<!-- This div displays the user their score -->
 <div class="levelDisplay" ng-controller="progressbarCtrl">
 <h3>Your score is <strong style="color: red; font-weight: bold;">{{score}}</strong></h3>
 </div>
 
-<!-- This div displays the users progress towards completing the game 
- <div class="progress" style="width: 1050px;">
-    <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:100%;">{{score}}%</div>
-</div>-->
 
+<!--progressbar -->
 <div class="progress" ng-controller="progressbarCtrl">
   <div class="progress-bar" role="progressbar" aria-valuenow="{{procent}}" aria-valuemin="0" aria-valuemax="100" style="width: {{procent}}%;"> 
   </div>

@@ -52,7 +52,7 @@ projectApp.config(['$routeProvider',
       }).
       when('/finish', {
         templateUrl: 'partials/finish.html',          
-        controller: 'progressbarCtrl'
+        controller: 'progressbarCtrl' //behövs ingen
       }).
       otherwise({
         redirectTo: '/start'
