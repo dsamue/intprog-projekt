@@ -26,7 +26,9 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     if (isCorrect) {
       $scope.fail = true; //göm fail-alert
       $scope.success = false; //visa success-alert
-      
+      Model.setScore(25);
+      var score = Model.getScore();
+      console.log(score);
     } else {
       $scope.success = true;
       $scope.fail = false;
@@ -49,7 +51,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
       $location.url('/pickSentence.html');
     } else if (level == 10){
       $location.url('/pickSentence.html');
-    } else
+    } else {
       $location.url('/sentence/'+level);
     }
   };
