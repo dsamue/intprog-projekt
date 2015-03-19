@@ -165,10 +165,11 @@ h3 {
 
 .glyphicon-remove {
 	float: right;
+	cursor: hand;
 }
 
 .glyphicon{
-	cursor: default;
+	cursor: hand;
 }
 
 
