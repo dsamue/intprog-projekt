@@ -20,7 +20,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
 
 
   $scope.checkMySentence = function(){ 
-    Model.setCorrectSentence($routeParams.sentenceId);      
+    Model.setCorrectSentence($routeParams.sentenceId);    
     isCorrect = Model.checkMySentence();
 
     if (isCorrect) {
@@ -36,13 +36,18 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
   };
 
   $scope.levelUp = function (){
+    $scope.sentence = $scope.sentence.concat($scope.mySentence);  //lägger till valda ord i wordbox igen om man rensar orden
+    Model.clearMySentence();             // clearMySenctence() borde köras när du väljer att gå till nästa level..
+    Model.setLevel($routeParams.sentenceId);                           
+    
+    var level = Number($routeParams.sentenceId) + 1 ; //plussar en level för varje avklarad mening
 
-    Model.clearMySentence(); // clearMySenctence() borde köras när du väljer att gå till nästa level..
-    Model.setLevel(1);                            //plussar en level för varje avklarad mening
-    var level = Model.getLevel().toString();
+
     if (level == 5) {
       $location.url('/pickSentence.html');
-    } else if(level == 8){
+    } else if (level == 9){
+      $location.url('/pickSentence.html');
+    } else if (level == 10){
       $location.url('/pickSentence.html');
     } else
       $location.url('/sentence/'+level);
