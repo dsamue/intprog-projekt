@@ -1,10 +1,11 @@
 .as-sortable-item {
     -ms-touch-action: none;
     touch-action: none;
+    cursor: pointer;
 }
 
 .as-sortable-item-handle {
-    cursor: move;
+    cursor: pointer;
 }
 
 .as-sortable-placeholder {

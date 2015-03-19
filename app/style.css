@@ -29,6 +29,7 @@ h3 {
 .container-fluid {
 	margin: 0;
 	padding: 0;
+	cursor: default;
 }
 
 .container {
@@ -59,13 +60,26 @@ h3 {
 	height: 40px;
 	padding: 10px;
 	margin: 5px;
+	cursor: pointer;
 }
 
-.bubble {
+.bubble{
 	background-color: #f1f1f1;
 	min-height: 50px;
 	border-radius: 30px;
+}
 
+.bubble-row{	
+	padding-top: 40px;
+	padding-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.bubble-row .btn-success{
+	float:right;
+	margin-right:-10px;
+	min-height:40px;
 }
 
 .info-bubble{
@@ -76,7 +90,8 @@ h3 {
 .word-box {
 	background-color: #5BC0DE;
 	border-radius: 5px;
-	min-height: 50px;
+	min-height: 100px;
+	padding: 10px;
 	margin: 10px;
 }
 
@@ -156,24 +171,34 @@ h3 {
 	cursor: default;
 }
 
-
-#score-board{
-	position: relative;
-	height:30em;
-	margin-top:0px;
+.glyphicon-play{
+	color:black;
+	font-size: 2em;
+	position: absolute;
+	padding-top:50px;
+	margin-left:150px;
+	cursor:pointer;
 }
 
-#game-data {
+#instruction-row{
+	position:relative;
+	height:100px;
+}
+
+#score-board {
 	width: 14.1em;
 	height: 19.75em;
-	position: absolute; 
-	margin-top: -364px; 
+	margin-top: 80px; 
 	margin-left: 72px;
-	border-radius: 0.1em;
+	border-radius: 1em;
 	background-color: #5BC0DE;
+	box-shadow: 0px 2px 10px #cccccc;
+	overflow: hidden;
+	cursor: default;
+
 }
 
-#game-data p, #game-data h1{
+#score-board p, #score-board h1{
 	color: white;
 	text-align: center;
 	margin-top: 1em;

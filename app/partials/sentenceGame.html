@@ -3,27 +3,24 @@
 
   <!--Buttons and instructions-->
   <div class="row">
-    <h2>Drag the words to the bubble!</h2>
+    <h2>How do you say "{{engSentence}}" in Swedish?</h2>
   </div>
 
-  <div class="row">
-    <div class="col-sm-1 col-xs-12">
-      <button type="button" class="play-button"><span class="glyphicon glyphicon-play" ng-click="playSentence()"></span></button>
-    </div>
+  <!--Bubble row-->
+  <div class="row bubble-row">
 
-    <!--Bubble-->
-      <div id='sortable-container' class="col-sm-8 col-xs-12 bubble" data-as-sortable data-ng-model="mySentence">
+      <div id='sortable-container' class="col-sm-9 col-xs-12 bubble" data-as-sortable data-ng-model="mySentence">
         <div ng-repeat="word in mySentence" as-sortable-item class="dragItem" id="word{{word.id}}" ng-click="playSound(word.audiofile)">
           <div as-sortable-item-handle >{{word.sweWord}}</div>
         </div>
-        <button type="button" class="delete-button" ng-click="clearMySentence()"><span class="glyphicon glyphicon-remove" ng-click="clearMySentence()"></span></button>
+
+        <button type="button" class="delete-button btn btn-danger" ng-click="clearMySentence()"><span class="glyphicon glyphicon-remove" ng-click="clearMySentence()"></span></button>
       </div>
     
-
-    <!--Buttons-->
     <div class="col-sm-3 col-xs-12">
-      <button type="button" class="sentence-button" ng-click="checkMySentence()">Check sentence</button>
+      <button type="button" class="btn btn-success check-button" ng-click="checkMySentence()">Check sentence</button>
     </div>
+
   </div>
 
   <!--Wordbox-->
@@ -33,18 +30,25 @@
     </div>
   </div>
 
+  <!--instructions and play-->
+  <div class="row" id="instruction-row">
+    <h2>
+      <small><span class="glyphicon glyphicon-play" id="play-symbol" ng-click="playSentence()"></span>Listen to it and drag the words to the bubble!</small>
+    </h2>
+  </div>
+
   <!-- hidden alerts-->
   <div class="row" ng-hide="alerts">
     <div class="alert alert-success" role="alert" ng-hide="success" >
       <p><span class="glyphicon glyphicon-ok"></span>
-      Well done!</p>
-      <button type="button" class="continue-button" ng-click="levelUp()">Continue</button>
+      Well done! 100 points!</p>
+      <button type="button" class="continue-button btn btn-success" ng-click="levelUp()">Continue</button>
     </div>
 
     <div class="alert alert-success" role="alert" ng-hide="finish" >
       <p><span class="glyphicon glyphicon-ok"></span>
       Wow, You finished the game! Well played!</p>
-      <button type="button" class="continue-button" ng-click="backToStart()">Back to start</button>
+      <button type="button" class="continue-button btn btn-success" ng-click="backToStart()">Back to start</button>
     </div>
 
     <div class="alert alert-danger" role="alert" ng-hide="fail" ng-click="hideAlerts()">

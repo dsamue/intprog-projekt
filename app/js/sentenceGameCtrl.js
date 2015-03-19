@@ -2,7 +2,7 @@
 projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams, $location, $route) {
 
   $scope.alerts = true; //sätter hide=true på alerts
-
+  $scope.engSentence = Model.getSentence($routeParams.sentenceId).engSentence;
   $scope.sentence = Model.getSentence($routeParams.sentenceId).words.sort(function() { return .5 - Math.random(); }); //någon härlig random-funktion, ordningen blir dock samma varje gång
   $scope.mySentence = Model.getMySentence();
 
