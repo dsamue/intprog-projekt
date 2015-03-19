@@ -5,7 +5,7 @@ projectApp.factory('Model', function ($resource) {
 	var mySentence = [];  		  //Lagra dom valda orden i appens pratbubble
 	var correctSentence = {};	  //Behövs eftersom det inte räcker med att bara kolla att ordningsföljden är korrekt i mySentence
 	var boxWords = [];			  //All words to choose from
-	var gameScore = 60;
+	var gameScore = 0;
 	var gameLevel = 1;
 	var myVar = 1; 				 //För test
 
