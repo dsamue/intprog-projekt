@@ -171,25 +171,44 @@ h3 {
 	cursor: default;
 }
 
-.glyphicon-play{
-	color:black;
-	font-size: 2em;
-	position: absolute;
-	padding-top:60px;
-	margin-left:45%;
-	cursor:pointer;
-}
 
 #instruction-row{
 	position:relative;
-	height:100px;
+	min-height:150px;
 	margin-left: 10px;
 	margin-right: 10px;
 }
 
-#play-button-row{
-	margin-top:50px;
+
+#supertest{
+	position:relative;
 	float:center;
+	text-align: center;
+}
+
+
+#cat{
+	height:4em;
+	position:absolute;
+	margin-top:20px;
+	margin-left:-80px;
+}
+
+#pratbubbla{
+	height:4em;
+	position:absolute;
+	margin-top:0px;
+	margin-left:-20px;
+	cursor:pointer;
+}
+
+.glyphicon-play{
+	color:black;
+	font-size: 2em;
+	position: absolute;
+	margin-top:7px;
+	margin-left:-2px;
+	cursor:pointer;
 }
 
 #score-board {
