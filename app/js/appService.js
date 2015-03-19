@@ -29,7 +29,7 @@ projectApp.factory('Model', function ($resource) {
 
 	// Set gameLevel
 	this.setLevel = function(num) {   
-		gameData.level += num;	   //I arbetsmasterns variant är num level, i min adderas num till nuvarande level
+		gameData.level = num;	   //I arbetsmasterns variant är num level, i min adderas num till nuvarande level
 	}
 
 	// Get gameLevel
@@ -54,6 +54,7 @@ projectApp.factory('Model', function ($resource) {
 
 	// Compare mySentence with correctSentence
 	this.checkMySentence = function() { 
+		return true
 		numOfWords = correctSentence['length'];       
 
 		if (mySentence.length != numOfWords){
