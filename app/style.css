@@ -114,6 +114,25 @@ h3 {
 	height:auto;
 }
 
+.delete-button {
+	float: right;
+	background-color: #EC584B;
+	border-radius: 20px;
+	color: #ffffff;
+	height: 40px;
+	width: 40px;
+	padding: auto;
+	margin: 5px;
+	border: none;
+	text-align: auto;
+}
+
+.delete-button .glyphicon-remove{
+	cursor: hand;
+	text-align: auto;
+	float: center;
+}
+
 .alert {
 	margin: -40px;
 	margin-top: 20px;

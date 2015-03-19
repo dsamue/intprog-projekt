@@ -12,15 +12,16 @@
     </div>
 
     <!--Bubble-->
-    <div id='sortable-container' class="col-sm-8 col-xs-12 bubble" data-as-sortable data-ng-model="mySentence">
-      <div ng-repeat="word in mySentence" as-sortable-item class="dragItem" id="word{{word.id}}" ng-click="playSound(word.audiofile)">
-        <div as-sortable-item-handle >{{word.sweWord}}</div>
+      <div id='sortable-container' class="col-sm-8 col-xs-12 bubble" data-as-sortable data-ng-model="mySentence">
+        <div ng-repeat="word in mySentence" as-sortable-item class="dragItem" id="word{{word.id}}" ng-click="playSound(word.audiofile)">
+          <div as-sortable-item-handle >{{word.sweWord}}</div>
+        </div>
+        <button type="button" class="delete-button" ng-click="clearMySentence()"><span class="glyphicon glyphicon-remove" ng-click="clearMySentence()"></span></button>
       </div>
-    </div>
+    
 
     <!--Buttons-->
     <div class="col-sm-3 col-xs-12">
-      <button type="button" class="sentence-button" ng-click="clearMySentence()">Clear words</button>
       <button type="button" class="sentence-button" ng-click="checkMySentence()">Check sentence</button>
     </div>
   </div>
