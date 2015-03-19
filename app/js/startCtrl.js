@@ -7,9 +7,6 @@ projectApp.controller('StartCtrl', function ($scope, Model) {
 });
 
 
-
-
-
 /* tidigare kod
 
 // Tabcontroller

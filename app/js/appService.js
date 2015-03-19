@@ -2,54 +2,44 @@
 projectApp.factory('Model', function ($resource) {
  
 	// Creating object that will hold application data
-	var mySentence = [];  		  //Lagra dom valda orden i appens pratbubble
-	var correctSentence = {};	  //Behövs eftersom det inte räcker med att bara kolla att ordningsföljden är korrekt i mySentence
-	var boxWords = [];			  //All words to choose from
-	var gameScore = 100;
-	var gameLevel = 1;
-	var myVar = 1; 				 //För test
+	var mySentence = [];  		 			 //Lagra dom valda orden i appens pratbubbla
+	var correctSentence = {};	 			 //Behövs eftersom det inte räcker med att bara kolla att ordningsföljden är korrekt i mySentence
+	var gameData = {score:0, level:1};   	 //för att kunna binda data mellan modell och flera olika controllers/views
 
 
 	// Creating functions
-	// För test
-	this.setMyVar = function(num) {   
-		myVar = num;
+	this.resetGameData = function() {   
+		gameData.score = 0;
+		gameData.level = 1;
 	}
 
-	// För test
-	this.getMyVar = function() {   
-		return myVar;
+	this.getGameData = function() {   
+		return gameData;
 	}
-
 
 	// Set gameScore
 	this.setScore = function(num) {   
-		gameScore = gameScore+num;
+		gameData.score+= num;
 	}
 
 	// Get gameScore
 	this.getScore = function() {   
-		return gameScore;
+		return gameData.score;
 	}
 
 	// Set gameLevel
 	this.setLevel = function(num) {   
-		gameLevel = num;	
+		gameLevel.level = num;	   //I arbetsmasterns variant är num level, i min adderas num till nuvarande level
 	}
 
 	// Get gameLevel
 	this.getLevel = function() {   
-		return gameLevel;
+		return gameData.level;
 	}
 
 	// Set correctSentence
 	this.setCorrectSentence = function(id) {   
 		correctSentence = this.getSentence(id);
-	}
-
-	// Add choosen word from app to mySentence
-	this.setMySentence = function(word) {   
-		mySentence.push(word);
 	}
 
 	// Get mySentence
@@ -63,7 +53,7 @@ projectApp.factory('Model', function ($resource) {
 	}
 
 	// Compare mySentence with correctSentence
-	this.checkMySentence = function() {   
+	this.checkMySentence = function() {  
 		numOfWords = correctSentence['length'];       
 
 		if (mySentence.length != numOfWords){

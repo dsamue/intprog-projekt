@@ -1,32 +1,32 @@
-<div class="container">
+<div class="col-md-3"></div>
+<div class="container col-md-6">
 
   <!--Progress bar-->
   <div class="row">
     <div ng-include=" 'partials/progressbar.html' "></div>
   </div>
 
+
   <!--Buttons and instructions-->
   <div class="row">
-    <h2>Drag the words to the bubble!</h2>
+    <h2>How do you say "{{engSentence}}" in Swedish?</h2>
   </div>
 
-  <div class="row">
-    <div class="col-sm-1 col-xs-12">
-      <button type="button" class="play-button"><span class="glyphicon glyphicon-play" ng-click="playSentence()"></span></button>
-    </div>
+  <!--Bubble row-->
+  <div class="row bubble-row">
 
-    <!--Bubble-->
-    <div id='sortable-container' class="col-sm-8 col-xs-12 bubble" data-as-sortable data-ng-model="mySentence">
-      <div ng-repeat="word in mySentence" as-sortable-item class="dragItem" id="word{{word.id}}" ng-click="playSound(word.audiofile)">
-        <div as-sortable-item-handle >{{word.sweWord}}</div>
+      <div id='sortable-container' class="col-md-9 col-sm-12 bubble" data-as-sortable data-ng-model="mySentence">
+        <div ng-repeat="word in mySentence" as-sortable-item class="dragItem" id="word{{word.id}}" ng-click="playSound(word.audiofile)">
+          <div as-sortable-item-handle >{{word.sweWord}}</div>
+        </div>
+
+        <button type="button" class="delete-button btn btn-danger" ng-click="clearMySentence()"><span class="glyphicon glyphicon-remove" ng-click="clearMySentence()"></span></button>
       </div>
+    
+    <div class="col-md-3 col-sm-12">
+      <button type="button" class="btn btn-success check-button" ng-click="checkMySentence()">Check sentence</button>
     </div>
 
-    <!--Buttons-->
-    <div class="col-sm-3 col-xs-12">
-      <button type="button" class="sentence-button" ng-click="clearMySentence()">Clear words</button>
-      <button type="button" class="sentence-button" ng-click="checkMySentence()">Check sentence</button>
-    </div>
   </div>
 
   <!--Wordbox-->
@@ -36,27 +36,46 @@
     </div>
   </div>
 
+  <!--instructions and play-->
+  <div class="row" id="instruction-row">
+    
+    <div class="row">
+      <h2><small>Need help? Drag the words to the bubble and listen to the correct sentence below</small></h2>
+    </div>
+    <div class="row play-button-row">
+      <div id="supertest">
+        <img id="cat" src="graphics/cat.png"></img>
+        <img id="pratbubbla" src="graphics/bubble.png"></img>
+        <span class="glyphicon glyphicon-play" ng-click="playSentence()"></span>
+      </div>
+    </div>
+  </div>
+
   <!-- hidden alerts-->
   <div class="row" ng-hide="alerts">
 
-
     <div class="alert alert-success" role="alert" ng-hide="success" >
       <p><span class="glyphicon glyphicon-ok"></span>
-      Well done!</p>
-      <button type="button" class="continue-button" ng-click="levelUp()">Continue</button>
+      Well done! 100 points!</p>
+      <button type="button" class="continue-button btn btn-success" ng-click="levelUp()">Continue</button>
     </div>
 
-    <div class="alert alert-danger" role="alert" ng-hide="fail" >
-      <p><span class="glyphicon glyphicon-remove" ></span>
-      Wrong answer</p>
+    <div class="alert alert-success" role="alert" ng-hide="finish" >
+      <p><span class="glyphicon glyphicon-ok"></span>
+      Wow, You finished the game! Well played!</p>
+      <button type="button" class="continue-button btn btn-success" ng-click="backToStart()">Back to start</button>
     </div>
-  
+
+    <div class="alert alert-danger" role="alert" ng-hide="fail" ng-click="hideAlerts()">
+      <p><span class="glyphicon glyphicon-remove" ng-click="hideAlerts()"></span>
+      Wrong answer<br/>-20 points..</p>
+    </div>
   </div>
-
-
 
 </div>
 
+<!--score board-->
+<div class="col-md-3" ng-controller="ScoreBoardCtrl" ng-include="'partials/scoreBoard.html'"></div>
 
 
 
