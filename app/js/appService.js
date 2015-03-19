@@ -101,27 +101,26 @@ projectApp.factory('Model', function ($resource) {
 			'engWord':'my',
 			'sweWord': 'min',
 			'position':'1', 
-		 	'audiofile':'my.mp3',
+		 	'audiofile':'min.mp3',
 			},{
 			'id':'2',
 			'engWord':'cat',
 			'sweWord': 'katt',
 			'position':'2', 
-		 	'audiofile':'cat.mp3',
+		 	'audiofile':'katt.mp3',
 
 			},{
 			'id':'3',
 			'engWord':'is',
 			'sweWord': 'är',
-
 			'position':'3', 
-		 	'audiofile':'is.mp3',
+		 	'audiofile':'är.mp3',
 			},{
 			'id':'4',
 			'engWord':'yellow',
 			'sweWord': 'gul',
 			'position':'4', 
-		 	'audiofile':'yellow.mp3',
+		 	'audiofile':'gul.mp3',
 			}]
 		},{
 
@@ -136,26 +135,26 @@ projectApp.factory('Model', function ($resource) {
 			'engWord':'my',
 			'sweWord': 'min',
 			'position':'1',
-		 	'audiofile':'my.mp3',
+		 	'audiofile':'min.mp3',
 
 			},{
 			'id':'6',
 			'engWord':'dog',
 			'sweWord': 'hund',
 			'position':'2', 
-		 	'audiofile':'dog.mp3',
+		 	'audiofile':'hund.mp3',
 			},{
 			'id':'7',
 			'engWord':'is',
 			'sweWord': 'är',
 			'position':'3', 
-		 	'audiofile':'is.mp3',
+		 	'audiofile':'är.mp3',
 			},{
 			'id':'8',
 			'engWord':'black',
 			'sweWord': 'svart',
 			'position':'4', 
-		 	'audiofile':'black.mp3',
+		 	'audiofile':'svart.mp3',
 			}]
 		}
 	];

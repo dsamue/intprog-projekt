@@ -39,6 +39,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
 
   $scope.levelUp = function (){
     Model.setLevel(1);                            //plussar en level för varje avklarad mening
+    Model.clearMySentence;
     var level = Model.getLevel()
     
     if (level > 2){
