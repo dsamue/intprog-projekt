@@ -67,15 +67,6 @@ h3 {
 	height: 90px;
 }
 
-<<<<<<< HEAD
-
-button {
-	border-radius: 5px;
-	color: #ffffff;
-	height: 40px;
-	padding: 10px;
-	border: none;
-=======
 .progress { 
   height: 3em;
   i { line-height: 3.5em; }
@@ -83,7 +74,15 @@ button {
 
 .progress-bar { 
   transition: width 1s ease-in-out; 
->>>>>>> origin/Max
+
+
+button {
+	border-radius: 5px;
+	color: #ffffff;
+	height: 40px;
+	padding: 10px;
+	border: none;
+
 }
 
 .sentence-button {
