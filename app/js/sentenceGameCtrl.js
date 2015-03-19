@@ -26,7 +26,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     if (isCorrect) {
       $scope.fail = true; //göm fail-alert
       $scope.success = false; //visa success-alert
-      
+      Model.setScore(10);
     } else {
       $scope.success = true;
       $scope.fail = false;
