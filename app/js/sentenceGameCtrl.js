@@ -26,9 +26,13 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     if (isCorrect) {
       $scope.fail = true; //göm fail-alert
       $scope.success = false; //visa success-alert
+<<<<<<< HEAD
       Model.setScore(25);
       var score = Model.getScore();
       console.log(score);
+=======
+      Model.setScore(10);
+>>>>>>> origin/sanna2
     } else {
       $scope.success = true;
       $scope.fail = false;
