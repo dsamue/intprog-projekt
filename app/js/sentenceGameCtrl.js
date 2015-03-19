@@ -25,7 +25,7 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
       $scope.finish = true; //göm finish-alert
       $scope.success = false; //visa success-alert
       Model.setScore(100);
-      Model.setLevel(1);                       //plussar en level för varje avklarad mening
+      Model.setLevel(Number($routeParams.sentenceId)+1);                       //Går till nästa level för varje avklarad mening
     } 
 
     else {
