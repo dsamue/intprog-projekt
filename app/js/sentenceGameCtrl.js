@@ -28,10 +28,8 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
       Model.setScore(10);
 
       var score = Model.getScore();
-      console.log(score);
 
       if (score == 120) {
-        console.log('hej');
         $location.url('/finish');
       } else {
         $scope.fail = true; //göm fail-alert
