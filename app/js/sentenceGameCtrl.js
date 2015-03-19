@@ -50,7 +50,6 @@ projectApp.controller('SentenceGameCtrl', function ($scope, Model, $routeParams,
     }
 
     else{
-      console.log(level)
       var level = Model.getLevel().toString();
       $location.url('/sentence/'+level);
       $scope.finish = true; //göm finish-alert
