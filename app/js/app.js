@@ -8,7 +8,7 @@
 // also see that we included separate JavaScript files for these modules. Angular
 // has other core modules that you might want to use and explore when you go deeper
 // into developing Angular applications. For this lab, these two will suffice.
-var projectApp = angular.module('projectApp', ['ngRoute','ngResource']);
+var projectApp = angular.module('projectApp', ['ngRoute','ngResource','ui.sortable']);
 
 
 // Here we configure our application module and more specifically our $routeProvider. 
@@ -40,18 +40,17 @@ projectApp.config(['$routeProvider',
 
       when('/start', {
         templateUrl: 'partials/pickSentence.html',
-        controller: 'PickSentenceCtrl'                      //Varför får jag inte denna att funka med pickSentenceController??
+        controller: 'PickSentenceCtrl'                
       }).
       when('/sentence/:sentenceId', {
         templateUrl: 'partials/sentenceGame.html',
         controller: 'SentenceGameCtrl'
       }).
       when('/test', {
-        templateUrl: 'partials/map.html',           //test.html laddas in i sidan när url:en ändras till /test
+        templateUrl: 'partials/map.html',          
         controller: 'MapCtrl'
       }).
       otherwise({
         redirectTo: '/start'
-
       });
   }]);

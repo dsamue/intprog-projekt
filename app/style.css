@@ -17,6 +17,8 @@ body {
 	background-color: #ffffff;
 	height: auto;
 	box-shadow: 0px 2px 10px #cccccc;
+	overflow: hidden;
+	padding-bottom: 30px;
 }
 
 h1,h1 small {
@@ -35,11 +37,21 @@ h3 {
 
 }
 
-.bubble-list,.word-list {
-	list-style: none;
+.bubble {
+	background-color: #f1f1f1;
+	min-height: 50px;
+	border-radius: 30px;
+
+}	
+
+.word-box {
+	background-color: #5BC0DE;
+	border-radius: 5px;
+	min-height: 50px;
+	margin: 10px;
 }
 
-.bubble-list li,.word-list li, button {
+.dragItem{
 	float: left;
 	background-color: #ff8205;
 	border-radius: 5px;
@@ -49,26 +61,13 @@ h3 {
 	margin: 5px;
 }
 
-.bubble {
-	background-color: #f1f1f1;
-	height: 50px;
-	border-radius: 30px;
-
-}	
-
-.word-box {
-	background-color: #5BC0DE;
-	border-radius: 5px;
-	margin: 10px;
-}
-
 .header {
 	background-color: #F57B26;
 	margin: 0;
 	height: 90px;
-
 }
 
+<<<<<<< HEAD
 .progress { 
   height: 3em;
   i { line-height: 3.5em; }
@@ -76,23 +75,27 @@ h3 {
 
 .progress-bar { 
   transition: width 1s ease-in-out; 
+=======
+
+button {
+	border-radius: 5px;
+	color: #ffffff;
+	height: 40px;
+	padding: 10px;
+	border: none;
+>>>>>>> origin/Arbetsmaster--BörjaAlltidHär-MergeaOfta!
 }
 
-#character {
-	width: 40px;
-	height: auto;
-	background: none;
-	position: absolute; 
-	margin-top: 100px; 
-	margin-left: -50px;
+.sentence-button {
+	float: left;
+	margin: 5px;
+	background-color: #ff8205;
 }
 
-.score {
-	background-color: #0582ff;
-	width: 80%;
-	margin: auto;
-	text-align: center;
-	font-size: 20pt;
+.continue-button {
+	float: right;
+	margin-top: -10px;
+	background-color: #57aa58;
 }
 
 .play-button {
@@ -101,45 +104,32 @@ h3 {
 	height: 50px;
 	border-radius: 25px;
 	border: none;
-	margin: auto;
+	margin-left: 15px;
+	color: #ffffff;
 }
 
 .play-button span {
 	font-size: 17pt;
 }
 
-.sentence-button {
-	border: none;
+.alert span {
+	font-size: 12pt;
 }
 
 .alert {
-	margin: 0;
+	margin: -40px;
+	margin-top: 20px;
+	padding-top: 25px;
+	height: 110px;
 }
 
-.glyphicon-remove {
-	float: right;
-}
-section{
-	float: center;
 
+.pickSentence {
+	width: 60%;
+	margin: auto;
 }
 
-p {
-		font-family: Lobster;
-		font-size: 22px;
-		font-weight: bold;
-		font-style: italic;
-		color: rgb(62, 62, 62);
-		margin: 25px;
-}
-ul {
-	float: left;
-	border-radius: 5px;
-	border: solid 1px rgb(198, 198, 198);
-	padding: 7px 11px;
-	background-color: rgb(248,248,248);
-}
-li {
+.pickSentence li {
 	float: left;
 	background-color: rgb(62, 62, 92);
 	padding: 5px 19px;
@@ -147,20 +137,21 @@ li {
 	color: black;
 	list-style: none;
 }
-li:hover, li:hover a {
+.pickSentence li:hover, .pickSentence li:hover a {
 	background-color: #F57B26;
 	color:white;
 }
-li a {
+.pickSentence li a {
 	font-family: Lobster;
 	color: white;
 	font-size: 21px;
 	font-style: italic;
 	text-shadow: 1px 0px 3px rgb(157, 157, 157);
 }
-	li:nth-child(1) { border-radius: 4px 0px 0px 4px; margin-left: 1px;}
-	li:nth-child(3) { border-radius: 0px 4px 4px 0px;}
-	.active {
+li:nth-child(1) { border-radius: 4px 0px 0px 4px; margin-left: 1px;}
+li:nth-child(3) { border-radius: 0px 4px 4px 0px;}
+	
+.active {
 	background-color: #33CCFF;
 }
 	

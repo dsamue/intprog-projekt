@@ -3,7 +3,7 @@ projectApp.factory('Model', function ($resource) {
  
 	// Creating object that will hold application data
 	var mySentence = [];  		  //Lagra dom valda orden i appens pratbubble
-	var correctSentence = [];	  //Behlvs eftersom det inte räcker med att bara kolla att ordningsföljden är korrekt i mySentence
+	var correctSentence = {};	  //Behövs eftersom det inte räcker med att bara kolla att ordningsföljden är korrekt i mySentence
 	var boxWords = [];			  //All words to choose from
 	var gameScore = 0;
 	var gameLevel = 1;
@@ -25,7 +25,6 @@ projectApp.factory('Model', function ($resource) {
 	// Set gameScore
 	this.setScore = function(num) {   
 		gameScore = gameScore+num;
-		notifyObservers();
 	}
 
 	// Get gameScore
@@ -35,8 +34,7 @@ projectApp.factory('Model', function ($resource) {
 
 	// Set gameLevel
 	this.setLevel = function(num) {   
-		gameScore = num;
-		notifyObservers();
+		gameLevel = num;	
 	}
 
 	// Get gameLevel
@@ -45,8 +43,8 @@ projectApp.factory('Model', function ($resource) {
 	}
 
 	// Set correctSentence
-	this.setCorretSentence = function(sentence) {   
-		correctSentence = [sentence];
+	this.setCorrectSentence = function(id) {   
+		correctSentence = this.getSentence(id);
 	}
 
 	// Add choosen word from app to mySentence
@@ -66,9 +64,7 @@ projectApp.factory('Model', function ($resource) {
 
 	// Compare mySentence with correctSentence
 	this.checkMySentence = function() {   
-
-		//numOfWords = correctSentence.words.length;       //Än så länge har vi inte lagt till någon mening i correctSentence
-		numOfWords = 4;
+		numOfWords = correctSentence['length'];       
 
 		if (mySentence.length != numOfWords){
 			return false
@@ -84,10 +80,12 @@ projectApp.factory('Model', function ($resource) {
 		}
 	}
 
+	// Get all sentences	
 	this.getAllSentences = function() {
 		return sentences;
 	}
 
+	// Get specific sentence
 	this.getSentence = function(id) {
 		for (i=0; i<sentences.length; i++){
 			if(sentences[i].id == id){
@@ -106,6 +104,9 @@ projectApp.factory('Model', function ($resource) {
 		'sweSentence':'Min katt är gul',
 		'engSentence':'My cat is yellow',
 		'audiofile':'mening1.mp3',
+		'length': 4,
+		'levelID' : '1',
+
 		'words':[{
 			'id':'1',
 			'engWord':'my',
@@ -139,6 +140,8 @@ projectApp.factory('Model', function ($resource) {
 		'sweSentence':'Min hund är svart',
 		'engSentence':'My dog is black',
 		'audiofile':'mening2.mp3',
+		'length': 4,
+		'levelID' : '1',
 
 		'words':[{
 			'id':'5',
@@ -165,6 +168,252 @@ projectApp.factory('Model', function ($resource) {
 			'sweWord': 'svart',
 			'position':'4', 
 		 	'audiofile':'black.mp3',
+			}]
+		},{
+
+		'id':'3',
+		'sweSentence':'Giraffer har lång hals',
+		'engSentence':'Giraffes have long necks',
+		'audiofile':'mening3.mp3',
+		'length': 4,
+		'levelID' : '1',
+
+		'words':[{
+			'id':'9',
+			'engWord':'giraffes',
+			'sweWord': 'giraffer',
+			'position':'1',
+		 	'audiofile':'giraffer.mp3',
+
+			},{
+			'id':'10',
+			'engWord':'have',
+			'sweWord': 'har',
+			'position':'2', 
+		 	'audiofile':'har.mp3',
+			},{
+			'id':'11',
+			'engWord':'long',
+			'sweWord': 'lång',
+			'position':'3', 
+		 	'audiofile':'lång.mp3',
+			},{
+			'id':'12',
+			'engWord':'necks',
+			'sweWord': 'hals',
+			'position':'4', 
+		 	'audiofile':'black.mp3',
+			}]
+		},{
+
+		'id':'4',
+		'sweSentence':'Min tiger är randig',
+		'engSentence':'My tiger is striped',
+		'audiofile':'mening4.mp3',
+		'length': 4,
+		'levelID' : '1',
+
+		'words':[{
+			'id':'13',
+			'engWord':'my',
+			'sweWord': 'min',
+			'position':'1',
+		 	'audiofile':'min.mp3',
+
+			},{
+			'id':'14',
+			'engWord':'tiger',
+			'sweWord': 'tiger',
+			'position':'2', 
+		 	'audiofile':'tiger.mp3',
+			},{
+			'id':'15',
+			'engWord':'is',
+			'sweWord': 'är',
+			'position':'3', 
+		 	'audiofile':'är.mp3',
+			},{
+			'id':'16',
+			'engWord':'striped',
+			'sweWord': 'randig',
+			'position':'4', 
+		 	'audiofile':'randig.mp3',
+			}]
+		},{
+
+		'id':'5',
+		'sweSentence':'Mina jordgubbar är röda',
+		'engSentence':'My strawberries are red',
+		'audiofile':'mening4.mp3',
+		'length': 4,
+		'levelID' : '2',
+
+		'words':[{
+			'id':'17',
+			'engWord':'my',
+			'sweWord': 'mina',
+			'position':'1',
+		 	'audiofile':'min.mp3',
+
+			},{
+			'id':'14',
+			'engWord':'strawberries',
+			'sweWord': 'jordgubbar',
+			'position':'2', 
+		 	'audiofile':'tiger.mp3', //ljudfil ska ändras
+			},{
+			'id':'19',
+			'engWord':'is',
+			'sweWord': 'är',
+			'position':'3', 
+		 	'audiofile':'är.mp3',
+			},{
+			'id':'16',
+			'engWord':'red',
+			'sweWord': 'röda',
+			'position':'4', 
+		 	'audiofile':'mat.mp3',
+			}]
+		},{
+
+		'id':'6',
+		'sweSentence':'Min mat är god',
+		'engSentence':'My food is tasty',
+		'audiofile':'mening4.mp3',
+		'length': 4,
+		'levelID' : '2',
+
+		'words':[{
+			'id':'21',
+			'engWord':'my',
+			'sweWord': 'min',
+			'position':'1',
+		 	'audiofile':'min.mp3',
+
+			},{
+			'id':'22',
+			'engWord':'food',
+			'sweWord': 'mat',
+			'position':'2', 
+		 	'audiofile':'mat.mp3',
+			},{
+			'id':'23',
+			'engWord':'is',
+			'sweWord': 'är',
+			'position':'3', 
+		 	'audiofile':'är.mp3',
+			},{
+			'id':'24',
+			'engWord':'tasty',
+			'sweWord': 'god',
+			'position':'4', 
+		 	'audiofile':'god.mp3',
+			}]
+		},{
+
+		'id':'7',
+		'sweSentence':'Min mat är matig',
+		'engSentence':'My food is foody',
+		'audiofile':'mening4.mp3',
+		'length': 4,
+		'levelID' : '2',
+
+		'words':[{
+			'id':'25',
+			'engWord':'my',
+			'sweWord': 'min',
+			'position':'1',
+		 	'audiofile':'min.mp3',
+
+			},{
+			'id':'26',
+			'engWord':'tiger',
+			'sweWord': 'tiger',
+			'position':'2', 
+		 	'audiofile':'tiger.mp3',
+			},{
+			'id':'27',
+			'engWord':'is',
+			'sweWord': 'är',
+			'position':'3', 
+		 	'audiofile':'är.mp3',
+			},{
+			'id':'28',
+			'engWord':'striped',
+			'sweWord': 'randig',
+			'position':'4', 
+		 	'audiofile':'randig.mp3',
+			}]
+		},{
+
+		'id':'8',
+		'sweSentence':'Min mat är matmat',
+		'engSentence':'My food is foodfood',
+		'audiofile':'mening4.mp3',
+		'length': 4,
+		'levelID' : '2',
+
+		'words':[{
+			'id':'29',
+			'engWord':'my',
+			'sweWord': 'min',
+			'position':'1',
+		 	'audiofile':'min.mp3',
+
+			},{
+			'id':'30',
+			'engWord':'food',
+			'sweWord': 'mat',
+			'position':'2', 
+		 	'audiofile':'tiger.mp3',
+			},{
+			'id':'31',
+			'engWord':'is',
+			'sweWord': 'är',
+			'position':'3', 
+		 	'audiofile':'är.mp3',
+			},{
+			'id':'32',
+			'engWord':'foodfood',
+			'sweWord': 'matmat',
+			'position':'4', 
+		 	'audiofile':'randig.mp3',
+			}]
+		},{
+
+		'id':'9',
+		'sweSentence':'Min bil är blå',
+		'engSentence':'My car is blue',
+		'audiofile':'mening4.mp3',
+		'length': 4,
+		'levelID' : '3',
+
+		'words':[{
+			'id':'33',
+			'engWord':'my',
+			'sweWord': 'min',
+			'position':'1',
+		 	'audiofile':'min.mp3',
+
+			},{
+
+			'id':'34',
+			'engWord':'car',
+			'sweWord': 'bil',
+			'position':'2', 
+		 	'audiofile':'car.mp3',
+			},{
+			'id':'35',
+			'engWord':'is',
+			'sweWord': 'är',
+			'position':'3', 
+		 	'audiofile':'är.mp3',
+			},{
+			'id':'36',
+			'engWord':'blue',
+			'sweWord': 'blå',
+			'position':'4', 
+		 	'audiofile':'blå.mp3',
 			}]
 		}
 	];
