@@ -6,19 +6,6 @@ body {
 	background-color: #f1f1f1;
 }
 
-.container-fluid {
-	margin: 0;
-	padding: 0;
-}
-
-.container {
-	margin-top: 100px;
-	padding: 50px;
-	background-color: #ffffff;
-	height: auto;
-	box-shadow: 0px 2px 10px #cccccc;
-}
-
 h1,h1 small {
 	font-family: Lobster;
 	color: white;
@@ -32,7 +19,42 @@ h2 {
 h3 {
 	font-family: Lobster;
 	text-align: center;
+}
 
+h3 {
+	font-family: Lobster;
+	text-align: center;
+}
+
+p {
+	font-family: Lobster;
+	font-size: 22px;
+	font-weight: bold;
+	font-style: italic;
+	color: rgb(62, 62, 62);
+	margin: 25px;
+}
+
+.container-fluid {
+	margin: 0;
+	padding: 0;
+	cursor: default;
+}
+
+.container {
+	margin-top: 0px;  /*100 i gammal*/
+	padding: 50px;
+	background-color: #ffffff;
+	height: auto;
+	box-shadow: 0px 2px 10px #cccccc;
+	overflow: hidden;
+	padding-bottom: 30px;
+}
+
+.header {
+	background-color: #F57B26;
+	margin: 0;
+	height: 90px;
 }
 
 .bubble-list,.word-list {
@@ -47,20 +69,49 @@ h3 {
 	height: 40px;
 	padding: 10px;
 	margin: 5px;
+	cursor: pointer;
 }
 
-.bubble {
+.bubble{
 	background-color: #f1f1f1;
 	min-height: 50px;
 	border-radius: 30px;
+}
 
+.bubble-row{	
+	padding-top: 40px;
+	padding-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.bubble-row .btn-success{
+	float:right;
+	margin-right:-10px;
+	min-height:40px;
+}
+
+.info-bubble{
+	background-color: #5BC0DE;
+	padding: 20px 40px 20px 40px;
 }	
 
 .word-box {
 	background-color: #5BC0DE;
 	border-radius: 5px;
-	min-height: 50px;
+	min-height: 100px;
+	padding: 10px;
 	margin: 10px;
+}
+
+.button{
+	background-color: #ff8205;
+	border-radius: 5px;
+	color: #ffffff;
+	height: 40px;
+    /*HEAD*/
+	padding: 10px;
+	margin: 5px;
 }
 
 .header {
@@ -69,25 +120,37 @@ h3 {
 	height: 90px;
 }
 
-.progress {
-	margin-bottom: 50px;
+.progress { 
+  height: 3em;
+  i { line-height: 3.5em; }
 }
 
-#character {
-	width: 40px;
-	height: auto;
-	background: none;
-	position: absolute; 
-	margin-top: 100px; 
-	margin-left: -50px;
+.progress-bar { 
+  transition: width 1s ease-in-out; 
 }
 
-.score {
-	background-color: #0582ff;
-	width: 80%;
-	margin: auto;
-	text-align: center;
-	font-size: 20pt;
+button {
+	border-radius: 5px;
+	color: #ffffff;
+	height: 40px;
+	padding: 10px;
+	border: none;
+
+}
+
+.sentence-button {
+	float: left;
+	margin: 5px;
+	background-color: #ff8205;
+	width:100em;
+	padding: 2px;
+	margin: 5px;
+}
+
+.continue-button {
+	float: right;
+	margin-top: -10px;
+	background-color: #57aa58;
 }
 
 .play-button {
@@ -96,7 +159,8 @@ h3 {
 	height: 50px;
 	border-radius: 25px;
 	border: none;
-	margin: auto;
+	margin-left: 15px;
+	color: #ffffff;
 }
 
 .play-button span {
@@ -105,39 +169,123 @@ h3 {
 
 .sentence-button {
 	border: none;
+	height:auto;
+}
+
+.delete-button {
+	float: right;
+	background-color: #EC584B;
+	border-radius: 20px;
+	color: #ffffff;
+	height: 40px;
+	width: 40px;
+	padding: auto;
+	margin: 5px;
+	border: none;
+	text-align: auto;
+}
+
+.delete-button .glyphicon-remove{
+	cursor: hand;
+	text-align: auto;
+	float: center;
 }
 
 .alert {
-	margin: 0;
+	margin: -40px;
+	margin-top: 20px;
+	padding-top: 0px;
+	height: 150px;
+}
+
+.alert span {
+	font-size: 12pt;
+}
+
+.progress {
+	margin-bottom: 50px;
 }
 
 .glyphicon-remove {
 	float: right;
+	cursor: hand;
+}
+
+.glyphicon{
+	cursor: hand;
+}
+
+
+#instruction-row{
+	position:relative;
+	min-height:150px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+#supertest{
+	position:relative;
+	float:center;
+	text-align: center;
+}
+
+
+#cat{
+	height:4em;
+	position:absolute;
+	margin-top:20px;
+	margin-left:-80px;
+}
+
+#pratbubbla{
+	height:4em;
+	position:absolute;
+	margin-top:0px;
+	margin-left:-20px;
+	cursor:pointer;
+}
+
+.glyphicon-play{
+	color:black;
+	font-size: 2em;
+	position: absolute;
+	margin-top:7px;
+	margin-left:-2px;
+	cursor:pointer;
+}
+
+#score-board {
+	width: 14.1em;
+	height: 19.75em;
+	margin-top: 80px; 
+	margin-left: 72px;
+	border-radius: 1em;
+	background-color: #5BC0DE;
+	box-shadow: 0px 2px 10px #cccccc;
+	overflow: hidden;
+	cursor: default;
+
+}
+
+#score-board p, #score-board h1{
+	color: white;
+	text-align: center;
+	margin-top: 1em;
+	font-style: none;
 }
 
 section{
 	float: center;
-
 }
 
-p {
-		font-family: Lobster;
-		font-size: 22px;
-		font-weight: bold;
-		font-style: italic;
-		color: rgb(62, 62, 62);
-		margin: 25px;
+
+.pickSentence {
+	width: 60%;
+	margin: auto;
 }
 
-ul {
-	float: left;
-	border-radius: 5px;
-	border: solid 1px rgb(198, 198, 198);
-	padding: 7px 11px;
-	background-color: rgb(248,248,248);
-}
-
-li {
+.pickSentence li {
 	float: left;
 	background-color: rgb(62, 62, 92);
 	padding: 5px 19px;
@@ -145,20 +293,21 @@ li {
 	color: black;
 	list-style: none;
 }
-li:hover, li:hover a {
+.pickSentence li:hover, .pickSentence li:hover a {
 	background-color: #F57B26;
 	color:white;
 }
-li a {
+.pickSentence li a {
 	font-family: Lobster;
 	color: white;
 	font-size: 21px;
 	font-style: italic;
 	text-shadow: 1px 0px 3px rgb(157, 157, 157);
 }
-	li:nth-child(1) { border-radius: 4px 0px 0px 4px; margin-left: 1px;}
-	li:nth-child(3) { border-radius: 0px 4px 4px 0px;}
-	.active {
+li:nth-child(1) { border-radius: 4px 0px 0px 4px; margin-left: 1px;}
+li:nth-child(3) { border-radius: 0px 4px 4px 0px;}
+	
+.active {
 	background-color: #33CCFF;
 }
 	

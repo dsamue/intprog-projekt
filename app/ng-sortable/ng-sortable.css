@@ -1,29 +1,21 @@
-/* ************************************** */
-/* Mandatory CSS required for ng-sortable */
-/* ************************************** */
-
 .as-sortable-item {
     -ms-touch-action: none;
     touch-action: none;
+    cursor: pointer;
 }
 
 .as-sortable-item-handle {
-    cursor: move;
+    cursor: pointer;
 }
 
-.as-sortable-placeholder {
+.as-sortable-placeholder { /*vad händer när du hovrar över drop*/
     display: inline-block;
-    width: 124px;
-    height: 110px;
     float: left;
-    border: 1px darkgrey;
-    margin: 5px;
-    border-radius: 5px;
-    background-color: #dbdbdb;
 }
 
-
-.as-sortable-drag {
+.as-sortable-drag { /*hur den stylas när den är i "luften"*/
+    background: none;
+    margin: 5px;
     position: absolute;
     pointer-events: none;
     z-index: 9999;
