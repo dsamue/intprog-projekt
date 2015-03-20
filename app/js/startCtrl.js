@@ -5,24 +5,3 @@ projectApp.controller('StartCtrl', function ($scope, Model) {
     Model.resetGameData();
   };
 });
-
-
-/* tidigare kod från pick sentence
-
-// Tabcontroller
-projectApp.controller('Tabcontroller', function(){
-	this.tab = 1;
-	
-	this.selectTab = function(setTab){
-		
-		this.tab = setTab;
-	};
-	this.isSelected = function(checkTab){
-		
-		return this.tab === checkTab;
-	};
-});
-
-
-*/
-

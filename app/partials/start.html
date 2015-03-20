@@ -1,78 +1,37 @@
 <div class="row">
-<div class="col-lg-3 col-md-1"></div>
-<div class="container col-lg-6 col-md-8">
-
-	<!-- instructions -->
- 	<div class="row" >  
- 		<h2>Welcome to Fabulous Swedish!</h2>
- 	</div>
- 	
- 	<div class="row">
- 		<div class="col-lg-2 col-md-1"></div>
- 		<div class="col-lg-8 col-mg-10 bubble info-bubble">
-			<h1 class="info-text"><small>
-			In this almost mindblowing app you will learn to speak swedish in the most extraordinary way!<br/><br/>
-			Litsen to the very useful sentences in swedish and try to create the same sentence by draging the correct words to the bubble.<br/><br/>
-			You can check if the sentence is corect and move up one level, but if your answer is wrong, you lose 100 points...
- 			</small></h1>
- 		</div>
- 		<div class="col-lg-2 col-md-1"></div>
- 	</div>
-
- 	<div class="row">
- 		<a href="#/sentence/1" ng-click="resetGame()"><h2>Play the game!</h2></a>
- 	</div>
- 	
- 	<!--Progress bar-->
-	<div class="row">
-		<div ng-include=" 'partials/progressbar.html' "></div>
+	<div class="col-lg-3 col-md-1">		
 	</div>
-</div>
+	<div class="container col-lg-6 col-md-8">
+
+		<!-- instructions -->
+	 	<div class="row" >  
+	 		<h2>Welcome to Fabulous Swedish!</h2>
+	 	</div>
+	 	
+	 	<div class="row">
+	 		<div class="col-lg-2 col-md-1"></div>
+	 		<div class="col-lg-8 col-mg-10 bubble info-bubble">
+				<h1 class="info-text"><small>
+				In this almost mindblowing app you will learn to speak swedish in the most extraordinary way!<br/><br/>
+				Litsen to the very useful sentences in swedish and try to create the same sentence by draging the correct words to the bubble.<br/><br/>
+				You can check if the sentence is corect and move up one level, but if your answer is wrong, you lose 100 points...
+	 			</small></h1>
+	 		</div>
+	 		<div class="col-lg-2 col-md-1"></div>
+	 	</div>
+
+	 	<div class="row">
+	 		<a href="#/sentence/1" ng-click="resetGame()"><h2>Play the game!</h2></a>
+	 	</div>
+	 	
+	 	<!--Progress bar-->
+		<div class="row">
+			<div ng-include=" 'partials/progressbar.html' "></div>
+		</div>
+	</div>
 
 
 <!--score board-->
-<div class="col-lg-3 col-md-3" ng-controller="ScoreBoardCtrl" ng-include="'partials/scoreBoard.html'"></div>
+	<div class="col-lg-3 col-md-3" ng-controller="ScoreBoardCtrl" ng-include="'partials/scoreBoard.html'">
+	</div>
 </div>
-
-
-
-<!-- gamla picksentence:
-
- 	<div class="row" >  
- 		<h2>Choose a topic to begin</h2>
- 	</div>
-
-
- 	<div class="row">
-	
-	<div class="pickSentence" ng-controller="Tabcontroller as panel">
-		<ul>
-			<li ng-class="{active:panel.isSelected(1)}"> 
-				<a href="#/sentence/1" ng-click="panel.selectTab(1)">Animals</a>
-			</li>
-			<li ng-class="{active:panel.isSelected(2)}">
-				<a href="#/sentence/5" ng-click="panel.selectTab(2)">Food</a>
-			</li>
-			<li ng-class="{active:panel.isSelected(3)}">
-				<a href="#/sentence/9" ng-click="panel.selectTab(3)">Vehicles</a>
-			</li>			
-					
-					<a class="ng-scope" href="#/sentence/{{sentence.id}}" ng-repeat="sentence in allSentences.slice(0, 4)">
-						<h3 ng-show="panel.isSelected(1)" class="ng-binding">{{sentence.engSentence}}</h3>
-					</a>
-					<a class="ng-scope" href="#/sentence/{{sentence.id}}" ng-repeat="sentence in allSentences.slice(4, 8)">
-						<h3 ng-show="panel.isSelected(2)" class="ng-binding">{{sentence.engSentence}}</h3>
-					</a>
-					<a class="ng-scope" href="#/sentence/{{sentence.id}}" ng-repeat="sentence in allSentences.slice(8)">
-						<h3 ng-show="panel.isSelected(3)" class="ng-binding">{{sentence.engSentence}}</h3>
-					</a>
-						
-
-					
-					<div ng-repeat="item in items.slice(6, 10)">{{item}}</div>
-
-		</ul>
-	</div>
-	</div>
-
--->
