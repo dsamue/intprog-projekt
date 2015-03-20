@@ -1,5 +1,5 @@
-<div class="col-md-3"></div>
-<div class="container col-md-6">
+<div class="col-md-2"></div>
+<div class="container col-md-7">
 
   <!--Buttons and instructions-->
   <div class="row">
@@ -9,7 +9,7 @@
   <!--Bubble row-->
   <div class="row bubble-row">
 
-      <div id='sortable-container' class="col-md-9 col-sm-12 bubble" data-as-sortable data-ng-model="mySentence">
+      <div id='sortable-container' class="col-sm-8 bubble" data-as-sortable data-ng-model="mySentence">
         <div ng-repeat="word in mySentence" as-sortable-item class="dragItem" id="word{{word.id}}" ng-click="playSound(word.audiofile)">
           <div as-sortable-item-handle >{{word.sweWord}}</div>
         </div>
@@ -17,7 +17,7 @@
         <button type="button" class="delete-button btn btn-danger" ng-click="clearMySentence()"><span class="glyphicon glyphicon-remove" ng-click="clearMySentence()"></span></button>
       </div>
     
-    <div class="col-md-3 col-sm-12">
+    <div class="col-sm-3">
       <button type="button" class="btn btn-success check-button" ng-click="checkMySentence()">Check sentence</button>
     </div>
 
